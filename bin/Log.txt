@@ -1,0 +1,8 @@
+2024-03-04 20:16:29	40356	日志器01	100	[INFO]	[root]	/home/muqiu0614/桌面/sylar/src/../include/Config.h:78	LOOKUP first
+2024-03-04 20:16:29	40356	日志器01	100	[INFO]	[root]	/home/muqiu0614/桌面/sylar/src/../include/Config.h:98	LOOKUP second
+2024-03-04 20:16:29	40356	日志器01	100	[INFO]	[root]	/home/muqiu0614/桌面/sylar/src/../include/Config.h:78	LOOKUP first
+2024-03-04 20:16:29	40356	日志器01	100	[INFO]	[root]	/home/muqiu0614/桌面/sylar/src/../include/Config.h:98	LOOKUP second
+2024-03-04 20:16:29	40356	日志器01	100	[INFO]	[root]	/home/muqiu0614/桌面/sylar/src/main.cc:98	8080
+2024-03-04 20:16:29	40356	日志器01	100	[INFO]	[root]	/home/muqiu0614/桌面/sylar/src/main.cc:99	8080
+2024-03-04 20:16:29	40356	日志器01	100	[INFO]	[root]	/home/muqiu0614/桌面/sylar/src/main.cc:100	10.2
+2024-03-04 20:16:29	40356	日志器01	100	[INFO]	[root]	/home/muqiu0614/桌面/sylar/src/main.cc:101	10.1999998

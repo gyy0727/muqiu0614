@@ -1,0 +1,5 @@
+2024-03-02 19:39:42	24524	无敌霸王	100	[ERROR]	[root]	main.cc:20	zhangdejf
+2024-03-02 19:40:15	24690	无敌霸王	100	[ERROR]	[root]	main.cc:20	zhangdejf
+2024-03-02 19:40:20	24702	日志器01	100	[ERROR]	[root]	main.cc:20	zhangdejf
+2024-03-04 16:29:23	16756	日志器01	100	[ERROR]	[root]	main.cc:20	zhangdejf
+2024-03-04 16:34:06	17777	日志器01	100	[ERROR]	[root]	main.cc:20	zhangdejf
