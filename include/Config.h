@@ -2,7 +2,7 @@
  * @Author: Gyy0727 3155833132@qq.com
  * @Date: 2024-03-03 12:28:07
  * @LastEditors: Gyy0727 3155833132@qq.com
- * @LastEditTime: 2024-03-08 13:51:37
+ * @LastEditTime: 2024-03-08 15:06:38
  * @FilePath: /sylar/include/Config.h
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置
  * 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
@@ -16,15 +16,15 @@
 #include <execution>
 #include <future>
 #include <list>
-#include<set>
 #include <map>
 #include <memory>
+#include <set>
 #include <sstream>
 #include <string>
+#include <unordered_map>
+#include <unordered_set>
 #include <utility>
 #include <vector>
-#include <unordered_set>
-#include<unordered_map>
 using json = nlohmann::json;
 namespace Sylar {
 class ConfigVarBase {
@@ -68,12 +68,12 @@ public:
  * @return {vector<T>}
  */
 template <class T> class LexicalCast<std::string, class std::vector<T>> {
-  public:
+public:
   std::vector<T> operator()(const std::string &val) {
     json j = json::parse(val);
     typename std::vector<T> vec;
-    for (auto& element : j) {
-        vec.push_back(LexicalCast<std::string, T>()(element.dump(4)));
+    for (auto &element : j) {
+      vec.push_back(LexicalCast<std::string, T>()(element.dump(4)));
     }
     return vec;
   }
@@ -84,16 +84,15 @@ template <class T> class LexicalCast<std::string, class std::vector<T>> {
  * @param {return} j
  * @return {*}
  */
-template<class T>
-class LexicalCast<std::vector<T>, std::string> {
+template <class T> class LexicalCast<std::vector<T>, std::string> {
 public:
   std::string operator()(std::vector<T> vec) {
     json j;
     for (auto &i : vec) {
-      j.push_back(LexicalCast<T,std::string>()(i));
+      j.push_back(LexicalCast<T, std::string>()(i));
     }
     return j.dump(4);
-    }
+  }
 };
 /**
  * @description: 将string转换成list
@@ -101,12 +100,12 @@ public:
  * @return {*}
  */
 template <class T> class LexicalCast<std::string, class std::list<T>> {
-  public:
+public:
   std::list<T> operator()(const std::string &val) {
     json j = json::parse(val);
     typename std::list<T> vec;
-    for (auto& element : j) {
-        vec.push_back(LexicalCast<std::string, T>()(element.dump(4)));
+    for (auto &element : j) {
+      vec.push_back(LexicalCast<std::string, T>()(element.dump(4)));
     }
     return vec;
   }
@@ -116,16 +115,15 @@ template <class T> class LexicalCast<std::string, class std::list<T>> {
  * @param {string} &val
  * @return {*}
  */
-template<class T>
-class LexicalCast<std::list<T>, std::string> {
+template <class T> class LexicalCast<std::list<T>, std::string> {
 public:
   std::string operator()(std::list<T> vec) {
     json j;
     for (auto &i : vec) {
-      j.push_back(LexicalCast<T,std::string>()(i));
+      j.push_back(LexicalCast<T, std::string>()(i));
     }
     return j.dump(4);
-    }
+  }
 };
 /**
  * @description: 将string转换成set
@@ -133,12 +131,12 @@ public:
  * @return {*}
  */
 template <class T> class LexicalCast<std::string, class std::set<T>> {
-  public:
+public:
   std::set<T> operator()(const std::string &val) {
     json j = json::parse(val);
     typename std::set<T> vec;
-    for (auto& element : j) {
-        vec.insert(LexicalCast<std::string, T>()(element.dump(4)));
+    for (auto &element : j) {
+      vec.insert(LexicalCast<std::string, T>()(element.dump(4)));
     }
     return vec;
   }
@@ -148,16 +146,15 @@ template <class T> class LexicalCast<std::string, class std::set<T>> {
  * @param {string} &val
  * @return {*}
  */
-template<class T>
-class LexicalCast<std::set<T>, std::string> {
+template <class T> class LexicalCast<std::set<T>, std::string> {
 public:
   std::string operator()(std::set<T> vec) {
     json j;
     for (auto &i : vec) {
-      j.push_back(LexicalCast<T,std::string>()(i));
+      j.push_back(LexicalCast<T, std::string>()(i));
     }
     return j.dump(4);
-    }
+  }
 };
 /**
  * @description: 将string转换成unordered_set
@@ -165,12 +162,12 @@ public:
  * @return {*}
  */
 template <class T> class LexicalCast<std::string, class std::unordered_set<T>> {
-  public:
+public:
   std::unordered_set<T> operator()(const std::string &val) {
     json j = json::parse(val);
     typename std::unordered_set<T> vec;
-    for (auto& element : j) {
-        vec.insert(LexicalCast<std::string, T>()(element.dump(4)));
+    for (auto &element : j) {
+      vec.insert(LexicalCast<std::string, T>()(element.dump(4)));
     }
     return vec;
   }
@@ -180,29 +177,29 @@ template <class T> class LexicalCast<std::string, class std::unordered_set<T>> {
  * @param {string} &val
  * @return {*}
  */
-template<class T>
-class LexicalCast<std::unordered_set<T>, std::string> {
+template <class T> class LexicalCast<std::unordered_set<T>, std::string> {
 public:
   std::string operator()(std::unordered_set<T> vec) {
     json j;
     for (auto &i : vec) {
-      j.push_back(LexicalCast<T,std::string>()(i));
+      j.push_back(LexicalCast<T, std::string>()(i));
     }
     return j.dump(4);
-    }
+  }
 };
 /**
  * @description: 将string转换成 std::map<std::string,T>
  * @param {string} &val
  * @return {*}
  */
-template <class T> class LexicalCast<std::string, class std::map<std::string,T>> {
-  public:
-  std::map<std::string,T> operator()(const std::string &val) {
+template <class T>
+class LexicalCast<std::string, class std::map<std::string, T>> {
+public:
+  std::map<std::string, T> operator()(const std::string &val) {
     json j = json::parse(val);
-    typename  std::map<std::string,T> vec;
-    for (auto& element : j) {
-        vec.insert(LexicalCast<std::string, T>()(element.dump(4)));
+    typename std::map<std::string, T> vec;
+    for (auto &element : j.items()) {
+      vec.insert(std::make_pair(element.key(), LexicalCast<std::string, T>()(element.value().dump())));
     }
     return vec;
   }
@@ -212,29 +209,29 @@ template <class T> class LexicalCast<std::string, class std::map<std::string,T>>
  * @param {string} &val
  * @return {*}
  */
-template<class T>
-class LexicalCast< std::map<std::string,T>, std::string> {
+template <class T> class LexicalCast<std::map<std::string, T>, std::string> {
 public:
-  std::string operator()( std::map<std::string,T> vec) {
+  std::string operator()(std::map<std::string, T> vec) {
     json j;
     for (auto &i : vec) {
-      j.push_back(LexicalCast<T,std::string>()(i));
+      j[i.first]= LexicalCast<T, std::string>()(i.second);
     }
     return j.dump(4);
-    }
+  }
 };
 /**
  * @description: 将string转换成 std::unordered_map<std::string,T>
  * @param {string} &val
  * @return {*}
  */
-template <class T> class LexicalCast<std::string, class std::unordered_map<std::string,T>> {
-  public:
-  std::unordered_map<std::string,T> operator()(const std::string &val) {
+template <class T>
+class LexicalCast<std::string, class std::unordered_map<std::string, T>> {
+public:
+  std::unordered_map<std::string, T> operator()(const std::string &val) {
     json j = json::parse(val);
-    typename  std::unordered_map<std::string,T> vec;
-    for (auto& element : j) {
-        vec.insert(LexicalCast<std::string, T>()(element.dump(4)));
+    typename std::unordered_map<std::string, T> vec;
+    for (auto &element : j.items()) {
+     vec.insert(std::make_pair(element.key(), LexicalCast<std::string, T>()(element.value().dump())));
     }
     return vec;
   }
@@ -244,20 +241,17 @@ template <class T> class LexicalCast<std::string, class std::unordered_map<std::
  * @param {string} &val
  * @return {*}
  */
-template<class T>
-class LexicalCast< std::unordered_map<std::string,T>, std::string> {
+template <class T>
+class LexicalCast<std::unordered_map<std::string, T>, std::string> {
 public:
-  std::string operator()( std::unordered_map<std::string,T> vec) {
+  std::string operator()(std::unordered_map<std::string, T> vec) {
     json j;
     for (auto &i : vec) {
-      j.push_back(LexicalCast<T,std::string>()(i));
+      j[i.first]= LexicalCast<T, std::string>()(i.second);
     }
     return j.dump(4);
-    }
-    
+  }
 };
-
-
 
 template <class T, class FromStr = LexicalCast<std::string, T>,
           class ToStr = LexicalCast<T, std::string>>

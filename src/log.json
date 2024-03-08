@@ -36,6 +36,10 @@
     "value": 15,
     "int_vec":[3,4,5],
     "int_list":[829,23],
-    "int_set":[3789,23243]
+    "int_set":[3789,23243],
+    "int_uset":[1111,2222],
+    "str_int_map":{"kkch":65},
+    "str_int_umap":{"dwdwad":677777}
+
   }
 }

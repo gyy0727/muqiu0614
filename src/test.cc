@@ -2,7 +2,7 @@
  * @Author: Gyy0727 3155833132@qq.com
  * @Date: 2024-03-02 12:07:17
  * @LastEditors: Gyy0727 3155833132@qq.com
- * @LastEditTime: 2024-03-08 12:05:57
+ * @LastEditTime: 2024-03-08 15:08:53
  * @FilePath: /sylar/src/test.cc
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置
  * 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
@@ -40,22 +40,21 @@ using json = nlohmann::json;
 //         std::cout << j.dump() << " (普通元素)" << std::endl;
 //     }
 // }
-void test() {
-  // auto config_json = R"({"A" : "a", "B" : "b", "Pi" : 1234 })"_json;
+// void test() {
+//   // auto config_json = R"({"A" : "a", "B" : "b", "Pi" : 1234 })"_json;
 
-  // // parse explicitly
-  // std::string info = R"({"A" : "a", "B" : "b", "Pi" : 1234 })";
-  // auto config_json1 = nlohmann::json::parse(info);
-  // std::cout << config_json << std::endl;
+//   // 创建一个JSON对象
+//   nlohmann::json jsonObj = {
+//       {"name", "John"}, {"age", 30}, {"city", "New York"}};
 
+//   // 遍历JSON对象
+//   for (const auto &item : jsonObj) {
+//     std::string key = item.key();
+//     auto value = item.value();
+//     std::cout << "Key: " << key << ", Value: " << value << std::endl;
+//   }
+// }
 
-    json jsonArray = json::array({"apple", "banana", "cherry"});
-
-    // 输出JSON数组
-    std::cout << jsonArray.dump() << std::endl;
-
-  
-}
 // int main() {
 //   // 读取一个json文件，nlohmann会自动解析其中数据
 //   // std::ifstream i("/home/muqiu0614/桌面/sylar/src/log.json");

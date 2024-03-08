@@ -2,7 +2,7 @@
  * @Author: Gyy0727 3155833132@qq.com
  * @Date: 2024-02-26 20:50:11
  * @LastEditors: Gyy0727 3155833132@qq.com
- * @LastEditTime: 2024-03-08 13:35:21
+ * @LastEditTime: 2024-03-08 15:25:50
  S @FilePath: /sylar/src/main.cc
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置
  * 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
@@ -22,8 +22,24 @@ Sylar::ConfigVar<std::vector<int>>::ptr g_int_value_config__vector =
 Sylar::ConfigVar<std::list<int>>::ptr g_int_list_value_config_list =
     Sylar::Config::Lookup("system.int_list", std::list<int>{1, 2},
                           "system int list");
-Sylar::ConfigVar<std::set<int> >::ptr g_int_set_value_config =
-    Sylar::Config::Lookup("system.int_set", std::set<int>{1,2}, "system int set");
+Sylar::ConfigVar<std::set<int>>::ptr g_int_set_value_config =
+    Sylar::Config::Lookup("system.int_set", std::set<int>{1, 2},
+                          "system int set");
+
+Sylar::ConfigVar<std::unordered_set<int>>::ptr g_int_uset_value_config =
+    Sylar::Config::Lookup("system.int_uset", std::unordered_set<int>{1, 2},
+                          "system int uset");
+
+Sylar::ConfigVar<std::map<std::string, int>>::ptr g_str_int_map_value_config =
+    Sylar::Config::Lookup("system.str_int_map",
+                          std::map<std::string, int>{{"k", 2}},
+                          "system str int map");
+
+Sylar::ConfigVar<std::unordered_map<std::string, int>>::ptr
+    g_str_int_umap_value_config =
+        Sylar::Config::Lookup("system.str_int_umap",
+                              std::unordered_map<std::string, int>{{"k", 2}},
+                              "system str int map");
 // Sylar::ConfigVar<int>::ptr g_int_value_config1 =
 //     Sylar::Config::Lookup("system.aaa", (int)880, "system port");
 // Sylar::ConfigVar<int>::ptr g_int_value_config2 =
@@ -46,13 +62,18 @@ int main() {
   //   << g_int_value_config1->toString();
   // SYLAR_LOG_INFO(g_logger) << "before: " << g_int_value_config2->getValue();
   // SYLAR_LOG_INFO(g_logger) << "before: " << g_int_value_config2->toString();
-  auto v = g_int_set_value_config->getValue();
+  auto v = g_str_int_umap_value_config->getValue();
+//   for (auto it : v) {
+//     SYLAR_LOG_INFO(g_logger) << "before: " << it << std::endl;
+//     ;
+//   }
   for (auto it : v) {
-    SYLAR_LOG_INFO(g_logger) << "before: " << it << std::endl;
-    ;
+    SYLAR_LOG_INFO(g_logger) << "before: " << it.first << " " << it.second << std::endl;
+    
   }
+  SYLAR_LOG_INFO(g_logger) << "before: " << g_str_int_umap_value_config->toString();
   SYLAR_LOG_INFO(g_logger) << "before: "
-                           << g_int_set_value_config->toString();
+                           << g_str_int_umap_value_config->getDescription();
   std::ifstream i("/home/muqiu0614/桌面/sylar/src/log.json");
   json j = json::parse(i);
   Sylar::Config::LoadFromJson(j);
@@ -69,12 +90,16 @@ int main() {
   //   SYLAR_LOG_INFO(g_logger) << "afterint: " <<
   //   g_int_valuex_config->getValue(); SYLAR_LOG_INFO(g_logger) << "afterint:"
   //   << g_int_valuex_config->toString();
-  auto v1 = g_int_set_value_config->getValue();
+  auto v1 = g_str_int_umap_value_config->getValue();
+//   for (auto it : v1) {
+//     SYLAR_LOG_INFO(g_logger) << "after: " << it << std::endl;
+//   }
   for (auto it : v1) {
-    SYLAR_LOG_INFO(g_logger) << "after: " << it << std::endl;
+     SYLAR_LOG_INFO(g_logger) << "before: " << it.first << " " << it.second << std::endl;
   }
+  SYLAR_LOG_INFO(g_logger) << "after: " << g_str_int_umap_value_config->toString();
   SYLAR_LOG_INFO(g_logger) << "after: "
-                           << g_int_set_value_config->toString();
+                           << g_str_int_umap_value_config->getDescription();
 
   // auto var = it.find("system.port");
   // if (var != it.end()) {
