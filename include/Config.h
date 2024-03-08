@@ -2,47 +2,278 @@
  * @Author: Gyy0727 3155833132@qq.com
  * @Date: 2024-03-03 12:28:07
  * @LastEditors: Gyy0727 3155833132@qq.com
- * @LastEditTime: 2024-03-04 19:59:45
+ * @LastEditTime: 2024-03-08 13:51:37
  * @FilePath: /sylar/include/Config.h
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置
  * 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
 #pragma once
 #include "Log.h"
+#include "json.hpp"
+#include <algorithm>
 #include <boost/lexical_cast.hpp>
 #include <exception>
+#include <execution>
 #include <future>
+#include <list>
+#include<set>
 #include <map>
 #include <memory>
 #include <sstream>
 #include <string>
-namespace Syalr {
+#include <utility>
+#include <vector>
+#include <unordered_set>
+#include<unordered_map>
+using json = nlohmann::json;
+namespace Sylar {
 class ConfigVarBase {
 public:
   using ptr = std::shared_ptr<ConfigVarBase>;
+
   ConfigVarBase(const std::string &name, const std::string &description = "")
-      : m_name(name), m_description(description) {}
+      : m_name(name), m_description(description) {
+    std::transform(m_name.begin(), m_name.end(), m_name.begin(), ::tolower);
+  }
 
   virtual ~ConfigVarBase() {}
+
   const std::string &getName() const { return m_name; }
+
   const std::string &getDescription() const { return m_description; }
+
   virtual std::string toString() = 0;
+
   virtual bool fromString(const std::string &val) = 0;
 
 protected:
   std::string m_name;
+
   std::string m_description;
 };
-template <class T> class ConfigVar : public ConfigVarBase {
+
+/**
+ * @description: 基本类型的转换
+ * @param {return} boost
+ * @return {*}
+ */
+template <class F, class T> class LexicalCast {
+public:
+  T operator()(const F &v) { return boost::lexical_cast<T>(v); }
+};
+
+/**
+ * @description: 将 string类型转换成vector<T>
+ * @param {string} &val
+ * @return {vector<T>}
+ */
+template <class T> class LexicalCast<std::string, class std::vector<T>> {
+  public:
+  std::vector<T> operator()(const std::string &val) {
+    json j = json::parse(val);
+    typename std::vector<T> vec;
+    for (auto& element : j) {
+        vec.push_back(LexicalCast<std::string, T>()(element.dump(4)));
+    }
+    return vec;
+  }
+};
+/**
+ * @description: 将 vector<T>类型转 string类型
+ * @param {vector<T>} vec
+ * @param {return} j
+ * @return {*}
+ */
+template<class T>
+class LexicalCast<std::vector<T>, std::string> {
+public:
+  std::string operator()(std::vector<T> vec) {
+    json j;
+    for (auto &i : vec) {
+      j.push_back(LexicalCast<T,std::string>()(i));
+    }
+    return j.dump(4);
+    }
+};
+/**
+ * @description: 将string转换成list
+ * @param {string} &val
+ * @return {*}
+ */
+template <class T> class LexicalCast<std::string, class std::list<T>> {
+  public:
+  std::list<T> operator()(const std::string &val) {
+    json j = json::parse(val);
+    typename std::list<T> vec;
+    for (auto& element : j) {
+        vec.push_back(LexicalCast<std::string, T>()(element.dump(4)));
+    }
+    return vec;
+  }
+};
+/**
+ * @description: 将list转换成string
+ * @param {string} &val
+ * @return {*}
+ */
+template<class T>
+class LexicalCast<std::list<T>, std::string> {
+public:
+  std::string operator()(std::list<T> vec) {
+    json j;
+    for (auto &i : vec) {
+      j.push_back(LexicalCast<T,std::string>()(i));
+    }
+    return j.dump(4);
+    }
+};
+/**
+ * @description: 将string转换成set
+ * @param {string} &val
+ * @return {*}
+ */
+template <class T> class LexicalCast<std::string, class std::set<T>> {
+  public:
+  std::set<T> operator()(const std::string &val) {
+    json j = json::parse(val);
+    typename std::set<T> vec;
+    for (auto& element : j) {
+        vec.insert(LexicalCast<std::string, T>()(element.dump(4)));
+    }
+    return vec;
+  }
+};
+/**
+ * @description: 将set转换成string
+ * @param {string} &val
+ * @return {*}
+ */
+template<class T>
+class LexicalCast<std::set<T>, std::string> {
+public:
+  std::string operator()(std::set<T> vec) {
+    json j;
+    for (auto &i : vec) {
+      j.push_back(LexicalCast<T,std::string>()(i));
+    }
+    return j.dump(4);
+    }
+};
+/**
+ * @description: 将string转换成unordered_set
+ * @param {string} &val
+ * @return {*}
+ */
+template <class T> class LexicalCast<std::string, class std::unordered_set<T>> {
+  public:
+  std::unordered_set<T> operator()(const std::string &val) {
+    json j = json::parse(val);
+    typename std::unordered_set<T> vec;
+    for (auto& element : j) {
+        vec.insert(LexicalCast<std::string, T>()(element.dump(4)));
+    }
+    return vec;
+  }
+};
+/**
+ * @description: 将unordered_set转换成string
+ * @param {string} &val
+ * @return {*}
+ */
+template<class T>
+class LexicalCast<std::unordered_set<T>, std::string> {
+public:
+  std::string operator()(std::unordered_set<T> vec) {
+    json j;
+    for (auto &i : vec) {
+      j.push_back(LexicalCast<T,std::string>()(i));
+    }
+    return j.dump(4);
+    }
+};
+/**
+ * @description: 将string转换成 std::map<std::string,T>
+ * @param {string} &val
+ * @return {*}
+ */
+template <class T> class LexicalCast<std::string, class std::map<std::string,T>> {
+  public:
+  std::map<std::string,T> operator()(const std::string &val) {
+    json j = json::parse(val);
+    typename  std::map<std::string,T> vec;
+    for (auto& element : j) {
+        vec.insert(LexicalCast<std::string, T>()(element.dump(4)));
+    }
+    return vec;
+  }
+};
+/**
+ * @description: 将 std::map<std::string,T>转换成string
+ * @param {string} &val
+ * @return {*}
+ */
+template<class T>
+class LexicalCast< std::map<std::string,T>, std::string> {
+public:
+  std::string operator()( std::map<std::string,T> vec) {
+    json j;
+    for (auto &i : vec) {
+      j.push_back(LexicalCast<T,std::string>()(i));
+    }
+    return j.dump(4);
+    }
+};
+/**
+ * @description: 将string转换成 std::unordered_map<std::string,T>
+ * @param {string} &val
+ * @return {*}
+ */
+template <class T> class LexicalCast<std::string, class std::unordered_map<std::string,T>> {
+  public:
+  std::unordered_map<std::string,T> operator()(const std::string &val) {
+    json j = json::parse(val);
+    typename  std::unordered_map<std::string,T> vec;
+    for (auto& element : j) {
+        vec.insert(LexicalCast<std::string, T>()(element.dump(4)));
+    }
+    return vec;
+  }
+};
+/**
+ * @description: 将 std::unordered_map<std::string,T>转换成string
+ * @param {string} &val
+ * @return {*}
+ */
+template<class T>
+class LexicalCast< std::unordered_map<std::string,T>, std::string> {
+public:
+  std::string operator()( std::unordered_map<std::string,T> vec) {
+    json j;
+    for (auto &i : vec) {
+      j.push_back(LexicalCast<T,std::string>()(i));
+    }
+    return j.dump(4);
+    }
+    
+};
+
+
+
+template <class T, class FromStr = LexicalCast<std::string, T>,
+          class ToStr = LexicalCast<T, std::string>>
+class ConfigVar : public ConfigVarBase {
 public:
   using ptr = std::shared_ptr<ConfigVar>;
+
   ConfigVar(const std::string &name, const T &defautl_value,
             const std::string &description = "")
       : ConfigVarBase(name, description), m_val(defautl_value) {}
+
   //*将基本类型转换成string
   std::string toString() override {
     try {
-      return boost::lexical_cast<std::string>(m_val);
+      // return boost::lexical_cast<std::string>(m_val);
+      return ToStr()(m_val);
     } catch (std::exception &e) {
       SYLAR_LOG_ERROR(SYLAR_LOG_ROOT())
           << "ConfigVar::toString exception" << e.what() << "convert"
@@ -50,9 +281,12 @@ public:
     }
     return "";
   }
+
   bool fromString(const std::string &val) override {
     try {
-      m_val = boost::lexical_cast<T>(val);
+      setValue(FromStr()(val));
+
+      return true;
     } catch (std::exception &e) {
       SYLAR_LOG_ERROR(SYLAR_LOG_ROOT())
           << "ConfigVar::toString exception" << e.what()
@@ -60,7 +294,9 @@ public:
     }
     return false;
   }
+
   ~ConfigVar() {}
+
   const T getValue() { return m_val; }
 
   void setValue(const T &v) { m_val = v; }
@@ -71,11 +307,14 @@ private:
 class Config {
 public:
   using ConfigVarMap = std::map<std::string, ConfigVarBase::ptr>;
+
   template <class T>
+
   static typename ConfigVar<T>::ptr
+
   Lookup(const std::string &name, const T &default_value,
+
          const std::string &description = "") {
-    SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << "LOOKUP first";
     auto tmp = Lookup<T>(name);
 
     if (tmp) {
@@ -93,9 +332,10 @@ public:
     GetDatas()[name] = v;
     return v;
   }
+  static ConfigVarBase::ptr LookupBase(const std::string &name);
   template <class T>
   static typename ConfigVar<T>::ptr Lookup(const std::string &name) {
-    SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << "LOOKUP second";
+
     auto it = GetDatas().find(name);
     if (it == GetDatas().end()) {
       return nullptr;
@@ -108,6 +348,6 @@ public:
     return s_datas;
   }
 
-private:
+  static void LoadFromJson(const json &j);
 };
-} // namespace Syalr
+} // namespace Sylar

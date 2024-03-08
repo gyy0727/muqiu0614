@@ -2,7 +2,7 @@
  * @Author: Gyy0727 3155833132@qq.com
  * @Date: 2024-02-25 15:26:41
  * @LastEditors: Gyy0727 3155833132@qq.com
- * @LastEditTime: 2024-03-03 17:03:03
+ * @LastEditTime: 2024-03-06 12:58:31
  * @FilePath: /桌面/sylar/include/Log.h
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置
  * 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
@@ -30,7 +30,7 @@
           logger, level, __FILE__, __LINE__, 0, Sylar::GetThreadId(),          \
           Sylar::GetFiberId(), time(0), "日志器01")))                          \
       .getSS()
-
+#define SYLAR_LOG_NAME(name) Sylar::LoggerMgr::getInstance()->getLogger(name)
 /**
  * @brief 使用流式方式将日志级别debug的日志写入到logger
  */

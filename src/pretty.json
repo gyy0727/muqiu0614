@@ -1,0 +1,38 @@
+{
+    "logs": [
+        {
+            "appender": [
+                {
+                    "path": "log.txt",
+                    "type": "FileLogAppender"
+                },
+                {
+                    "path": "log.txt",
+                    "type": "StdoutLogAppender"
+                }
+            ],
+            "formatter": "%d%T%m%n",
+            "level": "info",
+            "name": "root"
+        },
+        {
+            "appender": [
+                {
+                    "path": "log.txt",
+                    "type": "FileLogAppender"
+                },
+                {
+                    "path": "log.txt",
+                    "type": "StdoutLogAppender"
+                }
+            ],
+            "formatter": "%d%T%m%n",
+            "level": "debug",
+            "name": "system"
+        }
+    ],
+    "system": {
+        "port": 8080,
+        "value": 15
+    }
+}
