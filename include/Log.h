@@ -2,20 +2,21 @@
  * @Author: Gyy0727 3155833132@qq.com
  * @Date: 2024-02-25 15:26:41
  * @LastEditors: Gyy0727 3155833132@qq.com
- * @LastEditTime: 2024-03-06 12:58:31
+ * @LastEditTime: 2024-03-09 20:50:20
  * @FilePath: /桌面/sylar/include/Log.h
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置
  * 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
 #pragma once
+#include "Config.h"
 #include "Singleton.h"
+#include "util.h"
 #include <boost/lexical_cast.hpp>
 #include <cstdint>
 #include <fstream>
 #include <iostream>
 #include <list>
 #include <map>
-#include "util.h"
 #include <memory>
 #include <ostream>
 #include <sstream>
@@ -123,6 +124,7 @@ public:
   };
   //*将日志级别转换成文本内容
   static const char *ToString(LogLevel::Level level);
+  static LogLevel::Level FromString(const std::string &str);
 };
 
 /**
@@ -261,6 +263,7 @@ public:
   bool hasFormatter() { return m_hasFormatter; }
 
   void setLevel(LogLevel::Level val) { m_level = val; }
+  virtual std::string toYamlString() = 0;
 
 protected:
   //*日志级别
@@ -291,7 +294,7 @@ public:
   void fatal(LogEvent::ptr event);
 
   void error(LogEvent::ptr event);
-
+  std::string toYamlString();
   //*添加及删除日志器
   void addAppender(LogAppender::ptr appender);
 
@@ -304,9 +307,7 @@ public:
   void clearAppenders();
 
   const std::string &getName() const { return m_name; }
-  Logger::ptr getRoot() {
-    return m_root;
-  }
+  Logger::ptr getRoot() { return m_root; }
 
   void setFormatter(LogFormatter::ptr val);
 
@@ -328,7 +329,7 @@ public:
   StdoutLogAppender();
 
   using ptr = std::shared_ptr<StdoutLogAppender>;
-
+  std::string toYamlString() override;
   void log(Logger::ptr logger, LogLevel::Level level,
            LogEvent::ptr event) override;
 };
@@ -342,7 +343,7 @@ public:
 
   void log(Logger::ptr logger, LogLevel::Level level,
            LogEvent::ptr event) override;
-
+  std::string toYamlString() override;
   bool reopen();
 
 private:
@@ -372,7 +373,7 @@ private:
 };
 
 // 日志器管理类单例模式
-using  LoggerMgr=Sylar::Singleton<LoggerManager>;
+using LoggerMgr = Sylar::Singleton<LoggerManager>;
 
-}
+} // namespace Sylar
 // namespace Sylar

@@ -2,7 +2,7 @@
  * @Author: Gyy0727 3155833132@qq.com
  * @Date: 2024-03-03 12:28:07
  * @LastEditors: Gyy0727 3155833132@qq.com
- * @LastEditTime: 2024-03-08 15:06:38
+ * @LastEditTime: 2024-03-09 12:57:35
  * @FilePath: /sylar/include/Config.h
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置
  * 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
@@ -12,8 +12,10 @@
 #include "json.hpp"
 #include <algorithm>
 #include <boost/lexical_cast.hpp>
+#include <cstdint>
 #include <exception>
 #include <execution>
+#include <functional>
 #include <future>
 #include <list>
 #include <map>
@@ -199,7 +201,8 @@ public:
     json j = json::parse(val);
     typename std::map<std::string, T> vec;
     for (auto &element : j.items()) {
-      vec.insert(std::make_pair(element.key(), LexicalCast<std::string, T>()(element.value().dump())));
+      vec.insert(std::make_pair(element.key(), LexicalCast<std::string, T>()(
+                                                   element.value().dump())));
     }
     return vec;
   }
@@ -214,7 +217,7 @@ public:
   std::string operator()(std::map<std::string, T> vec) {
     json j;
     for (auto &i : vec) {
-      j[i.first]= LexicalCast<T, std::string>()(i.second);
+      j[i.first] = LexicalCast<T, std::string>()(i.second);
     }
     return j.dump(4);
   }
@@ -231,7 +234,8 @@ public:
     json j = json::parse(val);
     typename std::unordered_map<std::string, T> vec;
     for (auto &element : j.items()) {
-     vec.insert(std::make_pair(element.key(), LexicalCast<std::string, T>()(element.value().dump())));
+      vec.insert(std::make_pair(element.key(), LexicalCast<std::string, T>()(
+                                                   element.value().dump())));
     }
     return vec;
   }
@@ -247,7 +251,7 @@ public:
   std::string operator()(std::unordered_map<std::string, T> vec) {
     json j;
     for (auto &i : vec) {
-      j[i.first]= LexicalCast<T, std::string>()(i.second);
+      j[i.first] = LexicalCast<T, std::string>()(i.second);
     }
     return j.dump(4);
   }
@@ -258,10 +262,11 @@ template <class T, class FromStr = LexicalCast<std::string, T>,
 class ConfigVar : public ConfigVarBase {
 public:
   using ptr = std::shared_ptr<ConfigVar>;
-
+  using on_change_cb =
+      std::function<void(const T &old_value, const T &new_value)>;
   ConfigVar(const std::string &name, const T &defautl_value,
             const std::string &description = "")
-      : ConfigVarBase(name, description), m_val(defautl_value) {}
+      : ConfigVarBase(name, description), m_val(defautl_value), m_cdId(0) {}
 
   //*将基本类型转换成string
   std::string toString() override {
@@ -288,15 +293,33 @@ public:
     }
     return false;
   }
+  uint64_t addListener(on_change_cb cb) {
+    static uint64_t s_fun_id = 0;
+    ++s_fun_id;
+    m_cbs[s_fun_id] = cb;
+    return s_fun_id;
+  }
 
+  void delListener(uint64_t key) { m_cbs.erase(key); }
+
+  on_change_cb getListener(uint64_t key) {
+    auto it = m_cbs.find(key);
+    return it == m_cbs.end() ? nullptr : it->second;
+  }
+
+  void clearListener() { m_cbs.clear(); }
   ~ConfigVar() {}
 
   const T getValue() { return m_val; }
+  const uint64_t getcbId() { return m_cdId; }
+  void setcbId(uint64_t id) { m_cdId = id; }
 
   void setValue(const T &v) { m_val = v; }
 
 private:
   T m_val;
+  uint64_t m_cdId;
+  std::map<uint64_t, on_change_cb> m_cbs;
 };
 class Config {
 public:
@@ -336,7 +359,9 @@ public:
     }
     return std::dynamic_pointer_cast<ConfigVar<T>>(it->second);
   }
+  static void LoadFromConfDir(const std::string &path, bool force = false);
 
+  static void Visit(std::function<void(ConfigVarBase::ptr)> cb);
   static ConfigVarMap &GetDatas() {
     static ConfigVarMap s_datas;
     return s_datas;
