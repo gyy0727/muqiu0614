@@ -3,3 +3,27 @@
 2024-03-02 19:40:20	24702	日志器01	100	[ERROR]	[root]	main.cc:20	zhangdejf
 2024-03-04 16:29:23	16756	日志器01	100	[ERROR]	[root]	main.cc:20	zhangdejf
 2024-03-04 16:34:06	17777	日志器01	100	[ERROR]	[root]	main.cc:20	zhangdejf
+2024-03-10 19:38:01 ----- after hello system
+2024-03-10 19:39:15	58859	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test.cc:31	after hello system
+2024-03-10 19:51:06	60879	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test.cc:31	after hello system
+2024-03-10 19:53:33	61764	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test.cc:31	after hello system
+2024-03-10 20:31:15	67210	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test.cc:31	after hello system
+2024-03-10 21:35:53	81589	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test.cc:22	hello system
+2024-03-10 21:35:53	81589	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test.cc:32	after hello system
+2024-03-10 21:36:31	81993	日志器01	100	[INFO]	[root]	/home/muqiu0614/桌面/sylar/src/test.cc:22	hello system
+2024-03-10 21:36:31	81993	日志器01	100	[INFO]	[root]	/home/muqiu0614/桌面/sylar/src/test.cc:32	after hello system
+2024-03-10 21:39:17	82720	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test.cc:22	hello system
+2024-03-10 21:39:17	82720	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test.cc:32	after hello system
+2024-03-10 21:46:55	84911	日志器01	100	[INFO]	[root]	/home/muqiu0614/桌面/sylar/src/test.cc:23	hello system
+2024-03-10 21:46:55	84911	日志器01	100	[INFO]	[root]	/home/muqiu0614/桌面/sylar/src/test.cc:34	after hello system
+2024-03-10 21:47:43	85205	日志器01	100	[INFO]	[root]	/home/muqiu0614/桌面/sylar/src/../include/Config.h:329	on_logger_conf_changed
+2024-03-10 21:47:43	85205	日志器01	100	[INFO]	[root]	/home/muqiu0614/桌面/sylar/src/test.cc:23	hello system
+2024-03-10 21:47:43	85205	日志器01	100	[INFO]	[root]	/home/muqiu0614/桌面/sylar/src/test.cc:34	after hello system
+2024-03-10 21:48:44	85598	日志器01	100	[INFO]	[root]	/home/muqiu0614/桌面/sylar/src/test.cc:23	hello system
+2024-03-10 21:48:44	85598	日志器01	100	[INFO]	[root]	/home/muqiu0614/桌面/sylar/src/test.cc:34	after hello system
+2024-03-10 21:49:38	86155	日志器01	100	[INFO]	[root]	/home/muqiu0614/桌面/sylar/src/test.cc:23	hello system
+2024-03-10 21:49:38	86155	日志器01	100	[INFO]	[root]	/home/muqiu0614/桌面/sylar/src/test.cc:34	after hello system
+2024-03-10 21:50:16	86645	日志器01	100	[INFO]	[root]	/home/muqiu0614/桌面/sylar/src/test.cc:23	hello system
+2024-03-10 21:50:16	86645	日志器01	100	[INFO]	[root]	/home/muqiu0614/桌面/sylar/src/test.cc:34	after hello system
+2024-03-10 21:52:13	87331	日志器01	100	[INFO]	[root]	/home/muqiu0614/桌面/sylar/src/test.cc:23	hello system
+2024-03-10 21:52:13	87331	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test.cc:34	after hello system

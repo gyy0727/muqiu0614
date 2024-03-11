@@ -2,13 +2,13 @@
  * @Author: Gyy0727 3155833132@qq.com
  * @Date: 2024-02-25 15:26:41
  * @LastEditors: Gyy0727 3155833132@qq.com
- * @LastEditTime: 2024-03-09 20:50:20
+ * @LastEditTime: 2024-03-10 21:14:22
  * @FilePath: /桌面/sylar/include/Log.h
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置
  * 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
 #pragma once
-#include "Config.h"
+
 #include "Singleton.h"
 #include "util.h"
 #include <boost/lexical_cast.hpp>
@@ -32,6 +32,7 @@
           Sylar::GetFiberId(), time(0), "日志器01")))                          \
       .getSS()
 #define SYLAR_LOG_NAME(name) Sylar::LoggerMgr::getInstance()->getLogger(name)
+
 /**
  * @brief 使用流式方式将日志级别debug的日志写入到logger
  */
@@ -103,6 +104,7 @@
  * @brief 获取主日志器
  */
 #define SYLAR_LOG_ROOT() Sylar::LoggerMgr::getInstance()->getRoot()
+
 namespace Sylar {
 
 // 日志事件
@@ -263,7 +265,7 @@ public:
   bool hasFormatter() { return m_hasFormatter; }
 
   void setLevel(LogLevel::Level val) { m_level = val; }
-  virtual std::string toYamlString() = 0;
+  virtual std::string toJsonString() = 0;
 
 protected:
   //*日志级别
@@ -294,7 +296,7 @@ public:
   void fatal(LogEvent::ptr event);
 
   void error(LogEvent::ptr event);
-  std::string toYamlString();
+  std::string toJsonString();
   //*添加及删除日志器
   void addAppender(LogAppender::ptr appender);
 
@@ -329,7 +331,7 @@ public:
   StdoutLogAppender();
 
   using ptr = std::shared_ptr<StdoutLogAppender>;
-  std::string toYamlString() override;
+  std::string toJsonString() override;
   void log(Logger::ptr logger, LogLevel::Level level,
            LogEvent::ptr event) override;
 };
@@ -343,7 +345,7 @@ public:
 
   void log(Logger::ptr logger, LogLevel::Level level,
            LogEvent::ptr event) override;
-  std::string toYamlString() override;
+  std::string toJsonString() override;
   bool reopen();
 
 private:
@@ -361,7 +363,7 @@ public:
 
   Logger::ptr getRoot() const { return m_root; }
 
-  std::string toYamlString();
+  std::string toJsonString();
 
 private:
   /// Mutex

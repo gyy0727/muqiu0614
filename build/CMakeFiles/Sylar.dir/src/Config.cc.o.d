@@ -172,6 +172,11 @@ CMakeFiles/Sylar.dir/src/Config.cc.o: \
  /usr/include/c++/11/bits/atomic_base.h \
  /usr/include/c++/11/bits/atomic_lockfree_defines.h \
  /usr/include/c++/11/backward/auto_ptr.h \
+ /home/muqiu0614/桌面/sylar/src/../include/util.h \
+ /usr/include/x86_64-linux-gnu/sys/syscall.h \
+ /usr/include/x86_64-linux-gnu/asm/unistd.h \
+ /usr/include/x86_64-linux-gnu/asm/unistd_64.h \
+ /usr/include/x86_64-linux-gnu/bits/syscall.h \
  /usr/local/include/boost/lexical_cast.hpp \
  /usr/local/include/boost/lexical_cast/detail/buffer_view.hpp \
  /usr/local/include/boost/lexical_cast/bad_lexical_cast.hpp \
@@ -473,12 +478,7 @@ CMakeFiles/Sylar.dir/src/Config.cc.o: \
  /usr/include/c++/11/bits/list.tcc /usr/include/c++/11/map \
  /usr/include/c++/11/bits/stl_tree.h /usr/include/c++/11/bits/stl_map.h \
  /usr/include/c++/11/bits/stl_multimap.h \
- /usr/include/c++/11/bits/erase_if.h \
- /home/muqiu0614/桌面/sylar/src/../include/util.h \
- /usr/include/x86_64-linux-gnu/sys/syscall.h \
- /usr/include/x86_64-linux-gnu/asm/unistd.h \
- /usr/include/x86_64-linux-gnu/asm/unistd_64.h \
- /usr/include/x86_64-linux-gnu/bits/syscall.h /usr/include/c++/11/vector \
+ /usr/include/c++/11/bits/erase_if.h /usr/include/c++/11/vector \
  /usr/include/c++/11/bits/stl_vector.h \
  /usr/include/c++/11/bits/stl_bvector.h \
  /usr/include/c++/11/bits/vector.tcc \

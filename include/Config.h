@@ -2,7 +2,7 @@
  * @Author: Gyy0727 3155833132@qq.com
  * @Date: 2024-03-03 12:28:07
  * @LastEditors: Gyy0727 3155833132@qq.com
- * @LastEditTime: 2024-03-09 12:57:35
+ * @LastEditTime: 2024-03-10 17:44:01
  * @FilePath: /sylar/include/Config.h
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置
  * 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
@@ -135,9 +135,19 @@ public:
 template <class T> class LexicalCast<std::string, class std::set<T>> {
 public:
   std::set<T> operator()(const std::string &val) {
+
     json j = json::parse(val);
+    // std::cout << j << std::endl;
     typename std::set<T> vec;
     for (auto &element : j) {
+      // std::cout << "elementelementelementelementelementelementelementelementele"
+      //              "mentelement"
+      //           << std::endl;
+      // std::cout << element << std::endl;
+      // std::cout << typeid(T).name() << std::endl;
+      // auto it = element["name"];
+
+      // std::cout << it << std::endl;
       vec.insert(LexicalCast<std::string, T>()(element.dump(4)));
     }
     return vec;
@@ -283,8 +293,8 @@ public:
 
   bool fromString(const std::string &val) override {
     try {
+    
       setValue(FromStr()(val));
-
       return true;
     } catch (std::exception &e) {
       SYLAR_LOG_ERROR(SYLAR_LOG_ROOT())
@@ -314,7 +324,19 @@ public:
   const uint64_t getcbId() { return m_cdId; }
   void setcbId(uint64_t id) { m_cdId = id; }
 
-  void setValue(const T &v) { m_val = v; }
+  void setValue(const T &v) {
+    {
+      // SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << "on_logger_conf_changed";
+      if (v == m_val) {
+        return;
+      }
+      for (auto &i : m_cbs) {
+        i.second(m_val, v);
+      }
+    }
+
+    m_val = v;
+  }
 
 private:
   T m_val;

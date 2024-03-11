@@ -97,10 +97,24 @@ CMakeFiles/Sylar.dir/src/Log.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Sylar.dir/src/Log.cc.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/muqiu0614/桌面/sylar/src/Log.cc -o CMakeFiles/Sylar.dir/src/Log.cc.s
 
+CMakeFiles/Sylar.dir/src/Manager.cc.o: CMakeFiles/Sylar.dir/flags.make
+CMakeFiles/Sylar.dir/src/Manager.cc.o: /home/muqiu0614/桌面/sylar/src/Manager.cc
+CMakeFiles/Sylar.dir/src/Manager.cc.o: CMakeFiles/Sylar.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/muqiu0614/桌面/sylar/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Sylar.dir/src/Manager.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Sylar.dir/src/Manager.cc.o -MF CMakeFiles/Sylar.dir/src/Manager.cc.o.d -o CMakeFiles/Sylar.dir/src/Manager.cc.o -c /home/muqiu0614/桌面/sylar/src/Manager.cc
+
+CMakeFiles/Sylar.dir/src/Manager.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Sylar.dir/src/Manager.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/muqiu0614/桌面/sylar/src/Manager.cc > CMakeFiles/Sylar.dir/src/Manager.cc.i
+
+CMakeFiles/Sylar.dir/src/Manager.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Sylar.dir/src/Manager.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/muqiu0614/桌面/sylar/src/Manager.cc -o CMakeFiles/Sylar.dir/src/Manager.cc.s
+
 CMakeFiles/Sylar.dir/src/main.cc.o: CMakeFiles/Sylar.dir/flags.make
 CMakeFiles/Sylar.dir/src/main.cc.o: /home/muqiu0614/桌面/sylar/src/main.cc
 CMakeFiles/Sylar.dir/src/main.cc.o: CMakeFiles/Sylar.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/muqiu0614/桌面/sylar/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Sylar.dir/src/main.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/muqiu0614/桌面/sylar/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Sylar.dir/src/main.cc.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Sylar.dir/src/main.cc.o -MF CMakeFiles/Sylar.dir/src/main.cc.o.d -o CMakeFiles/Sylar.dir/src/main.cc.o -c /home/muqiu0614/桌面/sylar/src/main.cc
 
 CMakeFiles/Sylar.dir/src/main.cc.i: cmake_force
@@ -114,7 +128,7 @@ CMakeFiles/Sylar.dir/src/main.cc.s: cmake_force
 CMakeFiles/Sylar.dir/src/test.cc.o: CMakeFiles/Sylar.dir/flags.make
 CMakeFiles/Sylar.dir/src/test.cc.o: /home/muqiu0614/桌面/sylar/src/test.cc
 CMakeFiles/Sylar.dir/src/test.cc.o: CMakeFiles/Sylar.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/muqiu0614/桌面/sylar/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Sylar.dir/src/test.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/muqiu0614/桌面/sylar/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Sylar.dir/src/test.cc.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Sylar.dir/src/test.cc.o -MF CMakeFiles/Sylar.dir/src/test.cc.o.d -o CMakeFiles/Sylar.dir/src/test.cc.o -c /home/muqiu0614/桌面/sylar/src/test.cc
 
 CMakeFiles/Sylar.dir/src/test.cc.i: cmake_force
@@ -128,7 +142,7 @@ CMakeFiles/Sylar.dir/src/test.cc.s: cmake_force
 CMakeFiles/Sylar.dir/src/util.cc.o: CMakeFiles/Sylar.dir/flags.make
 CMakeFiles/Sylar.dir/src/util.cc.o: /home/muqiu0614/桌面/sylar/src/util.cc
 CMakeFiles/Sylar.dir/src/util.cc.o: CMakeFiles/Sylar.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/muqiu0614/桌面/sylar/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Sylar.dir/src/util.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/muqiu0614/桌面/sylar/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Sylar.dir/src/util.cc.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Sylar.dir/src/util.cc.o -MF CMakeFiles/Sylar.dir/src/util.cc.o.d -o CMakeFiles/Sylar.dir/src/util.cc.o -c /home/muqiu0614/桌面/sylar/src/util.cc
 
 CMakeFiles/Sylar.dir/src/util.cc.i: cmake_force
@@ -143,6 +157,7 @@ CMakeFiles/Sylar.dir/src/util.cc.s: cmake_force
 Sylar_OBJECTS = \
 "CMakeFiles/Sylar.dir/src/Config.cc.o" \
 "CMakeFiles/Sylar.dir/src/Log.cc.o" \
+"CMakeFiles/Sylar.dir/src/Manager.cc.o" \
 "CMakeFiles/Sylar.dir/src/main.cc.o" \
 "CMakeFiles/Sylar.dir/src/test.cc.o" \
 "CMakeFiles/Sylar.dir/src/util.cc.o"
@@ -152,12 +167,13 @@ Sylar_EXTERNAL_OBJECTS =
 
 /home/muqiu0614/桌面/sylar/bin/Sylar: CMakeFiles/Sylar.dir/src/Config.cc.o
 /home/muqiu0614/桌面/sylar/bin/Sylar: CMakeFiles/Sylar.dir/src/Log.cc.o
+/home/muqiu0614/桌面/sylar/bin/Sylar: CMakeFiles/Sylar.dir/src/Manager.cc.o
 /home/muqiu0614/桌面/sylar/bin/Sylar: CMakeFiles/Sylar.dir/src/main.cc.o
 /home/muqiu0614/桌面/sylar/bin/Sylar: CMakeFiles/Sylar.dir/src/test.cc.o
 /home/muqiu0614/桌面/sylar/bin/Sylar: CMakeFiles/Sylar.dir/src/util.cc.o
 /home/muqiu0614/桌面/sylar/bin/Sylar: CMakeFiles/Sylar.dir/build.make
 /home/muqiu0614/桌面/sylar/bin/Sylar: CMakeFiles/Sylar.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/muqiu0614/桌面/sylar/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable /home/muqiu0614/桌面/sylar/bin/Sylar"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/muqiu0614/桌面/sylar/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable /home/muqiu0614/桌面/sylar/bin/Sylar"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Sylar.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

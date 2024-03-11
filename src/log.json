@@ -3,43 +3,31 @@
     {
       "name": "root",
       "level": "info",
-      "formatter": "%d%T%m%n",
+      "formatter": "%d{%Y-%m-%d %H:%M:%S}%T%t%T%N%T%F%T[%p]%T[%c]%T%f:%l%T%m%n",
       "appender": [
         {
           "type": "FileLogAppender",
-          "path": "log.txt"
+          "path": "/home/muqiu0614/桌面/sylar/src/Log.txt"
         },
         {
-          "type": "StdoutLogAppender",
-          "path": "log.txt"
+          "type": "StdoutLogAppender"
         }
       ]
     },
     {
       "name": "system",
-      "level": "debug",
-      "formatter": "%d%T%m%n",
+      "level": "info",
+      "formatter": "%d{%Y-%m-%d %H:%M:%S}%T%t%T%N%T%F%T[%p]%T[%c]%T%f:%l%T%m%n",
       "appender": [
         {
           "type": "FileLogAppender",
-          "path": "log.txt"
+          "path": "/home/muqiu0614/桌面/sylar/src/Log.txt"
         },
         {
-          "type": "StdoutLogAppender",
-          "path": "log.txt"
+          "type": "StdoutLogAppender"
         }
       ]
     }
-  ],
-  "system": {
-    "aaa": 9999,
-    "value": 15,
-    "int_vec":[3,4,5],
-    "int_list":[829,23],
-    "int_set":[3789,23243],
-    "int_uset":[1111,2222],
-    "str_int_map":{"kkch":65},
-    "str_int_umap":{"dwdwad":677777}
-
-  }
+   
+  ]
 }

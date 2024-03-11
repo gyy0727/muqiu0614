@@ -177,6 +177,30 @@ src/Log.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/Log.cc.s
 .PHONY : src/Log.cc.s
 
+src/Manager.o: src/Manager.cc.o
+.PHONY : src/Manager.o
+
+# target to build an object file
+src/Manager.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/Manager.cc.o
+.PHONY : src/Manager.cc.o
+
+src/Manager.i: src/Manager.cc.i
+.PHONY : src/Manager.i
+
+# target to preprocess a source file
+src/Manager.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/Manager.cc.i
+.PHONY : src/Manager.cc.i
+
+src/Manager.s: src/Manager.cc.s
+.PHONY : src/Manager.s
+
+# target to generate assembly for a file
+src/Manager.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/Manager.cc.s
+.PHONY : src/Manager.cc.s
+
 src/main.o: src/main.cc.o
 .PHONY : src/main.o
 
@@ -264,6 +288,9 @@ help:
 	@echo "... src/Log.o"
 	@echo "... src/Log.i"
 	@echo "... src/Log.s"
+	@echo "... src/Manager.o"
+	@echo "... src/Manager.i"
+	@echo "... src/Manager.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

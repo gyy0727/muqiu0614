@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Sylar.dir/src/Config.cc.o.d"
   "CMakeFiles/Sylar.dir/src/Log.cc.o"
   "CMakeFiles/Sylar.dir/src/Log.cc.o.d"
+  "CMakeFiles/Sylar.dir/src/Manager.cc.o"
+  "CMakeFiles/Sylar.dir/src/Manager.cc.o.d"
   "CMakeFiles/Sylar.dir/src/main.cc.o"
   "CMakeFiles/Sylar.dir/src/main.cc.o.d"
   "CMakeFiles/Sylar.dir/src/test.cc.o"

@@ -2,7 +2,7 @@
  * @Author: Gyy0727 3155833132@qq.com
  * @Date: 2024-03-03 12:28:14
  * @LastEditors: Gyy0727 3155833132@qq.com
- * @LastEditTime: 2024-03-08 12:42:09
+ * @LastEditTime: 2024-03-10 17:39:42
  * @FilePath: /sylar/src/Config.cc
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置
  * 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
@@ -34,6 +34,7 @@ ListAllMember(const std::string &prefix, const json &j,
         << "Config invalid name: " << prefix << " : " << j;
     return;
   }
+
   output.push_back(std::make_pair(prefix, j));
   if (j.is_object()) {
     for (const auto &item : j.items()) {
@@ -41,11 +42,11 @@ ListAllMember(const std::string &prefix, const json &j,
       ListAllMember(prefix.empty() ? item.key() : prefix + "." + item.key(),
                     item.value(), output);
     }
-  // } else if (j.is_array()) {
-  //   for (size_t i = 0; i < j.size(); ++i) {
+    // } else if (j.is_array()) {
+    //   for (size_t i = 0; i < j.size(); ++i) {
 
-  //     ListAllMember(prefix.empty() ? "" : prefix, j[i], output);
-  //   }
+    //     ListAllMember(prefix.empty() ? "" : prefix, j[i], output);
+    //   }
   }
 }
 
@@ -53,7 +54,9 @@ void Sylar::Config::LoadFromJson(const json &root) {
   std::list<std::pair<std::string, const json>> all_jsons;
   ListAllMember("", root, all_jsons);
   for (auto &i : all_jsons) {
+
     std::string key = i.first;
+
     if (key.empty()) {
       continue;
     }
@@ -62,13 +65,18 @@ void Sylar::Config::LoadFromJson(const json &root) {
 
     if (var) {
       if (!i.second.is_object() && !i.second.is_array()) {
+
         var->fromString(i.second.dump());
 
       } else {
         std::stringstream ss;
+
         ss << i.second.dump();
+
         var->fromString(ss.str());
       }
+    } else {
+      std::cout << "can not find" << std::endl;
     }
   }
 } // namespace Sylar
