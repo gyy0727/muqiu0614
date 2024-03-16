@@ -16,6 +16,7 @@
 #include <fstream>
 #include <iostream>
 #include "../include/Manager.h"
+#ifdef a
 int main() {
   static Sylar::Logger::ptr system_log = SYLAR_LOG_NAME("system");
   static Sylar::Logger::ptr system_log2 = Sylar::ManagerLog()("工业园");
@@ -45,3 +46,4 @@ int main() {
   // }
   return 0;
 }
+#endif

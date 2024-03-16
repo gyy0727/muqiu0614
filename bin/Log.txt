@@ -1,1 +1,0 @@
-2024-03-10 21:52:13	87331	日志器01	100	[INFO]	[工业园]	/home/muqiu0614/桌面/sylar/src/test.cc:24	hello system

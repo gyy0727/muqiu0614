@@ -201,6 +201,78 @@ src/Manager.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/Manager.cc.s
 .PHONY : src/Manager.cc.s
 
+src/Mutex.o: src/Mutex.cc.o
+.PHONY : src/Mutex.o
+
+# target to build an object file
+src/Mutex.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/Mutex.cc.o
+.PHONY : src/Mutex.cc.o
+
+src/Mutex.i: src/Mutex.cc.i
+.PHONY : src/Mutex.i
+
+# target to preprocess a source file
+src/Mutex.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/Mutex.cc.i
+.PHONY : src/Mutex.cc.i
+
+src/Mutex.s: src/Mutex.cc.s
+.PHONY : src/Mutex.s
+
+# target to generate assembly for a file
+src/Mutex.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/Mutex.cc.s
+.PHONY : src/Mutex.cc.s
+
+src/PThread.o: src/PThread.cc.o
+.PHONY : src/PThread.o
+
+# target to build an object file
+src/PThread.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/PThread.cc.o
+.PHONY : src/PThread.cc.o
+
+src/PThread.i: src/PThread.cc.i
+.PHONY : src/PThread.i
+
+# target to preprocess a source file
+src/PThread.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/PThread.cc.i
+.PHONY : src/PThread.cc.i
+
+src/PThread.s: src/PThread.cc.s
+.PHONY : src/PThread.s
+
+# target to generate assembly for a file
+src/PThread.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/PThread.cc.s
+.PHONY : src/PThread.cc.s
+
+src/Thread.o: src/Thread.cc.o
+.PHONY : src/Thread.o
+
+# target to build an object file
+src/Thread.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/Thread.cc.o
+.PHONY : src/Thread.cc.o
+
+src/Thread.i: src/Thread.cc.i
+.PHONY : src/Thread.i
+
+# target to preprocess a source file
+src/Thread.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/Thread.cc.i
+.PHONY : src/Thread.cc.i
+
+src/Thread.s: src/Thread.cc.s
+.PHONY : src/Thread.s
+
+# target to generate assembly for a file
+src/Thread.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/Thread.cc.s
+.PHONY : src/Thread.cc.s
+
 src/main.o: src/main.cc.o
 .PHONY : src/main.o
 
@@ -249,6 +321,30 @@ src/test.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/test.cc.s
 .PHONY : src/test.cc.s
 
+src/test_pthread.o: src/test_pthread.cc.o
+.PHONY : src/test_pthread.o
+
+# target to build an object file
+src/test_pthread.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/test_pthread.cc.o
+.PHONY : src/test_pthread.cc.o
+
+src/test_pthread.i: src/test_pthread.cc.i
+.PHONY : src/test_pthread.i
+
+# target to preprocess a source file
+src/test_pthread.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/test_pthread.cc.i
+.PHONY : src/test_pthread.cc.i
+
+src/test_pthread.s: src/test_pthread.cc.s
+.PHONY : src/test_pthread.s
+
+# target to generate assembly for a file
+src/test_pthread.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/test_pthread.cc.s
+.PHONY : src/test_pthread.cc.s
+
 src/util.o: src/util.cc.o
 .PHONY : src/util.o
 
@@ -291,12 +387,24 @@ help:
 	@echo "... src/Manager.o"
 	@echo "... src/Manager.i"
 	@echo "... src/Manager.s"
+	@echo "... src/Mutex.o"
+	@echo "... src/Mutex.i"
+	@echo "... src/Mutex.s"
+	@echo "... src/PThread.o"
+	@echo "... src/PThread.i"
+	@echo "... src/PThread.s"
+	@echo "... src/Thread.o"
+	@echo "... src/Thread.i"
+	@echo "... src/Thread.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
 	@echo "... src/test.o"
 	@echo "... src/test.i"
 	@echo "... src/test.s"
+	@echo "... src/test_pthread.o"
+	@echo "... src/test_pthread.i"
+	@echo "... src/test_pthread.s"
 	@echo "... src/util.o"
 	@echo "... src/util.i"
 	@echo "... src/util.s"

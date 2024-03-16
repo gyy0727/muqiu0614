@@ -2,58 +2,34 @@
  * @Author: Gyy0727 3155833132@qq.com
  * @Date: 2024-02-27 19:24:26
  * @LastEditors: Gyy0727 3155833132@qq.com
- * @LastEditTime: 2024-02-28 15:43:29
+ * @LastEditTime: 2024-03-15 16:22:12
  * @FilePath: /桌面/sylar/test/src/test.cc
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置
  * 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
-#include "log.h"
-#include <climits>
-#include <iostream>
-#include <memory>
-#include <sstream>
-using namespace sylar;
-using namespace std;
-class b;
-class b {
-  public:
-  b() {}
-  stringstream &content() { return ss; }
-  string get() { return ss.str(); }
-  stringstream ss;
-};
-class a {
-  public:
-  ~a() { cout << "fewhfioewhof" << d.get(); }
-  b d;
-};
+#include "../include/Scheduler.h"
+#include "../../include/Log.h"
 
-class c {};
-int main() {
-    sylar::Logger::ptr logger(new sylar::Logger);
-    logger->addAppender(sylar::LogAppender ::ptr(new sylar
-    ::StdoutLogAppender)); sylar::FileLogAppender::ptr file_appender(
-        new sylar ::FileLogAppender("./log.txt"));
-    sylar::LogFormatter::ptr fmt(new sylar ::LogFormatter("dTpmn"));
-    file_appender->setFormatter(fmt);
-    file_appender->setLevel(sylar::LogLevel ::ERROR);
-    logger->addAppender(file_appender);
+static Sylar::Logger::ptr g_logger = SYLAR_LOG_ROOT();
 
-    std::cout << "hello sylar log" << std::endl;
-    SYLAR_LOG_INFO(logger) << "test macro";
-    SYLAR_LOG_ERROR(logger) << "test macro error";
+void test_fiber() {
+    static int s_count = 10;
+    SYLAR_LOG_INFO(g_logger) << "test in fiber s_count=" << s_count;
 
-    // sylar::Logger::ptr logger1(new sylar::Logger);
-    // logger1->addAppender(sylar::LogAppender::ptr(new
-    // sylar::StdoutLogAppender)); sylar::LogEvent::ptr event(new
-    // sylar::LogEvent(logger1, sylar::LogLevel::DEBUG,
-    //                                                __FILE__, __LINE__, 0,
-    //                                                100, 1000, time(0),
-    //                                                "name"));
-    // logger1->log(sylar::LogLevel::DEBUG, event);
-  // a A;
-  
-  // A.d.content() << "sss";
- 
-  return 0;
+    // sleep(1);
+    if(--s_count >= 0) {
+        sylar::Scheduler::GetThis()->schedule(&test_fiber, Sylar::GetThreadId());
+    }
+}
+
+int main(int argc, char** argv) {
+    SYLAR_LOG_INFO(g_logger) << "main";
+    sylar::Scheduler sc(10, false, "test");
+    sc.start();
+    // sleep(2);
+    SYLAR_LOG_INFO(g_logger) << "schedule";
+    sc.schedule(&test_fiber);
+    sc.stop();
+    SYLAR_LOG_INFO(g_logger) << "over";
+    return 0;
 }
