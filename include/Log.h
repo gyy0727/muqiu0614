@@ -2,13 +2,14 @@
  * @Author: Gyy0727 3155833132@qq.com
  * @Date: 2024-02-25 15:26:41
  * @LastEditors: Gyy0727 3155833132@qq.com
- * @LastEditTime: 2024-03-10 21:14:22
+ * @LastEditTime: 2024-03-16 20:59:05
  * @FilePath: /桌面/sylar/include/Log.h
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置
  * 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
 #pragma once
 
+#include "Mutex.h"
 #include "Singleton.h"
 #include "util.h"
 #include <boost/lexical_cast.hpp>
@@ -249,6 +250,7 @@ private:
 // *日志输出地
 class LogAppender {
 public:
+  using Mutex = Spinlock;
   using ptr = std::shared_ptr<LogAppender>;
 
   virtual ~LogAppender() {}
@@ -269,6 +271,7 @@ public:
 
 protected:
   //*日志级别
+  Mutex m_mutex;
   LogLevel::Level m_level = LogLevel::DEBUG;
 
   //* 是否有自己的日志格式器
@@ -281,6 +284,7 @@ protected:
 //*日志器
 class Logger : public std::enable_shared_from_this<Logger> {
 public:
+  using Mutex = Spinlock;
   using ptr = std::shared_ptr<Logger>;
 
   Logger(const std::string &name = "root");
@@ -318,6 +322,7 @@ public:
   LogFormatter::ptr getFormatter();
 
 private:
+  Mutex m_mutex;
   std::string m_name;                      //*日志名称
   LogLevel::Level m_level;                 //*日志级别
   std::list<LogAppender::ptr> m_appenders; //*Appender集合
@@ -355,6 +360,7 @@ private:
 };
 class LoggerManager {
 public:
+  using Mutex = Spinlock;
   LoggerManager();
 
   Logger::ptr getLogger(const std::string &name);
@@ -372,6 +378,7 @@ private:
   std::map<std::string, Logger::ptr> m_loggers;
   /// 主日志器
   Logger::ptr m_root;
+  Mutex m_mutex;
 };
 
 // 日志器管理类单例模式

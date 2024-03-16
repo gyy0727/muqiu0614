@@ -2,7 +2,7 @@
  * @Author: Gyy0727 3155833132@qq.com
  * @Date: 2024-03-14 18:44:05
  * @LastEditors: Gyy0727 3155833132@qq.com
- * @LastEditTime: 2024-03-14 19:14:20
+ * @LastEditTime: 2024-03-16 21:00:36
  * @FilePath: /sylar/include/Scheduler.h
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置
  * 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
@@ -14,7 +14,7 @@
 #include <boost/exception/exception.hpp>
 namespace Sylar {
 class Scheduler {
-  public:
+public:
   using ptr = boost::shared_ptr<Scheduler>;
   using MutexType = Mutex;
   //*线程数量,是否使用当前线程作为调度线程,调度线程名字
@@ -63,11 +63,11 @@ class Scheduler {
 
   //*调度协程 协程或函数 协程执行的线程id,-1标识任意线程
 
-  template <class FiberOrCb> void schedule(FiberOrCb fc, int thread = -1) {
+  template <class FiberOrCb> void submitTask(FiberOrCb fc, int thread = -1) {
     bool need_tickle = false;
     {
       MutexType::Lock lock(m_mutex);
-      need_tickle = scheduleNoLock(fc, thread);
+      need_tickle = submit(fc, thread);
     }
 
     if (need_tickle) {
@@ -78,12 +78,12 @@ class Scheduler {
   //*批量调度协程 协程数组的开始 协程数组的结束
 
   template <class InputIterator>
-  void schedule(InputIterator begin, InputIterator end) {
+  void submitTask(InputIterator begin, InputIterator end) {
     bool need_tickle = false;
     {
       MutexType::Lock lock(m_mutex);
       while (begin != end) {
-        need_tickle = scheduleNoLock(&*begin, -1) || need_tickle;
+        need_tickle = submit(&*begin, -1) || need_tickle;
         ++begin;
       }
     }
@@ -114,13 +114,13 @@ protected:
   //* 设置当前的协程调度器
 
   void setThis();
-
+  // void switchTo(int thread = -1);
   //*是否有空闲线程
 
   bool hasIdleThreads() { return m_idleThreadCount > 0; }
 
 private:
-  template <class FiberOrCb> bool scheduleNoLock(FiberOrCb fc, int thread) {
+  template <class FiberOrCb> bool submit(FiberOrCb fc, int thread) {
     bool need_tickle = m_fibers.empty();
     FiberAndThread ft(fc, thread);
     if (ft.fiber || ft.cb) {
@@ -154,5 +154,13 @@ protected:
 
   int m_rootThread = 0; //* 主线程id(use_caller)
 };
+// class SchedulerSwitcher : public Noncopyable {
+// public:
+//   SchedulerSwitcher(Scheduler *target = nullptr);
+//   ~SchedulerSwitcher();
+
+// private:
+//   Scheduler *m_caller;
+// };
 
 } // namespace Sylar

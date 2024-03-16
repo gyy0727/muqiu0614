@@ -2,7 +2,7 @@
  * @Author: Gyy0727 3155833132@qq.com
  * @Date: 2024-03-13 14:14:36
  * @LastEditors: Gyy0727 3155833132@qq.com
- * @LastEditTime: 2024-03-16 13:32:21
+ * @LastEditTime: 2024-03-17 01:26:03
  * @FilePath: /sylar/src/Fiber.cc
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置
  * 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
@@ -48,10 +48,11 @@ Fiber::Fiber() {
 //*创建新协程
 Fiber::Fiber(std::function<void()> cb, size_t stacksize, bool use_caller)
     : m_id(s_fiber_id++), m_cb(cb), m_runInScheduler(use_caller) {
-  SetThis(this);
+  //*这里不能加setthis,因为这样子创建主协程的时候就会出问题
+  //* SetThis(this);
   ++s_fiber_count;
   //*设置堆栈信息
-  m_stacksize = stacksize ? stacksize : g_fiber_stack_size->getValue();
+  m_stacksize = stacksize ? stacksize :128 * 1024;
   m_stack = MallocStackAllocator::Alloc(m_stacksize);
   //*保存当前上下文
   getcontext(&m_ucp);
@@ -61,11 +62,11 @@ Fiber::Fiber(std::function<void()> cb, size_t stacksize, bool use_caller)
   m_ucp.uc_stack.ss_sp = m_stack;
   m_ucp.uc_stack.ss_size = m_stacksize;
   //*绑定协程函数
-  if (!use_caller) {
-    makecontext(&m_ucp, &Fiber::MainFunc, 0);
-  } else {
-    makecontext(&m_ucp, &Fiber::CallerMainFunc, 0);
-  }
+  // if (!use_caller) {
+  makecontext(&m_ucp, &Fiber::MainFunc, 0);
+  // } else {
+  //   makecontext(&m_ucp, &Fiber::CallerMainFunc, 0);
+  // }
 }
 
 Fiber::~Fiber() {
@@ -96,7 +97,7 @@ void Fiber::reset(std::function<void()> &cb) {
 //*从主协程跳转到子协程
 void Fiber::resume() {
   SetThis(this);
-  m_state =RUNING;
+  m_state = RUNING;
   if (m_runInScheduler) {
     swapcontext(&Scheduler::GetMainFiber()->m_ucp, &m_ucp);
   } else {
@@ -108,13 +109,13 @@ void Fiber::yield() {
 
   SetThis(t_threadFiber.get());
   if (m_state != TERM) {
-        m_state = READY;
-    }
+    m_state = READY;
+  }
 
   if (m_runInScheduler) {
-    swapcontext(&m_ucp,&Scheduler::GetMainFiber()->m_ucp);
+    swapcontext(&m_ucp, &Scheduler::GetMainFiber()->m_ucp);
   } else {
-    swapcontext( &m_ucp,&t_threadFiber->m_ucp);
+    swapcontext(&m_ucp, &t_threadFiber->m_ucp);
   }
 }
 
@@ -122,7 +123,15 @@ void Fiber::yield() {
 void Fiber::SetThis(Fiber *f) { t_fiber = f; }
 
 //* 返回当前协程
-Fiber::ptr Fiber::GetThis() { return t_fiber->shared_from_this(); }
+Fiber::ptr Fiber::GetThis() {
+  if (t_fiber) {
+    
+    return t_fiber->shared_from_this();
+  } else {
+    
+    return nullptr;
+  }
+}
 Fiber::ptr Fiber::GetMainFiber() {
   if (t_fiber) {
     return t_threadFiber->shared_from_this();
@@ -131,18 +140,35 @@ Fiber::ptr Fiber::GetMainFiber() {
     t_threadFiber = main_fiber;
     return t_threadFiber->shared_from_this();
   }
- }
+}
 //* 协程切换到后台，并且设置为Ready状态
-void Fiber::YieldToReady() {}
+// void Fiber::YieldToReady() {}
 
 //* 协程切换到后台，并且设置为Hold状态
-void Fiber::YieldToHold() {}
+// void Fiber::YieldToHold() {}
 
 //* 总协程数
 uint64_t Fiber::TotalFibers() { return s_fiber_count; }
 
 void Fiber::MainFunc() {
-  Fiber::ptr cur=GetThis();
+  Fiber::ptr cur = GetThis();
+  try {
+    cur->m_cb();
+    cur->m_cb = nullptr;
+    cur->m_state = TERM;
+  } catch (std::exception &ex) {
+    cur->m_state = EXCEPT;
+    SYLAR_LOG_ERROR(ManagerLog()("system")) << "Fiber Except: " << ex.what();
+  } catch (...) {
+    cur->m_state = EXCEPT;
+    SYLAR_LOG_ERROR(ManagerLog()("system"))
+        << "Fiber Except"
+        << " fiber_id=" << cur->getId() << std::endl;
+  }
+  auto ptr = cur.get();
+  cur.reset();
+  //*执行完,切换回调度线程
+  ptr->yield();
 }
 
 } // namespace Sylar

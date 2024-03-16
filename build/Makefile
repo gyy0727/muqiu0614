@@ -153,6 +153,54 @@ src/Config.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/Config.cc.s
 .PHONY : src/Config.cc.s
 
+src/Fiber.o: src/Fiber.cc.o
+.PHONY : src/Fiber.o
+
+# target to build an object file
+src/Fiber.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/Fiber.cc.o
+.PHONY : src/Fiber.cc.o
+
+src/Fiber.i: src/Fiber.cc.i
+.PHONY : src/Fiber.i
+
+# target to preprocess a source file
+src/Fiber.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/Fiber.cc.i
+.PHONY : src/Fiber.cc.i
+
+src/Fiber.s: src/Fiber.cc.s
+.PHONY : src/Fiber.s
+
+# target to generate assembly for a file
+src/Fiber.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/Fiber.cc.s
+.PHONY : src/Fiber.cc.s
+
+src/IoManager.o: src/IoManager.cc.o
+.PHONY : src/IoManager.o
+
+# target to build an object file
+src/IoManager.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/IoManager.cc.o
+.PHONY : src/IoManager.cc.o
+
+src/IoManager.i: src/IoManager.cc.i
+.PHONY : src/IoManager.i
+
+# target to preprocess a source file
+src/IoManager.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/IoManager.cc.i
+.PHONY : src/IoManager.cc.i
+
+src/IoManager.s: src/IoManager.cc.s
+.PHONY : src/IoManager.s
+
+# target to generate assembly for a file
+src/IoManager.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/IoManager.cc.s
+.PHONY : src/IoManager.cc.s
+
 src/Log.o: src/Log.cc.o
 .PHONY : src/Log.o
 
@@ -249,6 +297,30 @@ src/PThread.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/PThread.cc.s
 .PHONY : src/PThread.cc.s
 
+src/Scheduler.o: src/Scheduler.cc.o
+.PHONY : src/Scheduler.o
+
+# target to build an object file
+src/Scheduler.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/Scheduler.cc.o
+.PHONY : src/Scheduler.cc.o
+
+src/Scheduler.i: src/Scheduler.cc.i
+.PHONY : src/Scheduler.i
+
+# target to preprocess a source file
+src/Scheduler.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/Scheduler.cc.i
+.PHONY : src/Scheduler.cc.i
+
+src/Scheduler.s: src/Scheduler.cc.s
+.PHONY : src/Scheduler.s
+
+# target to generate assembly for a file
+src/Scheduler.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/Scheduler.cc.s
+.PHONY : src/Scheduler.cc.s
+
 src/Thread.o: src/Thread.cc.o
 .PHONY : src/Thread.o
 
@@ -321,6 +393,30 @@ src/test.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/test.cc.s
 .PHONY : src/test.cc.s
 
+src/test__scheduler.o: src/test__scheduler.cc.o
+.PHONY : src/test__scheduler.o
+
+# target to build an object file
+src/test__scheduler.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/test__scheduler.cc.o
+.PHONY : src/test__scheduler.cc.o
+
+src/test__scheduler.i: src/test__scheduler.cc.i
+.PHONY : src/test__scheduler.i
+
+# target to preprocess a source file
+src/test__scheduler.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/test__scheduler.cc.i
+.PHONY : src/test__scheduler.cc.i
+
+src/test__scheduler.s: src/test__scheduler.cc.s
+.PHONY : src/test__scheduler.s
+
+# target to generate assembly for a file
+src/test__scheduler.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/test__scheduler.cc.s
+.PHONY : src/test__scheduler.cc.s
+
 src/test_pthread.o: src/test_pthread.cc.o
 .PHONY : src/test_pthread.o
 
@@ -381,6 +477,12 @@ help:
 	@echo "... src/Config.o"
 	@echo "... src/Config.i"
 	@echo "... src/Config.s"
+	@echo "... src/Fiber.o"
+	@echo "... src/Fiber.i"
+	@echo "... src/Fiber.s"
+	@echo "... src/IoManager.o"
+	@echo "... src/IoManager.i"
+	@echo "... src/IoManager.s"
 	@echo "... src/Log.o"
 	@echo "... src/Log.i"
 	@echo "... src/Log.s"
@@ -393,6 +495,9 @@ help:
 	@echo "... src/PThread.o"
 	@echo "... src/PThread.i"
 	@echo "... src/PThread.s"
+	@echo "... src/Scheduler.o"
+	@echo "... src/Scheduler.i"
+	@echo "... src/Scheduler.s"
 	@echo "... src/Thread.o"
 	@echo "... src/Thread.i"
 	@echo "... src/Thread.s"
@@ -402,6 +507,9 @@ help:
 	@echo "... src/test.o"
 	@echo "... src/test.i"
 	@echo "... src/test.s"
+	@echo "... src/test__scheduler.o"
+	@echo "... src/test__scheduler.i"
+	@echo "... src/test__scheduler.s"
 	@echo "... src/test_pthread.o"
 	@echo "... src/test_pthread.i"
 	@echo "... src/test_pthread.s"

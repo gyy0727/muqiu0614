@@ -2,7 +2,7 @@
  * @Author: Gyy0727 3155833132@qq.com
  * @Date: 2024-03-13 14:14:29
  * @LastEditors: Gyy0727 3155833132@qq.com
- * @LastEditTime: 2024-03-16 12:36:06
+ * @LastEditTime: 2024-03-16 20:13:48
  * @FilePath: /sylar/include/Fiber.h
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置
  * 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
@@ -36,7 +36,7 @@ public:
   //*主协程,负责调度
   Fiber();
   Fiber(std::function<void()> cb, size_t stacksize = 0,
-        bool use_caller = false);
+        bool use_caller = true);
   ~Fiber();
   void reset(std::function<void()> &cb);
   void resume();
@@ -52,15 +52,15 @@ public:
   static Fiber::ptr GetThis();
   static Fiber::ptr GetMainFiber();
 
-  static void YieldToReady();
+  // static void YieldToReady();
 
-  static void YieldToHold();
+  // static void YieldToHold();
 
   static uint64_t TotalFibers();
 
   static void MainFunc();
 
-  static void CallerMainFunc();
+  // static void CallerMainFunc();
 
   static uint64_t GetFiberId();
 

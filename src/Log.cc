@@ -328,7 +328,7 @@ void FileLogAppender::log(Logger::ptr logger, LogLevel::Level level,
 }
 //*文件的重新打开
 bool FileLogAppender::reopen() {
-  if (m_filestream) {
+  if (m_filestream.is_open()) {
     m_filestream.close();
   }
   m_filestream.open(m_name, std::ios::out | std::ios::app);

@@ -1,35 +1,262 @@
-2024-03-02 19:39:42	24524	无敌霸王	100	[ERROR]	[root]	main.cc:20	zhangdejf
-2024-03-02 19:40:15	24690	无敌霸王	100	[ERROR]	[root]	main.cc:20	zhangdejf
-2024-03-02 19:40:20	24702	日志器01	100	[ERROR]	[root]	main.cc:20	zhangdejf
-2024-03-04 16:29:23	16756	日志器01	100	[ERROR]	[root]	main.cc:20	zhangdejf
-2024-03-04 16:34:06	17777	日志器01	100	[ERROR]	[root]	main.cc:20	zhangdejf
-2024-03-10 19:38:01 ----- after hello system
-2024-03-10 19:39:15	58859	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test.cc:31	after hello system
-2024-03-10 19:51:06	60879	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test.cc:31	after hello system
-2024-03-10 19:53:33	61764	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test.cc:31	after hello system
-2024-03-10 20:31:15	67210	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test.cc:31	after hello system
-2024-03-10 21:35:53	81589	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test.cc:22	hello system
-2024-03-10 21:35:53	81589	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test.cc:32	after hello system
-2024-03-10 21:36:31	81993	日志器01	100	[INFO]	[root]	/home/muqiu0614/桌面/sylar/src/test.cc:22	hello system
-2024-03-10 21:36:31	81993	日志器01	100	[INFO]	[root]	/home/muqiu0614/桌面/sylar/src/test.cc:32	after hello system
-2024-03-10 21:39:17	82720	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test.cc:22	hello system
-2024-03-10 21:39:17	82720	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test.cc:32	after hello system
-2024-03-10 21:46:55	84911	日志器01	100	[INFO]	[root]	/home/muqiu0614/桌面/sylar/src/test.cc:23	hello system
-2024-03-10 21:46:55	84911	日志器01	100	[INFO]	[root]	/home/muqiu0614/桌面/sylar/src/test.cc:34	after hello system
-2024-03-10 21:47:43	85205	日志器01	100	[INFO]	[root]	/home/muqiu0614/桌面/sylar/src/../include/Config.h:329	on_logger_conf_changed
-2024-03-10 21:47:43	85205	日志器01	100	[INFO]	[root]	/home/muqiu0614/桌面/sylar/src/test.cc:23	hello system
-2024-03-10 21:47:43	85205	日志器01	100	[INFO]	[root]	/home/muqiu0614/桌面/sylar/src/test.cc:34	after hello system
-2024-03-10 21:48:44	85598	日志器01	100	[INFO]	[root]	/home/muqiu0614/桌面/sylar/src/test.cc:23	hello system
-2024-03-10 21:48:44	85598	日志器01	100	[INFO]	[root]	/home/muqiu0614/桌面/sylar/src/test.cc:34	after hello system
-2024-03-10 21:49:38	86155	日志器01	100	[INFO]	[root]	/home/muqiu0614/桌面/sylar/src/test.cc:23	hello system
-2024-03-10 21:49:38	86155	日志器01	100	[INFO]	[root]	/home/muqiu0614/桌面/sylar/src/test.cc:34	after hello system
-2024-03-10 21:50:16	86645	日志器01	100	[INFO]	[root]	/home/muqiu0614/桌面/sylar/src/test.cc:23	hello system
-2024-03-10 21:50:16	86645	日志器01	100	[INFO]	[root]	/home/muqiu0614/桌面/sylar/src/test.cc:34	after hello system
-2024-03-10 21:52:13	87331	日志器01	100	[INFO]	[root]	/home/muqiu0614/桌面/sylar/src/test.cc:23	hello system
-2024-03-10 21:52:13	87331	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test.cc:34	after hello system
-2024-03-13 13:50:13	62302	日志器01	100	[INFO]	[root]	/home/muqiu0614/桌面/sylar/src/test.cc:23	hello system
-2024-03-13 13:50:13	62302	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test.cc:34	after hello system
-2024-03-13 13:51:03	62791	日志器01	100	[INFO]	[root]	/home/muqiu0614/桌面/sylar/src/test.cc:23	hello system
-2024-03-13 13:51:03	62791	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test.cc:34	after hello system
-2024-03-13 13:51:48	63062	日志器01	100	[INFO]	[root]	/home/muqiu0614/桌面/sylar/src/test.cc:23	hello system
-2024-03-13 13:51:48	63062	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test.cc:34	after hello system
+2024-03-17 01:16:50	149367	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:26		main
+2024-03-17 01:16:50	149367	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:71		start lock free 
+2024-03-17 01:16:50	149368	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Fiber.cc:128		get this is not null
+2024-03-17 01:16:50	149369	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Fiber.cc:128		get this is not null
+2024-03-17 01:16:50	149370	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Fiber.cc:128		get this is not null
+2024-03-17 01:16:50	149368	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= -1820212601
+2024-03-17 01:16:50	149370	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= -1820212601
+2024-03-17 01:16:50	149369	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= -1820212601
+2024-03-17 01:16:52	149367	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:38		schedule
+2024-03-17 01:16:55	149368	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Fiber.cc:128		get this is not null
+2024-03-17 01:16:55	149370	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Fiber.cc:128		get this is not null
+2024-03-17 01:16:55	149368	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= -1820212601
+2024-03-17 01:16:55	149369	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Fiber.cc:128		get this is not null
+2024-03-17 01:16:55	149369	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= -1820212601
+2024-03-17 01:16:55	149370	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= -1820212601
+2024-03-17 01:17:00	149368	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Fiber.cc:128		get this is not null
+2024-03-17 01:17:00	149368	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Fiber.cc:128		get this is not null
+2024-03-17 01:17:00	149369	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Fiber.cc:128		get this is not null
+2024-03-17 01:17:00	149368	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= -1820212601
+2024-03-17 01:17:00	149369	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= -1820212601
+2024-03-17 01:17:00	149370	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Fiber.cc:128		get this is not null
+2024-03-17 01:17:00	149370	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:240		idle
+2024-03-17 01:17:00	149370	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:211		idle fiber term
+2024-03-17 01:17:00	149370	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:224		Scheduler::run() exit
+2024-03-17 01:17:05	149368	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Fiber.cc:128		get this is not null
+2024-03-17 01:17:05	149369	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Fiber.cc:128		get this is not null
+2024-03-17 01:17:05	149368	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:240		idle
+2024-03-17 01:17:05	149369	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:240		idle
+2024-03-17 01:17:05	149368	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:211		idle fiber term
+2024-03-17 01:17:05	149369	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:211		idle fiber term
+2024-03-17 01:17:05	149368	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:224		Scheduler::run() exit
+2024-03-17 01:17:05	149369	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:224		Scheduler::run() exit
+2024-03-17 01:17:05	149367	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:41		over
+2024-03-17 01:18:20	149812	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:26		main
+2024-03-17 01:18:20	149812	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:71		start lock free 
+2024-03-17 01:18:20	149813	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= -137706873
+2024-03-17 01:18:20	149813	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= -137706873
+2024-03-17 01:18:20	149814	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= -137706873
+2024-03-17 01:18:20	149815	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= -137706873
+2024-03-17 01:18:22	149812	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:38		schedule
+2024-03-17 01:18:25	149813	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= -137706873
+2024-03-17 01:18:25	149814	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= -137706873
+2024-03-17 01:18:25	149815	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= -137706873
+2024-03-17 01:18:30	149813	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= -137706873
+2024-03-17 01:18:30	149815	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:240		idle
+2024-03-17 01:18:30	149815	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:240		idle
+2024-03-17 01:18:30	149814	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= -137706873
+2024-03-17 01:18:30	149815	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:211		idle fiber term
+2024-03-17 01:18:35	149813	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:240		idle
+2024-03-17 01:18:35	149813	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:211		idle fiber term
+2024-03-17 01:18:35	149814	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:240		idle
+2024-03-17 01:18:35	149814	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:211		idle fiber term
+2024-03-17 01:18:35	149812	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:41		over
+2024-03-17 01:22:49	151891	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:26		main
+2024-03-17 01:22:49	151891	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:71		start lock free 
+2024-03-17 01:22:49	151892	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= 1749594759
+2024-03-17 01:22:49	151893	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= 1749594759
+2024-03-17 01:22:49	151894	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= 1749594759
+2024-03-17 01:22:51	151891	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:38		schedule
+2024-03-17 01:22:54	151892	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= 1749594759
+2024-03-17 01:22:54	151893	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= 1749594759
+2024-03-17 01:22:54	151894	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= 1749594759
+2024-03-17 01:22:59	151892	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= 1749594759
+2024-03-17 01:22:59	151893	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= 1749594759
+2024-03-17 01:22:59	151894	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:240		idle
+2024-03-17 01:22:59	151894	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:211		idle fiber term
+2024-03-17 01:23:04	151892	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:240		idle
+2024-03-17 01:23:04	151892	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:211		idle fiber term
+2024-03-17 01:23:04	151893	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:240		idle
+2024-03-17 01:23:04	151893	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:211		idle fiber term
+2024-03-17 01:23:04	151891	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:41		over
+2024-03-17 01:23:46	152326	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:26		main
+2024-03-17 01:23:46	152326	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:71		start lock free 
+2024-03-17 01:23:46	152327	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Fiber.cc:128		get this is not null
+2024-03-17 01:23:46	152329	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Fiber.cc:128		get this is not null
+2024-03-17 01:23:46	152328	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Fiber.cc:128		get this is not null
+2024-03-17 01:23:46	152328	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= -538029433
+2024-03-17 01:23:46	152328	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= -538029433
+2024-03-17 01:23:46	152327	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= -538029433
+2024-03-17 01:23:46	152329	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= -538029433
+2024-03-17 01:23:48	152326	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:38		schedule
+2024-03-17 01:23:51	152328	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Fiber.cc:128		get this is not null
+2024-03-17 01:23:51	152328	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= -538029433
+2024-03-17 01:23:51	152327	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Fiber.cc:128		get this is not null
+2024-03-17 01:23:51	152329	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Fiber.cc:128		get this is not null
+2024-03-17 01:23:51	152327	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= -538029433
+2024-03-17 01:23:51	152329	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= -538029433
+2024-03-17 01:23:56	152328	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Fiber.cc:128		get this is not null
+2024-03-17 01:23:56	152328	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= -538029433
+2024-03-17 01:23:56	152327	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Fiber.cc:128		get this is not null
+2024-03-17 01:23:56	152327	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= -538029433
+2024-03-17 01:23:56	152329	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Fiber.cc:128		get this is not null
+2024-03-17 01:23:56	152329	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:240		idle
+2024-03-17 01:23:56	152329	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:211		idle fiber term
+2024-03-17 01:23:56	152329	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:224		Scheduler::run() exit
+2024-03-17 01:24:33	152666	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:26		main
+2024-03-17 01:24:33	152666	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:71		start lock free 
+2024-03-17 01:24:33	152669	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Fiber.cc:128		get this is not null
+2024-03-17 01:24:33	152669	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Fiber.cc:128		get this is not null
+2024-03-17 01:24:33	152668	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Fiber.cc:128		get this is not null
+2024-03-17 01:24:33	152669	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Fiber.cc:128		get this is not null
+2024-03-17 01:24:33	152668	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Fiber.cc:128		get this is not null
+2024-03-17 01:24:33	152667	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Fiber.cc:128		get this is not null
+2024-03-17 01:24:33	152668	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= 860394119
+2024-03-17 01:24:33	152668	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= 860394119
+2024-03-17 01:24:33	152669	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= 860394119
+2024-03-17 01:24:33	152667	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= 860394119
+2024-03-17 01:24:35	152666	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:38		schedule
+2024-03-17 01:24:38	152669	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Fiber.cc:128		get this is not null
+2024-03-17 01:25:00	152672	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:26		main
+2024-03-17 01:25:00	152672	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:71		start lock free 
+2024-03-17 01:25:00	152673	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Fiber.cc:128		get this is not null
+2024-03-17 01:25:00	152675	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Fiber.cc:128		get this is not null
+2024-03-17 01:25:00	152675	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Fiber.cc:128		get this is not null
+2024-03-17 01:25:00	152674	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Fiber.cc:128		get this is not null
+2024-03-17 01:25:00	152673	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= -982150521
+2024-03-17 01:25:00	152675	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= -982150521
+2024-03-17 01:25:00	152674	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= -982150521
+2024-03-17 01:25:02	152672	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:38		schedule
+2024-03-17 01:25:21	152684	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:26		main
+2024-03-17 01:25:21	152684	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:71		start lock free 
+2024-03-17 01:25:21	152689	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Fiber.cc:128		get this is not null
+2024-03-17 01:25:21	152689	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Fiber.cc:128		get this is not null
+2024-03-17 01:25:21	152688	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Fiber.cc:128		get this is not null
+2024-03-17 01:25:21	152689	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Fiber.cc:128		get this is not null
+2024-03-17 01:25:21	152688	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Fiber.cc:128		get this is not null
+2024-03-17 01:25:21	152687	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Fiber.cc:128		get this is not null
+2024-03-17 01:25:21	152688	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= 1632588423
+2024-03-17 01:25:21	152687	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= 1632588423
+2024-03-17 01:25:21	152687	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= 1632588423
+2024-03-17 01:25:21	152689	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= 1632588423
+2024-03-17 01:25:23	152684	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:38		schedule
+2024-03-17 01:25:26	152688	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Fiber.cc:128		get this is not null
+2024-03-17 01:25:26	152688	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= 1632588423
+2024-03-17 01:25:26	152687	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Fiber.cc:128		get this is not null
+2024-03-17 01:25:26	152687	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= 1632588423
+2024-03-17 01:25:26	152689	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Fiber.cc:128		get this is not null
+2024-03-17 01:25:26	152689	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= 1632588423
+2024-03-17 01:25:31	152688	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Fiber.cc:128		get this is not null
+2024-03-17 01:25:31	152688	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= 1632588423
+2024-03-17 01:25:31	152687	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Fiber.cc:128		get this is not null
+2024-03-17 01:25:31	152687	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= 1632588423
+2024-03-17 01:25:31	152689	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Fiber.cc:128		get this is not null
+2024-03-17 01:25:31	152689	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:240		idle
+2024-03-17 01:25:31	152689	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:211		idle fiber term
+2024-03-17 01:25:31	152689	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:224		Scheduler::run() exit
+2024-03-17 01:25:36	152688	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Fiber.cc:128		get this is not null
+2024-03-17 01:25:36	152688	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:240		idle
+2024-03-17 01:25:36	152688	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:211		idle fiber term
+2024-03-17 01:25:36	152688	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:224		Scheduler::run() exit
+2024-03-17 01:25:36	152687	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Fiber.cc:128		get this is not null
+2024-03-17 01:25:36	152687	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:240		idle
+2024-03-17 01:25:36	152687	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:211		idle fiber term
+2024-03-17 01:25:36	152687	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:224		Scheduler::run() exit
+2024-03-17 01:25:36	152684	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:41		over
+2024-03-17 01:26:17	152895	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:26		main
+2024-03-17 01:26:17	152895	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:71		start lock free 
+2024-03-17 01:26:17	152896	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Fiber.cc:128		get this is not null
+2024-03-17 01:26:17	152898	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Fiber.cc:128		get this is not null
+2024-03-17 01:26:17	152896	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= 1632588423
+2024-03-17 01:26:17	152898	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= 1632588423
+2024-03-17 01:26:17	152897	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Fiber.cc:128		get this is not null
+2024-03-17 01:26:17	152897	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= 1632588423
+2024-03-17 01:26:19	152895	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:38		schedule
+2024-03-17 01:26:22	152896	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Fiber.cc:128		get this is not null
+2024-03-17 01:26:22	152896	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= 1632588423
+2024-03-17 01:26:22	152897	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Fiber.cc:128		get this is not null
+2024-03-17 01:26:22	152897	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= 1632588423
+2024-03-17 01:35:15	153570	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:26		main
+2024-03-17 01:35:15	153570	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:71		start lock free 
+2024-03-17 01:35:15	153571	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= 199990000
+2024-03-17 01:35:15	153572	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= 199990000
+2024-03-17 01:35:15	153573	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= 199990000
+2024-03-17 01:35:17	153570	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:38		schedule
+2024-03-17 01:35:20	153571	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= 199990000
+2024-03-17 01:35:20	153572	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= 199990000
+2024-03-17 01:35:20	153573	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= 199990000
+2024-03-17 01:35:25	153571	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= 399980000
+2024-03-17 01:35:25	153572	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= 399980000
+2024-03-17 01:35:25	153573	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:240		idle
+2024-03-17 01:35:25	153573	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:211		idle fiber term
+2024-03-17 01:35:25	153573	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:224		Scheduler::run() exit
+2024-03-17 01:35:30	153572	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:240		idle
+2024-03-17 01:35:30	153572	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:240		idle
+2024-03-17 01:35:30	153571	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:240		idle
+2024-03-17 01:35:30	153572	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:211		idle fiber term
+2024-03-17 01:35:30	153571	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:211		idle fiber term
+2024-03-17 01:35:30	153572	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:224		Scheduler::run() exit
+2024-03-17 01:35:30	153571	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:224		Scheduler::run() exit
+2024-03-17 01:35:30	153570	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:41		over
+2024-03-17 01:35:34	153575	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:26		main
+2024-03-17 01:35:34	153575	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:71		start lock free 
+2024-03-17 01:35:34	153576	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= 199990000
+2024-03-17 01:35:34	153577	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= 199990000
+2024-03-17 01:35:34	153578	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= 199990000
+2024-03-17 01:35:36	153575	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:38		schedule
+2024-03-17 01:35:39	153576	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= 199990000
+2024-03-17 01:35:39	153577	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= 199990000
+2024-03-17 01:35:39	153578	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= 199990000
+2024-03-17 01:35:44	153577	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= 399980000
+2024-03-17 01:35:44	153576	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= 399980000
+2024-03-17 01:35:44	153578	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:240		idle
+2024-03-17 01:35:44	153578	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:211		idle fiber term
+2024-03-17 01:35:44	153578	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:224		Scheduler::run() exit
+2024-03-17 01:35:49	153576	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:240		idle
+2024-03-17 01:35:49	153576	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:240		idle
+2024-03-17 01:35:49	153577	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:240		idle
+2024-03-17 01:35:49	153577	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:211		idle fiber term
+2024-03-17 01:35:49	153576	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:211		idle fiber term
+2024-03-17 01:35:49	153577	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:224		Scheduler::run() exit
+2024-03-17 01:35:49	153576	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:224		Scheduler::run() exit
+2024-03-17 01:35:49	153575	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:41		over
+2024-03-17 01:36:30	153915	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:26		main
+2024-03-17 01:36:30	153915	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:71		start lock free 
+2024-03-17 01:36:30	153916	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= 199990000
+2024-03-17 01:36:30	153918	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= 199990000
+2024-03-17 01:36:30	153917	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= 199990000
+2024-03-17 01:36:30	153916	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= 199990000
+2024-03-17 01:36:30	153918	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= 199990000
+2024-03-17 01:36:30	153918	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= 399980000
+2024-03-17 01:36:30	153916	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= 399980000
+2024-03-17 01:36:30	153917	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		a= 199990000
+2024-03-17 01:36:30	153918	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:240		idle
+2024-03-17 01:36:30	153916	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:240		idle
+2024-03-17 01:36:30	153918	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:211		idle fiber term
+2024-03-17 01:36:30	153918	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:224		Scheduler::run() exit
+2024-03-17 01:36:30	153918	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:224		Scheduler::run() exit
+-17 01:36:30	153916	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:211		idle fiber term
+2024-03-17 01:36:30	153917	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:240		idle
+2024-03-17 01:36:30	153916	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:224		Scheduler::run() exit
+2024-03-17 01:36:30	153916	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:224		Scheduler::run() exit
+2024-03-17 01:36:30	153917	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:211		idle fiber term
+2024-03-17 01:36:30	153917	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:224		Scheduler::run() exit
+2024-03-17 01:36:32	153915	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:38		schedule
+2024-03-17 01:36:32	153915	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:41		over
+2024-03-17 01:37:34	154269	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:26		main
+2024-03-17 01:37:34	154269	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:71		start lock free 
+2024-03-17 01:37:34	154270	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		154270a= 199990000
+2024-03-17 01:37:34	154272	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		154270a= 199990000
+2024-03-17 01:37:34	154271	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		154271a= 199990000
+2024-03-17 01:37:34	154272	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		154272a= 199990000
+2024-03-17 01:37:34	154270	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		154270a= 199990000
+2024-03-17 01:37:34	154271	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		154271a= 199990000
+2024-03-17 01:37:34	154271	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		154271a= 199990000
+2024-03-17 01:37:34	154272	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		154272a= 199990000
+2024-03-17 01:37:34	154271	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		154271a= 199990000
+2024-03-17 01:37:34	154272	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		154272a= 199990000
+2024-03-17 01:37:34	154270	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		154270a= 399980000
+2024-03-17 01:37:34	154271	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:21		154271a= 399980000
+2024-03-17 01:37:34	154270	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:240		idle
+2024-03-17 01:37:34	154272	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:240		idle
+2024-03-17 01:37:34	154271	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:240		idle
+2024-03-17 01:37:34	154272	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:211		idle fiber term
+2024-03-17 01:37:34	154272	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:211		idle fiber term
+2024-03-17 01:37:34	154270	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:211		idle fiber term
+2024-03-17 01:37:34	154271	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:211		idle fiber term
+2024-03-17 01:37:34	154272	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:224		Scheduler::run() exit
+2024-03-17 01:37:34	154272	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:224		Scheduler::run() exit
+-17 01:37:34	154270	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:224		Scheduler::run() exit
+2024-03-17 01:37:34	154271	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/桌面/sylar/src/Scheduler.cc:224		Scheduler::run() exit
+2024-03-17 01:37:36	154269	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:38		schedule
+2024-03-17 01:37:36	154269	日志器01	100	[INFO]	[system]	/home/muqiu0614/桌面/sylar/src/test _scheduler.cc:41		over
