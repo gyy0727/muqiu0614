@@ -732,7 +732,7 @@ std::string LoggerManager::toJsonString() {
 
 void LoggerManager::init() {
 
-  std::ifstream i("/home/muqiu0614/桌面/sylar/src/log.json");
+  std::ifstream i("/home/muqiu0614/desktop/muqiu0614/src/Log.txt");
   json root = json::parse(i);
   Sylar::Config::LoadFromJson(root);
 }

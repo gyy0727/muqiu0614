@@ -7,7 +7,7 @@
       "appender": [
         {
           "type": "FileLogAppender",
-          "path": "/home/muqiu0614/桌面/sylar/src/Log.txt"
+          "path": "/home/muqiu0614/desktop/muqiu0614/src/Log.txt"
         },
         {
           "type": "StdoutLogAppender"
@@ -21,7 +21,7 @@
       "appender": [
         {
           "type": "FileLogAppender",
-          "path": "/home/muqiu0614/桌面/sylar/src/Log.txt"
+          "path": "/home/muqiu0614/desktop/muqiu0614/src/Log.txt"
         },
         {
           "type": "StdoutLogAppender"
