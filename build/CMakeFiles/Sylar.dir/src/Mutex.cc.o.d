@@ -1,7 +1,8 @@
-CMakeFiles/Sylar.dir/src/Mutex.cc.o: /root/desktop/muqiu0614/src/Mutex.cc \
+CMakeFiles/Sylar.dir/src/Mutex.cc.o: \
+ /home/muqiu0614/desktop/muqiu0614/src/Mutex.cc \
  /usr/include/stdc-predef.h \
- /root/desktop/muqiu0614/src/../include/Mutex.h \
- /root/desktop/muqiu0614/src/../include/Noncopyable.h \
+ /home/muqiu0614/desktop/muqiu0614/src/../include/Mutex.h \
+ /home/muqiu0614/desktop/muqiu0614/src/../include/Noncopyable.h \
  /usr/include/c++/11/atomic /usr/include/c++/11/bits/atomic_base.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \

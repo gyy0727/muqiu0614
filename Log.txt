@@ -1,0 +1,17 @@
+2024-06-06 18:10:27	42399	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/desktop/muqiu0614/src/Fiber.cc:36	主协程1创建
+2024-06-06 18:10:27	42399	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/desktop/muqiu0614/src/Fiber.cc:58	Fiber::Fiber id=2
+2024-06-06 18:10:27	42399	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/desktop/muqiu0614/src/Fiber.cc:59	Fiber::~Fiber id=2 total=2
+2024-06-06 18:10:27	42399	日志器01	100	[ERROR]	[system]	/home/muqiu0614/desktop/muqiu0614/src/Fiber.cc:129	Fiber Except fiber_id=2
+2024-06-06 18:10:27	42399	日志器01	100	[ERROR]	[system]	/home/muqiu0614/desktop/muqiu0614/src/Fiber.cc:129	Fiber Except fiber_id=1
+2024-06-06 18:11:41	42816	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/desktop/muqiu0614/src/Fiber.cc:36	主协程1创建
+2024-06-06 18:11:41	42816	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/desktop/muqiu0614/src/Fiber.cc:58	Fiber::Fiber id=2
+2024-06-06 18:11:41	42816	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/desktop/muqiu0614/src/Fiber.cc:59	Fiber::~Fiber id=2 total=2
+2024-06-06 18:14:35	43484	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/desktop/muqiu0614/src/Fiber.cc:37	主协程1创建
+2024-06-06 18:14:35	43484	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/desktop/muqiu0614/src/Fiber.cc:60	Fiber::Fiber id=2
+2024-06-06 18:14:35	43484	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/desktop/muqiu0614/src/Fiber.cc:61	Fiber::~Fiber id=2 total=2
+2024-06-06 18:17:45	43996	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/desktop/muqiu0614/src/Fiber.cc:37	主协程1创建
+2024-06-06 18:17:45	43996	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/desktop/muqiu0614/src/Fiber.cc:60	Fiber::Fiber id=2
+2024-06-06 18:17:45	43996	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/desktop/muqiu0614/src/Fiber.cc:61	Fiber::~Fiber id=2 total=2
+2024-06-06 18:25:46	46329	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/desktop/muqiu0614/src/Fiber.cc:37	主协程1创建
+2024-06-06 18:25:46	46329	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/desktop/muqiu0614/src/Fiber.cc:60	Fiber::Fiber id=2
+2024-06-06 18:25:46	46329	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/desktop/muqiu0614/src/Fiber.cc:61	Fiber::~Fiber id=2 total=2
