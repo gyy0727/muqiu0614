@@ -1,12 +1,13 @@
 /*
- * @Author: Gyy0727 3155833132@qq.com
- * @Date: 2024-03-11 21:03:48
- * @LastEditors: Gyy0727 3155833132@qq.com
- * @LastEditTime: 2024-03-13 14:43:19
- * @FilePath: /sylar/include/PThread.h
- * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置
- * 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @Author       : Gyy0727 3155833132@qq.com
+ * @Date         : 2024-06-05 12:32:01
+ * @LastEditors  : Gyy0727 3155833132@qq.com
+ * @LastEditTime : 2024-06-06 17:02:47
+ * @FilePath     : /muqiu0614/include/PThread.h
+ * @Description  :
+ * Copyright (c) 2024 by Gyy0727 email: 3155833132@qq.com, All Rights Reserved.
  */
+
 #pragma once
 #include "Config.h"
 #include "Log.h"
@@ -32,8 +33,8 @@ public:
 
   PThread(Func cb, const std::string &name);
 
-  ~PThread();
-  
+  ~PThread() ;
+
   pid_t getId() const { return m_id; }
 
   const std::string &getName() const { return m_name; }

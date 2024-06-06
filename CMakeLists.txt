@@ -12,4 +12,4 @@ set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
 # add_library(threadPool SHARED ${SRC})
 add_executable(Sylar ${SRC})
 
-target_link_libraries(Sylar yaml-cpp)
+target_link_libraries(Sylar pthread)
