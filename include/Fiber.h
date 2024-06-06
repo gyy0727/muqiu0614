@@ -26,15 +26,13 @@ public:
     TERM,
     READY,
     EXCEPT
-  };
+  }
   Fiber();
   Fiber(std::function<void()> cb, size_t stacksize = 0, bool usecaller = false);
   ~Fiber();
   void reset(std::function<void()> cb);
   void swapIn();
   void swapOut();
-  void call();
-  void back();
   uint64_t getId() const { return m_id; }
   STATE getState() const { return m_state; }
   static void setThis(Fiber *f);
@@ -45,15 +43,15 @@ public:
 
   static void mainFunc();
 
-  static void callerMainFunc();
   static uint64_t getFiberId();
 
 private:
-  uint64_t m_id;
+  static uint64_t m_id;
   uint32_t m_stackSize = 0;
   STATE m_state = INIT;
   ucontext_t m_context;
   void *m_stack;
+  bool m_user_caller=true;
   std::function<void()> m_cb;
 };
 #endif

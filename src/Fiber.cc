@@ -1,18 +1,16 @@
-/*
- * @Author       : Gyy0727 3155833132@qq.com
- * @Date         : 2024-06-05 12:32:01
- * @LastEditors  : Gyy0727 3155833132@qq.com
- * @LastEditTime : 2024-06-05 12:44:36
- * @FilePath     : /muqiu0614/src/Fiber.cc
- * @Description  :
- * Copyright (c) 2024 by Gyy0727 email: 3155833132@qq.com, All Rights Reserved.
- */
+
 #include "../include/Fiber.h"
 #include "../include/Log.h"
+#include <atomic>
 #include <cstddef>
+#include <cstdint>
 #include <cstdlib>
 #include <memory>
 #include <type_traits>
+#include <ucontext.h>
+static Sylar::Logger::ptr g_logger = SYLAR_LOG_NAME("system");
+static std::atomic<uint64_t> s_fiber_id { 0 };
+
 static thread_local Fiber* t_fiber = nullptr;
 static thread_local Fiber* t_thread_fiber = nullptr;
 
@@ -22,6 +20,55 @@ public:
 	{
 		return malloc(stackSize);
 	}
-
-	
+	static void delloc(void* stack)
+	{
+		free(stack);
+	}
 };
+//*主协程的初始化
+Fiber::Fiber()
+{
+	t_fiber = this;
+	getcontext(&m_context);
+	s_fiber_id++;
+}
+Fiber::Fiber(std::function<void()> cb, size_t stacksize, bool usecaller)
+{
+	m_cb = cb;
+}
+Fiber::~Fiber()
+{
+}
+void Fiber::reset(std::function<void()> cb)
+{
+	m_cb=cb;
+}
+void Fiber::swapIn()
+{
+	
+}
+void Fiber::swapOut()
+{
+}
+void Fiber::call()
+{
+}
+
+Fiber::ptr Fiber::getThis()
+{
+}
+
+uint64_t Fiber::totalFibers()
+{
+}
+
+void Fiber::mainFunc()
+{
+}
+
+void Fiber::callerMainFunc()
+{
+}
+uint64_t Fiber::getFiberId()
+{
+}
