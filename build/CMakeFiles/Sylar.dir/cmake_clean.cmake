@@ -25,6 +25,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Sylar.dir/src/test.cc.o.d"
   "CMakeFiles/Sylar.dir/src/test__scheduler.cc.o"
   "CMakeFiles/Sylar.dir/src/test__scheduler.cc.o.d"
+  "CMakeFiles/Sylar.dir/src/test_fiber.cc.o"
+  "CMakeFiles/Sylar.dir/src/test_fiber.cc.o.d"
   "CMakeFiles/Sylar.dir/src/test_pthread.cc.o"
   "CMakeFiles/Sylar.dir/src/test_pthread.cc.o.d"
   "CMakeFiles/Sylar.dir/src/util.cc.o"

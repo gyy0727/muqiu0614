@@ -57,18 +57,18 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/muqiu0614/desktop/muqiu0614
+CMAKE_SOURCE_DIR = /root/desktop/muqiu0614
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/muqiu0614/desktop/muqiu0614/build
+CMAKE_BINARY_DIR = /root/desktop/muqiu0614/build
 
 #=============================================================================
 # Targets provided globally by CMake.
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/muqiu0614/desktop/muqiu0614/build/CMakeFiles /home/muqiu0614/desktop/muqiu0614/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/desktop/muqiu0614/build/CMakeFiles /root/desktop/muqiu0614/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/muqiu0614/desktop/muqiu0614/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/desktop/muqiu0614/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -417,6 +417,30 @@ src/test__scheduler.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/test__scheduler.cc.s
 .PHONY : src/test__scheduler.cc.s
 
+src/test_fiber.o: src/test_fiber.cc.o
+.PHONY : src/test_fiber.o
+
+# target to build an object file
+src/test_fiber.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/test_fiber.cc.o
+.PHONY : src/test_fiber.cc.o
+
+src/test_fiber.i: src/test_fiber.cc.i
+.PHONY : src/test_fiber.i
+
+# target to preprocess a source file
+src/test_fiber.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/test_fiber.cc.i
+.PHONY : src/test_fiber.cc.i
+
+src/test_fiber.s: src/test_fiber.cc.s
+.PHONY : src/test_fiber.s
+
+# target to generate assembly for a file
+src/test_fiber.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/test_fiber.cc.s
+.PHONY : src/test_fiber.cc.s
+
 src/test_pthread.o: src/test_pthread.cc.o
 .PHONY : src/test_pthread.o
 
@@ -510,6 +534,9 @@ help:
 	@echo "... src/test__scheduler.o"
 	@echo "... src/test__scheduler.i"
 	@echo "... src/test__scheduler.s"
+	@echo "... src/test_fiber.o"
+	@echo "... src/test_fiber.i"
+	@echo "... src/test_fiber.s"
 	@echo "... src/test_pthread.o"
 	@echo "... src/test_pthread.i"
 	@echo "... src/test_pthread.s"
