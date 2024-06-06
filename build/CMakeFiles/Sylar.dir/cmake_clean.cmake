@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/muqiu0614/桌面/sylar/bin/Sylar"
-  "/home/muqiu0614/桌面/sylar/bin/Sylar.pdb"
+  "../bin/Sylar"
+  "../bin/Sylar.pdb"
   "CMakeFiles/Sylar.dir/src/Config.cc.o"
   "CMakeFiles/Sylar.dir/src/Config.cc.o.d"
   "CMakeFiles/Sylar.dir/src/Fiber.cc.o"

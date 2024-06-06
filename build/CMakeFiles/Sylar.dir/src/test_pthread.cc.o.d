@@ -1,11 +1,11 @@
 CMakeFiles/Sylar.dir/src/test_pthread.cc.o: \
- /home/muqiu0614/桌面/sylar/src/test_pthread.cc \
+ /home/muqiu0614/desktop/muqiu0614/src/test_pthread.cc \
  /usr/include/stdc-predef.h \
- /home/muqiu0614/桌面/sylar/src/../include/PThread.h \
- /home/muqiu0614/桌面/sylar/src/../include/Config.h \
- /home/muqiu0614/桌面/sylar/src/../include/Log.h \
- /home/muqiu0614/桌面/sylar/src/../include/Mutex.h \
- /home/muqiu0614/桌面/sylar/src/../include/Noncopyable.h \
+ /home/muqiu0614/desktop/muqiu0614/src/../include/PThread.h \
+ /home/muqiu0614/desktop/muqiu0614/src/../include/Config.h \
+ /home/muqiu0614/desktop/muqiu0614/src/../include/Log.h \
+ /home/muqiu0614/desktop/muqiu0614/src/../include/Mutex.h \
+ /home/muqiu0614/desktop/muqiu0614/src/../include/Noncopyable.h \
  /usr/include/c++/11/atomic /usr/include/c++/11/bits/atomic_base.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -134,7 +134,7 @@ CMakeFiles/Sylar.dir/src/test_pthread.cc.o: \
  /usr/include/linux/errno.h /usr/include/x86_64-linux-gnu/asm/errno.h \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
- /home/muqiu0614/桌面/sylar/src/../include/Singleton.h \
+ /home/muqiu0614/desktop/muqiu0614/src/../include/Singleton.h \
  /usr/local/include/boost/exception/exception.hpp \
  /usr/local/include/boost/assert/source_location.hpp \
  /usr/local/include/boost/config.hpp \
@@ -181,7 +181,7 @@ CMakeFiles/Sylar.dir/src/test_pthread.cc.o: \
  /usr/include/c++/11/bits/charconv.h \
  /usr/include/c++/11/bits/basic_string.tcc /usr/include/c++/11/cstring \
  /usr/include/string.h /usr/include/strings.h \
- /home/muqiu0614/桌面/sylar/src/../include/util.h \
+ /home/muqiu0614/desktop/muqiu0614/src/../include/util.h \
  /usr/include/x86_64-linux-gnu/sys/syscall.h \
  /usr/include/x86_64-linux-gnu/asm/unistd.h \
  /usr/include/x86_64-linux-gnu/asm/unistd_64.h \
@@ -489,7 +489,7 @@ CMakeFiles/Sylar.dir/src/test_pthread.cc.o: \
  /usr/include/c++/11/bits/stl_vector.h \
  /usr/include/c++/11/bits/stl_bvector.h \
  /usr/include/c++/11/bits/vector.tcc \
- /home/muqiu0614/桌面/sylar/src/../include/json.hpp \
+ /home/muqiu0614/desktop/muqiu0614/src/../include/json.hpp \
  /usr/include/c++/11/algorithm /usr/include/c++/11/bits/stl_algo.h \
  /usr/include/c++/11/bits/algorithmfwd.h \
  /usr/include/c++/11/bits/stl_heap.h \
@@ -521,5 +521,5 @@ CMakeFiles/Sylar.dir/src/test_pthread.cc.o: \
  /usr/include/c++/11/bits/stl_multiset.h \
  /usr/include/c++/11/unordered_set \
  /usr/include/c++/11/bits/unordered_set.h \
- /home/muqiu0614/桌面/sylar/src/../include/Manager.h \
+ /home/muqiu0614/desktop/muqiu0614/src/../include/Manager.h \
  /usr/include/c++/11/semaphore

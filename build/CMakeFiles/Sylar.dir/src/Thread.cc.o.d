@@ -1,6 +1,7 @@
 CMakeFiles/Sylar.dir/src/Thread.cc.o: \
- /home/muqiu0614/桌面/sylar/src/Thread.cc /usr/include/stdc-predef.h \
- /home/muqiu0614/桌面/sylar/src/../include/Thread.h \
+ /home/muqiu0614/desktop/muqiu0614/src/Thread.cc \
+ /usr/include/stdc-predef.h \
+ /home/muqiu0614/desktop/muqiu0614/src/../include/Thread.h \
  /usr/include/x86_64-linux-gnu/sys/types.h /usr/include/features.h \
  /usr/include/features-time64.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
@@ -108,10 +109,10 @@ CMakeFiles/Sylar.dir/src/Thread.cc.o: \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
  /usr/include/c++/11/functional /usr/include/c++/11/bits/std_function.h \
- /home/muqiu0614/桌面/sylar/src/../include/Config.h \
- /home/muqiu0614/桌面/sylar/src/../include/Log.h \
- /home/muqiu0614/桌面/sylar/src/../include/Mutex.h \
- /home/muqiu0614/桌面/sylar/src/../include/Noncopyable.h \
+ /home/muqiu0614/desktop/muqiu0614/src/../include/Config.h \
+ /home/muqiu0614/desktop/muqiu0614/src/../include/Log.h \
+ /home/muqiu0614/desktop/muqiu0614/src/../include/Mutex.h \
+ /home/muqiu0614/desktop/muqiu0614/src/../include/Noncopyable.h \
  /usr/include/c++/11/atomic /usr/include/c++/11/bits/atomic_base.h \
  /usr/include/c++/11/bits/atomic_lockfree_defines.h \
  /usr/include/c++/11/list /usr/include/c++/11/bits/allocator.h \
@@ -137,7 +138,7 @@ CMakeFiles/Sylar.dir/src/Thread.cc.o: \
  /usr/include/c++/11/bits/shared_ptr_atomic.h \
  /usr/include/c++/11/backward/auto_ptr.h /usr/include/semaphore.h \
  /usr/include/x86_64-linux-gnu/bits/semaphore.h \
- /home/muqiu0614/桌面/sylar/src/../include/Singleton.h \
+ /home/muqiu0614/desktop/muqiu0614/src/../include/Singleton.h \
  /usr/local/include/boost/exception/exception.hpp \
  /usr/local/include/boost/assert/source_location.hpp \
  /usr/local/include/boost/config.hpp \
@@ -184,7 +185,7 @@ CMakeFiles/Sylar.dir/src/Thread.cc.o: \
  /usr/include/c++/11/bits/charconv.h \
  /usr/include/c++/11/bits/basic_string.tcc /usr/include/c++/11/cstring \
  /usr/include/string.h /usr/include/strings.h \
- /home/muqiu0614/桌面/sylar/src/../include/util.h \
+ /home/muqiu0614/desktop/muqiu0614/src/../include/util.h \
  /usr/include/x86_64-linux-gnu/sys/syscall.h \
  /usr/include/x86_64-linux-gnu/asm/unistd.h \
  /usr/include/x86_64-linux-gnu/asm/unistd_64.h \
@@ -492,7 +493,7 @@ CMakeFiles/Sylar.dir/src/Thread.cc.o: \
  /usr/include/c++/11/bits/stl_vector.h \
  /usr/include/c++/11/bits/stl_bvector.h \
  /usr/include/c++/11/bits/vector.tcc \
- /home/muqiu0614/桌面/sylar/src/../include/json.hpp \
+ /home/muqiu0614/desktop/muqiu0614/src/../include/json.hpp \
  /usr/include/c++/11/algorithm /usr/include/c++/11/bits/stl_algo.h \
  /usr/include/c++/11/bits/algorithmfwd.h \
  /usr/include/c++/11/bits/stl_heap.h \
@@ -524,5 +525,5 @@ CMakeFiles/Sylar.dir/src/Thread.cc.o: \
  /usr/include/c++/11/bits/stl_multiset.h \
  /usr/include/c++/11/unordered_set \
  /usr/include/c++/11/bits/unordered_set.h \
- /home/muqiu0614/桌面/sylar/src/../include/Manager.h \
+ /home/muqiu0614/desktop/muqiu0614/src/../include/Manager.h \
  /usr/include/c++/11/semaphore

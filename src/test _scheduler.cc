@@ -1,4 +1,13 @@
 /*
+ * @Author       : Gyy0727 3155833132@qq.com
+ * @Date         : 2024-06-05 12:32:01
+ * @LastEditors  : Gyy0727 3155833132@qq.com
+ * @LastEditTime : 2024-06-06 17:09:22
+ * @FilePath     : /muqiu0614/src/test _scheduler.cc
+ * @Description  :
+ * Copyright (c) 2024 by Gyy0727 email: 3155833132@qq.com, All Rights Reserved.
+ */
+/*
  * @Author: Gyy0727 3155833132@qq.com
  * @Date: 2024-02-27 19:24:26
  * @LastEditors: Gyy0727 3155833132@qq.com
@@ -10,7 +19,7 @@
 #include "../include/Log.h"
 #include "../include/Manager.h"
 #include "../include/Scheduler.h"
-
+#if 0
 static Sylar::Logger::ptr g_logger = SYLAR_LOG_ROOT();
 
 void test_fiber() {
@@ -42,3 +51,4 @@ int main() {
   SYLAR_LOG_INFO(Sylar::ManagerLog()("system")) << "over";
   return 0;
 }
+#endif

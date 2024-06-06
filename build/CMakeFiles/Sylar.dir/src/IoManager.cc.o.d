@@ -1,2 +1,3 @@
 CMakeFiles/Sylar.dir/src/IoManager.cc.o: \
- /home/muqiu0614/桌面/sylar/src/IoManager.cc /usr/include/stdc-predef.h
+ /home/muqiu0614/desktop/muqiu0614/src/IoManager.cc \
+ /usr/include/stdc-predef.h

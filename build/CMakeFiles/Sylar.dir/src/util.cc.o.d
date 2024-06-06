@@ -1,6 +1,6 @@
 CMakeFiles/Sylar.dir/src/util.cc.o: \
- /home/muqiu0614/桌面/sylar/src/util.cc /usr/include/stdc-predef.h \
- /home/muqiu0614/桌面/sylar/src/../include/util.h \
+ /home/muqiu0614/desktop/muqiu0614/src/util.cc /usr/include/stdc-predef.h \
+ /home/muqiu0614/desktop/muqiu0614/src/../include/util.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \

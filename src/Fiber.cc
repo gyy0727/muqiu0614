@@ -60,7 +60,7 @@ Fiber::~Fiber() {
     MallocStackAllocator::delloc(m_stack);
   } else {
     Fiber *cur = t_fiber;
-    if (t_fiber == this) {
+    if (cur == this) {
       setThis(nullptr);
     }
   }
