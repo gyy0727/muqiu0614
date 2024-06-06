@@ -2,7 +2,7 @@
  * @Author       : Gyy0727 3155833132@qq.com
  * @Date         : 2024-06-05 12:32:01
  * @LastEditors  : Gyy0727 3155833132@qq.com
- * @LastEditTime : 2024-06-05 12:44:43
+ * @LastEditTime : 2024-06-06 14:21:27
  * @FilePath     : /muqiu0614/include/Fiber.h
  * @Description  :
  * Copyright (c) 2024 by Gyy0727 email: 3155833132@qq.com, All Rights Reserved.
@@ -26,9 +26,9 @@ public:
     TERM,
     READY,
     EXCEPT
-  }
+  };
   Fiber();
-  Fiber(std::function<void()> cb, size_t stacksize = 0, bool usecaller = false);
+  Fiber(std::function<void()> cb, size_t stacksize = 0, bool usecaller = true);
   ~Fiber();
   void reset(std::function<void()> cb);
   void swapIn();
@@ -46,12 +46,12 @@ public:
   static uint64_t getFiberId();
 
 private:
-  static uint64_t m_id;
+  uint64_t m_id;
   uint32_t m_stackSize = 0;
   STATE m_state = INIT;
   ucontext_t m_context;
   void *m_stack;
-  bool m_user_caller=true;
+  bool m_user_caller = true;//*是否参与调度
   std::function<void()> m_cb;
 };
 #endif
