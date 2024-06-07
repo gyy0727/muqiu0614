@@ -1,3 +1,0 @@
-2024-06-06 18:46:40	49248	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/desktop/muqiu0614/src/Fiber.cc:37	主协程1创建
-2024-06-06 18:46:40	49248	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/desktop/muqiu0614/src/Fiber.cc:60	Fiber::Fiber id=2
-2024-06-06 18:46:40	49248	日志器01	100	[DEBUG]	[system]	/home/muqiu0614/desktop/muqiu0614/src/Fiber.cc:61	Fiber::~Fiber id=2 total=2

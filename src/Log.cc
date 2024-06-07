@@ -20,7 +20,7 @@ Logger::Logger(const std::string &name)
 
   m_appenders.push_back(Sylar::LogAppender::ptr(new StdoutLogAppender()));
   m_appenders.push_back(
-      Sylar::LogAppender::ptr(new FileLogAppender("./Log.txt")));
+      Sylar::LogAppender::ptr(new FileLogAppender("/root/desktop/muqiu0614/src/log.h")));
   this->setFormatter(m_formatter);
 }
 /**
@@ -732,7 +732,7 @@ std::string LoggerManager::toJsonString() {
 
 void LoggerManager::init() {
 
-  std::ifstream i("/home/muqiu0614/desktop/muqiu0614/src/Log.txt");
+  std::ifstream i("/root/desktop/muqiu0614/src/log.json");
   json root = json::parse(i);
   Sylar::Config::LoadFromJson(root);
 }

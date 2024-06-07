@@ -32,19 +32,20 @@ public:
   static void delloc(void *stack) { free(stack); }
 };
 //*主协程的初始化
-Fiber::Fiber() {
-  m_id = s_fiber_id;
-  SYLAR_LOG_DEBUG(g_logger) << "主协程" << m_id << "创建";
-  m_state = RUNING; //*调整状态为执行中
-  t_fiber = this;
+Fiber::Fiber() : m_id(s_fiber_id++), m_state(RUNING) {
   if (t_thread_fiber) {
     SYLAR_LOG_ERROR(g_logger) << "重复的调度协程";
-    throw std::logic_error("bad t_thread_fiber");
+    //* throw std::logic_error("bad t_thread_fiber");
+    //*异常这种操作太重了,还是不抛为妙
+    //*构造函数抛出异常即使被catch,也可能导致构造失败
   }
-  t_thread_fiber = this;
-  s_fiber_id++;
-  s_fiber_counts++;
+  SYLAR_LOG_INFO(g_logger) << "主协程" << m_id << "创建";
+  setThis(this);
   getcontext(&m_context);
+  
+  t_thread_fiber = this;
+  s_fiber_counts++;
+  
 }
 
 Fiber::Fiber(std::function<void()> cb, size_t stacksize, bool usecaller)
@@ -62,6 +63,7 @@ Fiber::Fiber(std::function<void()> cb, size_t stacksize, bool usecaller)
       << "Fiber::~Fiber id=" << m_id << " total=" << s_fiber_counts;
   makecontext(&m_context, &Fiber::mainFunc, 0);
 }
+
 Fiber::~Fiber() {
   m_state = TERM;
   --s_fiber_counts;
@@ -75,42 +77,37 @@ Fiber::~Fiber() {
   }
 }
 void Fiber::reset(std::function<void()> cb) {
-  m_cb = cb;
+  m_cb = std::move(cb);
   getcontext(&m_context);
   m_context.uc_link = nullptr;
   m_context.uc_stack.ss_size = m_stackSize;
   m_context.uc_stack.ss_sp = m_stack;
   makecontext(&m_context, &Fiber::mainFunc, 0);
+  m_state=RUNING;
 }
 
 void Fiber::swapIn() {
-  std::cout << "--" << std::endl;
   setThis(this);
   Fiber *cur = t_thread_fiber;
-  if (cur) {
-    std::cout << "not empty" << std::endl;
-  }
+  
   m_state = RUNING;
   cur->m_state = HOLD;
   if (m_user_caller) {
-    std::cout << "swap in " << std::endl;
     swapcontext(&cur->m_context, &m_context);
-
   } else {
-    std::cout << "swap in " << std::endl;
     swapcontext(&cur->m_context, &m_context);
-    std::cout << "swap in " << std::endl;
   }
 }
 void Fiber::swapOut() {
 
   m_state = TERM;
+  t_thread_fiber->m_state = RUNING;
+  
   if (m_user_caller) {
     setThis(t_thread_fiber);
-    std::cout << "swap out " << std::endl;
     swapcontext(&m_context, &t_thread_fiber->m_context);
-
   } else {
+    setThis(t_thread_fiber);
     swapcontext(&m_context, &t_thread_fiber->m_context);
   }
 }
@@ -125,24 +122,30 @@ Fiber::ptr Fiber::getThis() {
   }
 }
 
-uint64_t Fiber::totalFibers() { return s_fiber_counts; }
+uint64_t Fiber::totalFibers() {
 
-void Fiber::setThis(Fiber *f) { t_fiber = f; }
+  return s_fiber_counts; //*返回当前的协程数
+}
+
+void Fiber::setThis(Fiber *f) {
+  f->m_state=RUNING;
+  t_fiber = f; //*设置运行时协程指针
+}
+
 void Fiber::mainFunc() {
   Fiber::ptr cur = getThis();
-  cur->m_cb();
-  cur->m_cb = nullptr;
-  cur->m_state = TERM;
-  // try {
-  //   cur->m_cb();
-  //   cur->m_cb = nullptr;
-  //   cur->m_state = TERM;
+  //*这里使用try-catch
+  //*我的个人理解是,作为一个协程,函数对象可能是用户穿进来的,要防止因为用户抛出异常导致程序崩掉
+  try {
+    cur->m_cb();
+    cur->m_cb = nullptr;
+    cur->m_state = TERM;
 
-  // } catch (std::exception &ex) {
-  //   cur->m_state = EXCEPT;
-  //   SYLAR_LOG_ERROR(g_logger) << "Fiber Except"
-  //                             << " fiber_id=" << cur->getId();
-  // }
+  } catch (std::exception &ex) {
+    cur->m_state = EXCEPT;
+    SYLAR_LOG_ERROR(g_logger) << "Fiber Except"
+                              << " fiber_id=" << cur->getId();
+  }
   auto ptr = cur.get();
 
   cur.reset();

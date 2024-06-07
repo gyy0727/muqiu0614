@@ -1,3 +1,6 @@
 build
 test
 bin
+src/Log.txt
+src/Log.cc
+include/Log.h

@@ -13,8 +13,9 @@
 #include <unistd.h>
 void test_fiber1() {
   std::cout << "子协程出现" << std::endl;
-//   Fiber::getThis()->swapOut();
+  Fiber::getThis()->swapOut();
   std::cout << "子协程再次出现" << std::endl;
+  // Fiber::getThis()->swapOut();
 }
 void test_fiber2() {}
 void test_Thread() {
@@ -25,7 +26,7 @@ void test_Thread() {
   Fiber::ptr f2(new Fiber(&test_fiber1, 1024 * 128));
   f2->swapIn();
   std::cout << "切换到主协程" << std::endl;
-//   f2->swapIn();
+  f2->swapIn();
 
 }
 
