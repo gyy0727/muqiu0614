@@ -17,3 +17,6 @@ class {
 2024-06-06 23:08:54	11440	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:42	主协程1创建
 2024-06-06 23:08:54	11440	日志器01	100	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:61	Fiber::Fiber id=2
 2024-06-06 23:08:54	11440	日志器01	100	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:62	Fiber::~Fiber id=2 total=2
+2024-07-06 13:53:03	124998	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:42	主协程1创建
+2024-07-06 13:53:03	124998	日志器01	100	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:61	Fiber::Fiber id=2
+2024-07-06 13:53:03	124998	日志器01	100	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:62	Fiber::~Fiber id=2 total=2

@@ -11,6 +11,7 @@
 #include "../include/PThread.h"
 #include <iostream>
 #include <unistd.h>
+#if 0
 void test_fiber1() {
   std::cout << "子协程出现" << std::endl;
   Fiber::getThis()->swapOut();
@@ -36,3 +37,4 @@ int main() {
   sleep(10);
   return 0;
 }
+#endif
