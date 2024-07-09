@@ -21,10 +21,10 @@
 #include <type_traits>
 #include <ucontext.h>
 static Sylar::Logger::ptr g_logger = SYLAR_LOG_NAME("system");
-static std::atomic<uint64_t> s_fiber_id{1};     //*协程id
+static std::atomic<uint64_t> s_fiber_id{0};     //*协程id
 static std::atomic<uint64_t> s_fiber_counts{0}; //*当前在运行的协程数量
 static thread_local Fiber *t_fiber = nullptr; //*当前在运行的协程指针
-static thread_local Fiber *t_thread_fiber = nullptr; //*调度协程
+static thread_local Fiber *t_thread_fiber = nullptr; //*调度协程指针
 
 class MallocStackAllocator {
 public:
@@ -42,15 +42,12 @@ Fiber::Fiber() : m_id(s_fiber_id++), m_state(RUNING) {
   SYLAR_LOG_INFO(g_logger) << "主协程" << m_id << "创建";
   setThis(this);
   getcontext(&m_context);
-  
   t_thread_fiber = this;
   s_fiber_counts++;
-  
 }
 
-Fiber::Fiber(std::function<void()> cb, size_t stacksize, bool usecaller)
-    : m_id(s_fiber_id++), m_stackSize(stacksize), m_state(RUNING),
-      m_user_caller(usecaller) {
+Fiber::Fiber(std::function<void()> cb, size_t stacksize)
+    : m_id(s_fiber_id++), m_stackSize(stacksize), m_state(RUNING) {
   s_fiber_counts++;
   m_stack = MallocStackAllocator::Alloc(m_stackSize);
   m_cb = std::move(cb);
@@ -83,37 +80,26 @@ void Fiber::reset(std::function<void()> cb) {
   m_context.uc_stack.ss_size = m_stackSize;
   m_context.uc_stack.ss_sp = m_stack;
   makecontext(&m_context, &Fiber::mainFunc, 0);
-  m_state=RUNING;
+  m_state = RUNING;
 }
 
 void Fiber::swapIn() {
   setThis(this);
   Fiber *cur = t_thread_fiber;
-  
   m_state = RUNING;
   cur->m_state = HOLD;
-  if (m_user_caller) {
-    swapcontext(&cur->m_context, &m_context);
-  } else {
-    swapcontext(&cur->m_context, &m_context);
-  }
+
+  swapcontext(&cur->m_context, &m_context);
 }
 void Fiber::swapOut() {
-
+  setThis(t_thread_fiber);
   m_state = TERM;
   t_thread_fiber->m_state = RUNING;
-  
-  if (m_user_caller) {
-    setThis(t_thread_fiber);
-    swapcontext(&m_context, &t_thread_fiber->m_context);
-  } else {
-    setThis(t_thread_fiber);
-    swapcontext(&m_context, &t_thread_fiber->m_context);
-  }
+  setThis(t_thread_fiber);
+  swapcontext(&m_context, &t_thread_fiber->m_context);
 }
 
 Fiber::ptr Fiber::getThis() {
-
   if (t_fiber) {
     return t_fiber->shared_from_this();
   } else {
@@ -128,7 +114,7 @@ uint64_t Fiber::totalFibers() {
 }
 
 void Fiber::setThis(Fiber *f) {
-  f->m_state=RUNING;
+  f->m_state = RUNING;
   t_fiber = f; //*设置运行时协程指针
 }
 

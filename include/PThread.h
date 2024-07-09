@@ -31,7 +31,7 @@ public:
   //*线程的任务函数
   using Func = std::function<void()>;
 
-  PThread(Func cb, const std::string &name);
+  PThread(Func cb, const std::string &name="");
 
   ~PThread() ;
 

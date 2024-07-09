@@ -345,6 +345,30 @@ src/Thread.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/Thread.cc.s
 .PHONY : src/Thread.cc.s
 
+src/hook.o: src/hook.cc.o
+.PHONY : src/hook.o
+
+# target to build an object file
+src/hook.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/hook.cc.o
+.PHONY : src/hook.cc.o
+
+src/hook.i: src/hook.cc.i
+.PHONY : src/hook.i
+
+# target to preprocess a source file
+src/hook.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/hook.cc.i
+.PHONY : src/hook.cc.i
+
+src/hook.s: src/hook.cc.s
+.PHONY : src/hook.s
+
+# target to generate assembly for a file
+src/hook.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/hook.cc.s
+.PHONY : src/hook.cc.s
+
 src/main.o: src/main.cc.o
 .PHONY : src/main.o
 
@@ -525,6 +549,9 @@ help:
 	@echo "... src/Thread.o"
 	@echo "... src/Thread.i"
 	@echo "... src/Thread.s"
+	@echo "... src/hook.o"
+	@echo "... src/hook.i"
+	@echo "... src/hook.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

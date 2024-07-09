@@ -23,15 +23,18 @@ public:
     INIT,   //*初始化状态
     HOLD,   //*挂起
     RUNING, //*运行中
-    TERM,
-    READY,
-    EXCEPT
+    TERM, //* 终止
+    READY, //*待执行
+    EXCEPT//*异常
   };
   Fiber();
-  Fiber(std::function<void()> cb, size_t stacksize = 0, bool usecaller = true);
+  Fiber(std::function<void()> cb, size_t stacksize = 0);
   ~Fiber();
   void reset(std::function<void()> cb);
   void swapIn();
+    void setState(Fiber::STATE state){
+        m_state = state;
+    }
   void swapOut();
   uint64_t getId() const { return m_id; }
   STATE getState() const { return m_state; }
@@ -46,12 +49,11 @@ public:
   static uint64_t getFiberId();
 
 private:
-  uint64_t m_id;
-  uint32_t m_stackSize = 0;
-  STATE m_state = INIT;
-  ucontext_t m_context;
-  void *m_stack;
-  bool m_user_caller = true;//*是否参与调度
-  std::function<void()> m_cb;
+  uint64_t m_id; //* 协程id 
+  uint32_t m_stackSize = 0;//*协程栈大小
+  STATE m_state = INIT;//*协程状态
+  ucontext_t m_context; //*协程上线文
+  void *m_stack; //*协程栈指针
+  std::function<void()> m_cb; //*协程函数
 };
 #endif

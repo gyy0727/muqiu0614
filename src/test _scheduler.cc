@@ -18,7 +18,7 @@
  */
 #include "../include/Log.h"
 #include "../include/Manager.h"
-#include "../include/Scheduler.h"
+#include "../include/scheduler.h"
 #if 0
 static Sylar::Logger::ptr g_logger = SYLAR_LOG_ROOT();
 

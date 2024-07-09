@@ -33,20 +33,22 @@ public:
       tickle();
     }
   }
-  template<class InputIterator>
-    void schedule(InputIterator begin, InputIterator end) {
-        bool need_tickle = false;
-        {
-            std::unique_lock<std::mutex> lock(m_mutex);
-            while(begin != end) {
-                need_tickle = scheduleNoLock(&*begin, -1) || need_tickle;
-                ++begin;
-            }
-        }
-        if(need_tickle) {
-            tickle();
-        }
+  template <class InputIterator>
+  void schedule(InputIterator begin, InputIterator end) {
+    bool need_tickle = false;
+    {
+      std::unique_lock<std::mutex> lock(m_mutex);
+      while (begin != end) {
+        need_tickle = scheduleNoLock(&*begin, -1) || need_tickle;
+        ++begin;
+      }
     }
+    if (need_tickle) {
+      tickle();
+    }
+  }
+
+
 protected:
   virtual void tickle();
   void run();
@@ -56,15 +58,14 @@ protected:
   bool hasIdleThreads() { return m_activeThreadCount > 0; }
 
 private:
-  template<class FiberOrCb>
-    bool scheduleNoLock(FiberOrCb fc, int thread) {
-        bool need_tickle = m_fibers.empty();
-        FiberAndThread ft(fc, thread);
-        if(ft.fiber || ft.cb) {
-            m_fibers.push_back(ft);
-        }
-        return need_tickle;
+  template <class FiberOrCb> bool scheduleNoLock(FiberOrCb fc, int thread) {
+    bool need_tickle = m_fibers.empty();
+    FiberAndThread ft(fc, thread);
+    if (ft.fiber || ft.cb) {
+      m_fibers.push_back(ft);
     }
+    return need_tickle;
+  }
   struct FiberAndThread {
     Fiber::ptr fiber;
     std::function<void()> cb;
@@ -81,13 +82,13 @@ private:
     }
   };
   std::mutex m_mutex;                   //*互斥锁
-  std::vector<PThread::ptr> m_pthreads; //*线程池
+  std::vector<PThread::ptr> m_threads; //*线程池
   std::list<FiberAndThread> m_fibers;   //*待执行的任务列表
   Fiber::ptr m_rootFiber;               //*调度器的调度协程
   std::string m_name;                   //*协程调度器的名字
 
 protected:
-  std::vector<int> m_threadId;                   //*线程池的线程ID集合
+  std::vector<int> m_threadIds;                   //*线程池的线程ID集合
   size_t m_threadCount;                          // *线程池线程数量
   std::atomic<size_t> m_activeThreadCount = {0}; //*活跃线程的数量
   std::atomic<size_t> m_idleThreadCount = {0};   //*空闲线程数量

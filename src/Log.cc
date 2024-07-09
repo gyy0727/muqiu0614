@@ -20,7 +20,7 @@ Logger::Logger(const std::string &name)
 
   m_appenders.push_back(Sylar::LogAppender::ptr(new StdoutLogAppender()));
   m_appenders.push_back(
-      Sylar::LogAppender::ptr(new FileLogAppender("/root/desktop/muqiu0614/src/log.h")));
+      Sylar::LogAppender::ptr(new FileLogAppender("/root/desktop/muqiu0614/src/Log.txt")));
   this->setFormatter(m_formatter);
 }
 /**

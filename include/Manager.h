@@ -9,7 +9,7 @@
  */
 #pragma once
 #include "Config.h"
-#include "Log.h"
+#include "../include/Log.h"
 #include"Mutex.h"
 namespace Sylar {
 class ManagerLog {
