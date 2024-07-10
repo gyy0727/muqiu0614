@@ -44,7 +44,7 @@ public:
       }
     }
     if (need_tickle) {
-      tickle() ;
+      tickle();
     }
   }
 
@@ -91,9 +91,9 @@ protected:
   size_t m_threadCount;                          // *线程池线程数量
   std::atomic<size_t> m_activeThreadCount = {0}; //*活跃线程的数量
   std::atomic<size_t> m_idleThreadCount = {0};   //*空闲线程数量
-  bool m_stopping = true;                        //*是否已经停止
-  bool m_autoStop = false;                       //*是否是自动停止的
-  /*int m_rootThreadId = 0;  */                        //*主线程的id
+  bool m_stopping;                        //*是否已经停止
+  bool m_autoStop;                       //*是否是自动停止的
+  /*int m_rootThreadId = 0;  */                  //*主线程的id
 };
 
 #endif

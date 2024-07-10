@@ -41,17 +41,18 @@ Fiber::Fiber() : m_id(s_fiber_id++), m_state(RUNING) {
     exit(1);
   }
   SYLAR_LOG_INFO(g_logger) << "主协程" << m_id << "创建";
-  setThis(this);
   getcontext(&m_context);
   s_fiber_counts++;
 }
 
 Fiber::Fiber(std::function<void()> cb, size_t stacksize)
     : m_id(s_fiber_id++), m_stackSize(stacksize), m_state(RUNING) {
+  setThis(this);
   s_fiber_counts++;
   m_stack = MallocStackAllocator::Alloc(m_stackSize);
   m_cb = std::move(cb);
   getcontext(&m_context);
+
   m_context.uc_link = nullptr;
   m_context.uc_stack.ss_sp = m_stack;
   m_context.uc_stack.ss_size = m_stackSize;
@@ -84,25 +85,35 @@ void Fiber::reset(std::function<void()> cb) {
 }
 
 void Fiber::swapIn() {
+  /*setThis(this);*/
+  /*assert(t_fiber && t_thread_fiber);*/
+  /*assert(Scheduler::GetMainFiber());*/
+  /*swapcontext(&Scheduler::GetMainFiber()->m_context, &m_context);*/
   setThis(this);
-    Fiber::ptr cur = t_thread_fiber;
-  m_state = RUNING;
-  cur->m_state = HOLD;
+  assert(t_fiber && t_thread_fiber);
+  assert(Scheduler::GetMainFiber());
 
-  swapcontext(&cur->m_context, &m_context);
+  // 增加日志记录
+
+  assert(m_context.uc_stack.ss_sp);
+  // 检查上下文是否已经初始化
+
+  swapcontext(&Scheduler::GetMainFiber()->m_context, &m_context);
 }
 void Fiber::swapOut() {
   setThis(Scheduler::GetMainFiber());
-  m_state = TERM;
-  setThis(Scheduler::GetMainFiber());
+  assert(t_fiber && t_thread_fiber);
+  assert(Scheduler::GetMainFiber());
   swapcontext(&m_context, &Scheduler::GetMainFiber()->m_context);
 }
 
 Fiber::ptr Fiber::getThis() {
+
   if (t_fiber) {
     return t_fiber->shared_from_this();
   } else {
     Fiber::ptr main_fiber(new Fiber());
+    setThis(main_fiber.get());
     t_thread_fiber = main_fiber;
     return t_fiber->shared_from_this();
   }
@@ -114,12 +125,12 @@ uint64_t Fiber::totalFibers() {
 }
 
 void Fiber::setThis(Fiber *f) {
-  f->m_state = RUNING;
   t_fiber = f; //*设置运行时协程指针
 }
 
 void Fiber::mainFunc() {
   Fiber::ptr cur = getThis();
+
   //*这里使用try-catch
   //*我的个人理解是,作为一个协程,函数对象可能是用户穿进来的,要防止因为用户抛出异常导致程序崩掉
   try {
@@ -132,11 +143,9 @@ void Fiber::mainFunc() {
     SYLAR_LOG_ERROR(g_logger) << "Fiber Except"
                               << " fiber_id=" << cur->getId();
   }
-  auto ptr = cur.get();//*手动减少引用计数
 
-  cur.reset();
   SYLAR_LOG_INFO(g_logger) << "执行完成";
-  ptr->swapOut();
+  cur->swapOut();
 }
 
 uint64_t Fiber::getFiberId() {

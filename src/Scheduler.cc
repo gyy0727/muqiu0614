@@ -7,6 +7,7 @@
  * @Description  :
  * Copyright (c) 2024 by Gyy0727 email: 3155833132@qq.com, All Rights Reserved.
  */
+#include "../include/Fiber.h"
 #include "../include/Log.h"
 #include "../include/hook.h"
 #include "../include/scheduler.h"
@@ -15,11 +16,11 @@ static Logger::ptr g_logger = SYLAR_LOG_NAME("system");
 static thread_local Scheduler *t_scheduler = nullptr; //*协程调度器指针
 static thread_local Fiber *t_scheduler_fiber = nullptr; //* 调度器的调度协程指针
 
-Scheduler::Scheduler(size_t threads, const std::string &name) : m_name(name) {
+Scheduler::Scheduler(size_t threads, const std::string &name)
+    : m_name(name), m_stopping(true), m_autoStop(false) {
   m_threadCount = threads;
   setThis();
 }
-
 Scheduler::~Scheduler() {
   if (GetThis() == this) {
     t_scheduler = nullptr;
@@ -44,42 +45,23 @@ void Scheduler::start() {
                                    m_name + " " + std::to_string(i)));
     m_threadIds.push_back(m_threads[i]->getId());
   }
-  lock.unlock();
 }
 
 //*检查是否可以停止运行
 void Scheduler::stop() {
   m_autoStop = true;
-  /*if (m_rootFiber && m_threadCount == 0 &&*/
-  /*    (m_rootFiber->getState() == Fiber::TERM ||*/
-  /*     m_rootFiber->getState() == Fiber::INIT)) {*/
-  /*  SYLAR_LOG_INFO(g_logger) << this << " stopped";*/
-  /*  m_stopping = true;*/
-  /**/
-  /*  if (stopping()) {*/
-  /*    return;*/
-  /*  }*/
-  /*}*/
   m_stopping = true;
   for (size_t i = 0; i < m_threadCount; ++i) {
-    tickle(); //* 防止有没完成的任务
+    tickle();
   }
-  /*if (m_rootFiber) {*/
-  // *  tickle(); //*maybe if for the user_caller option*/
-  /*}*/
-
-  /*if (m_rootFiber) {*/
-  /*  if (!stopping()) {*/
-  /*    m_rootFiber->swapIn();*/ //* swap to the main scheduler:
-  /*  }*/
-  /*}*/
-
-  std::vector<PThread::ptr> thread_ptrs;
+  std::vector<PThread::ptr> threads;
   {
+
     std::unique_lock<std::mutex> lock(m_mutex);
-    thread_ptrs.swap(m_threads);
+    threads.swap(m_threads);
   }
-  for (auto &i : thread_ptrs) {
+  for (auto &i : threads) {
+
     i->join();
   }
 }
@@ -87,11 +69,12 @@ void Scheduler::stop() {
 void Scheduler::setThis() { t_scheduler = this; }
 
 void Scheduler::run() {
+  setThis();
   SYLAR_LOG_INFO(g_logger) << m_name << "run";
   // set_hook_enable(true);
-  setThis();
   // if (GetThreadId() != m_rootThreadId) {
   t_scheduler_fiber = Fiber::getThis().get();
+  assert(t_scheduler_fiber && t_scheduler);
   //}
   Fiber::ptr idle_fiber(new Fiber(
       std::bind(&Scheduler::idle,
@@ -141,7 +124,7 @@ void Scheduler::run() {
       ft.reset();
     } else if (ft.cb) {
       if (cb_fiber) {
-        cb_fiber->reset(ft.cb); 
+        cb_fiber->reset(ft.cb);
       } else {
         cb_fiber.reset(new Fiber(ft.cb));
       }
@@ -190,6 +173,6 @@ bool Scheduler::stopping() {
 void Scheduler::idle() {
   SYLAR_LOG_DEBUG(g_logger) << "idle";
   while (!stopping()) {
-    GetMainFiber()->swapIn(); // * it means the new task is come
+    Fiber::getThis()->swapOut(); // * it means the new task is come
   }
 }

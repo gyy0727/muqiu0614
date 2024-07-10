@@ -32,7 +32,7 @@
           logger, level, __FILE__, __LINE__, 0, Sylar::GetThreadId(),          \
           Sylar::GetFiberId(), time(0), "日志器01")))                          \
       .getSS()
-#define SYLAR_LOG_NAME(name) Sylar::LoggerMgr::getInstance()->getLogger(name)
+#define SYLAR_LOG_NAME(name) std::make_shared<Logger>(name)
 
 /**
  * @brief 使用流式方式将日志级别debug的日志写入到logger

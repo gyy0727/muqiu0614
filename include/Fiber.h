@@ -28,7 +28,7 @@ public:
     EXCEPT  //*异常
   };
   Fiber();
-  Fiber(std::function<void()> cb, size_t stacksize = 1024*128);
+  Fiber(std::function<void()> cb, size_t stacksize = 1024 * 128);
   ~Fiber();
   void reset(std::function<void()> cb);
   void swapIn();
@@ -49,8 +49,8 @@ public:
 
 private:
   uint64_t m_id;              //* 协程id
-  uint32_t m_stackSize = 0;   //*协程栈大小
-  STATE m_state = INIT;       //*协程状态
+  uint32_t m_stackSize;   //*协程栈大小
+  STATE m_state;       //*协程状态
   ucontext_t m_context;       //*协程上线文
   void *m_stack;              //*协程栈指针
   std::function<void()> m_cb; //*协程函数
