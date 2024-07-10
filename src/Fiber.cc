@@ -7,9 +7,9 @@
  * @Description  :
  * Copyright (c) 2024 by Gyy0727 email: 3155833132@qq.com, All Rights Reserved.
  */
-
 #include "../include/Fiber.h"
 #include "../include/Log.h"
+#include "../include/scheduler.h"
 #include <algorithm>
 #include <atomic>
 #include <cstddef>
@@ -24,7 +24,7 @@ static Sylar::Logger::ptr g_logger = SYLAR_LOG_NAME("system");
 static std::atomic<uint64_t> s_fiber_id{0};     //*协程id
 static std::atomic<uint64_t> s_fiber_counts{0}; //*当前在运行的协程数量
 static thread_local Fiber *t_fiber = nullptr; //*当前在运行的协程指针
-static thread_local Fiber *t_thread_fiber = nullptr; //*调度协程指针
+static thread_local Fiber::ptr t_thread_fiber = nullptr; //*调度协程指针
 
 class MallocStackAllocator {
 public:
@@ -38,11 +38,11 @@ Fiber::Fiber() : m_id(s_fiber_id++), m_state(RUNING) {
     //* throw std::logic_error("bad t_thread_fiber");
     //*异常这种操作太重了,还是不抛为妙
     //*构造函数抛出异常即使被catch,也可能导致构造失败
+    exit(1);
   }
   SYLAR_LOG_INFO(g_logger) << "主协程" << m_id << "创建";
   setThis(this);
   getcontext(&m_context);
-  t_thread_fiber = this;
   s_fiber_counts++;
 }
 
@@ -80,31 +80,31 @@ void Fiber::reset(std::function<void()> cb) {
   m_context.uc_stack.ss_size = m_stackSize;
   m_context.uc_stack.ss_sp = m_stack;
   makecontext(&m_context, &Fiber::mainFunc, 0);
-  m_state = RUNING;
+  m_state = INIT;
 }
 
 void Fiber::swapIn() {
   setThis(this);
-  Fiber *cur = t_thread_fiber;
+    Fiber::ptr cur = t_thread_fiber;
   m_state = RUNING;
   cur->m_state = HOLD;
 
   swapcontext(&cur->m_context, &m_context);
 }
 void Fiber::swapOut() {
-  setThis(t_thread_fiber);
+  setThis(Scheduler::GetMainFiber());
   m_state = TERM;
-  t_thread_fiber->m_state = RUNING;
-  setThis(t_thread_fiber);
-  swapcontext(&m_context, &t_thread_fiber->m_context);
+  setThis(Scheduler::GetMainFiber());
+  swapcontext(&m_context, &Scheduler::GetMainFiber()->m_context);
 }
 
 Fiber::ptr Fiber::getThis() {
   if (t_fiber) {
     return t_fiber->shared_from_this();
   } else {
-    SYLAR_LOG_ERROR(g_logger) << "t_fiber 为空";
-    return nullptr;
+    Fiber::ptr main_fiber(new Fiber());
+    t_thread_fiber = main_fiber;
+    return t_fiber->shared_from_this();
   }
 }
 
@@ -132,10 +132,10 @@ void Fiber::mainFunc() {
     SYLAR_LOG_ERROR(g_logger) << "Fiber Except"
                               << " fiber_id=" << cur->getId();
   }
-  auto ptr = cur.get();
+  auto ptr = cur.get();//*手动减少引用计数
 
   cur.reset();
-  std::cout << "执行完成" << std::endl;
+  SYLAR_LOG_INFO(g_logger) << "执行完成";
   ptr->swapOut();
 }
 

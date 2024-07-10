@@ -489,6 +489,30 @@ src/test_pthread.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/test_pthread.cc.s
 .PHONY : src/test_pthread.cc.s
 
+src/test_schduler.o: src/test_schduler.cc.o
+.PHONY : src/test_schduler.o
+
+# target to build an object file
+src/test_schduler.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/test_schduler.cc.o
+.PHONY : src/test_schduler.cc.o
+
+src/test_schduler.i: src/test_schduler.cc.i
+.PHONY : src/test_schduler.i
+
+# target to preprocess a source file
+src/test_schduler.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/test_schduler.cc.i
+.PHONY : src/test_schduler.cc.i
+
+src/test_schduler.s: src/test_schduler.cc.s
+.PHONY : src/test_schduler.s
+
+# target to generate assembly for a file
+src/test_schduler.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/test_schduler.cc.s
+.PHONY : src/test_schduler.cc.s
+
 src/util.o: src/util.cc.o
 .PHONY : src/util.o
 
@@ -567,6 +591,9 @@ help:
 	@echo "... src/test_pthread.o"
 	@echo "... src/test_pthread.i"
 	@echo "... src/test_pthread.s"
+	@echo "... src/test_schduler.o"
+	@echo "... src/test_schduler.i"
+	@echo "... src/test_schduler.s"
 	@echo "... src/util.o"
 	@echo "... src/util.i"
 	@echo "... src/util.s"

@@ -10,7 +10,7 @@
  */
 #include "../include/Log.h"
 #include "../include/Config.h"
-
+#include<mutex>
 namespace Sylar {
 
 Logger::Logger(const std::string &name)
@@ -251,6 +251,7 @@ private:
   std::string m_string;
 };
 void Logger::log(LogLevel::Level level, LogEvent::ptr event) {
+    std::unique_lock<std::mutex> lock(m_mutex);
   auto self = shared_from_this();
   if (m_level <= level) {
     if (!m_appenders.empty()) {
@@ -284,6 +285,7 @@ void Logger::delAppender(LogAppender::ptr appender) {
 void Logger::clearAppenders() { m_appenders.clear(); }
 
 void Logger::setFormatter(LogFormatter::ptr val) {
+    std::unique_lock<std::mutex> lock(m_mutex);
   m_formatter = val;
   for (auto &i : m_appenders) {
     if (!i->hasFormatter()) {
@@ -293,6 +295,8 @@ void Logger::setFormatter(LogFormatter::ptr val) {
 }
 
 void Logger::setFormatter(const std::string &val) {
+
+    std::unique_lock<std::mutex> lock(m_mutex);
   LogFormatter::ptr new_val(new LogFormatter(val));
   if (new_val->isError()) {
     std::cout << "Logger setFormatter name=" << m_name << " value=" << val
@@ -304,6 +308,8 @@ void Logger::setFormatter(const std::string &val) {
 }
 void StdoutLogAppender::log(Logger::ptr logger, LogLevel::Level level,
                             LogEvent::ptr event) {
+
+    std::unique_lock<std::mutex> lock(m_mutex);
   if (m_level <= level) {
     m_logformatter->format(std::cout, logger, level, event);
   }
@@ -314,6 +320,8 @@ FileLogAppender::FileLogAppender(const std::string &fliename)
 }
 void FileLogAppender::log(Logger::ptr logger, LogLevel::Level level,
                           LogEvent::ptr event) {
+
+    std::unique_lock<std::mutex> lock(m_mutex);
   if(level >= m_level) {
         uint64_t now = event->getTime();
         if(now >= (m_lastTime + 3)) {

@@ -23,6 +23,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/root/desktop/muqiu0614/src/test _scheduler.cc" "CMakeFiles/Sylar.dir/src/test__scheduler.cc.o" "gcc" "CMakeFiles/Sylar.dir/src/test__scheduler.cc.o.d"
   "/root/desktop/muqiu0614/src/test_fiber.cc" "CMakeFiles/Sylar.dir/src/test_fiber.cc.o" "gcc" "CMakeFiles/Sylar.dir/src/test_fiber.cc.o.d"
   "/root/desktop/muqiu0614/src/test_pthread.cc" "CMakeFiles/Sylar.dir/src/test_pthread.cc.o" "gcc" "CMakeFiles/Sylar.dir/src/test_pthread.cc.o.d"
+  "/root/desktop/muqiu0614/src/test_schduler.cc" "CMakeFiles/Sylar.dir/src/test_schduler.cc.o" "gcc" "CMakeFiles/Sylar.dir/src/test_schduler.cc.o.d"
   "/root/desktop/muqiu0614/src/util.cc" "CMakeFiles/Sylar.dir/src/util.cc.o" "gcc" "CMakeFiles/Sylar.dir/src/util.cc.o.d"
   )
 

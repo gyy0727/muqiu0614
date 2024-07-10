@@ -44,10 +44,9 @@ public:
       }
     }
     if (need_tickle) {
-      tickle();
+      tickle() ;
     }
   }
-
 
 protected:
   virtual void tickle();
@@ -55,7 +54,7 @@ protected:
   virtual bool stopping();
   virtual void idle();
   void setThis();
-  bool hasIdleThreads() { return m_activeThreadCount > 0; }
+  bool hasIdleThreads() { return m_idleThreadCount > 0; }
 
 private:
   template <class FiberOrCb> bool scheduleNoLock(FiberOrCb fc, int thread) {
@@ -81,20 +80,20 @@ private:
       thread_id = -1;
     }
   };
-  std::mutex m_mutex;                   //*互斥锁
+  std::mutex m_mutex;                  //*互斥锁
   std::vector<PThread::ptr> m_threads; //*线程池
-  std::list<FiberAndThread> m_fibers;   //*待执行的任务列表
-  Fiber::ptr m_rootFiber;               //*调度器的调度协程
-  std::string m_name;                   //*协程调度器的名字
+  std::list<FiberAndThread> m_fibers;  //*待执行的任务列表
+  Fiber::ptr m_rootFiber;              //*调度器的调度协程
+  std::string m_name;                  //*协程调度器的名字
 
 protected:
-  std::vector<int> m_threadIds;                   //*线程池的线程ID集合
+  std::vector<int> m_threadIds;                  //*线程池的线程ID集合
   size_t m_threadCount;                          // *线程池线程数量
   std::atomic<size_t> m_activeThreadCount = {0}; //*活跃线程的数量
   std::atomic<size_t> m_idleThreadCount = {0};   //*空闲线程数量
   bool m_stopping = true;                        //*是否已经停止
   bool m_autoStop = false;                       //*是否是自动停止的
-  int m_rootThread = 0;                          //*主线程的id
+  /*int m_rootThreadId = 0;  */                        //*主线程的id
 };
 
 #endif

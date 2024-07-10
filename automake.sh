@@ -19,7 +19,7 @@ cd build
 
 # 执行 make 构建项目
 echo "Building project..."
-make
+make -j2
 
 echo "Build completed."
 echo "------------------------------------------------------------------"
