@@ -51,6 +51,7 @@ void Scheduler::start() {
 void Scheduler::stop() {
   m_autoStop = true;
   m_stopping = true;
+
   for (size_t i = 0; i < m_threadCount; ++i) {
     tickle();
   }
@@ -61,7 +62,6 @@ void Scheduler::stop() {
     threads.swap(m_threads);
   }
   for (auto &i : threads) {
-
     i->join();
   }
 }

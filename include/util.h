@@ -12,7 +12,7 @@
 #include <pthread.h>
 #include <sys/syscall.h>
 #include <unistd.h>
-
+#include<iostream>
 namespace Sylar {
 
 
@@ -25,6 +25,18 @@ pid_t GetThreadId();
  * @brief 返回当前协程的ID
  */
 uint32_t GetFiberId();
+uint64_t GetCurrentMS();
 
+/**
+ * @brief 获取当前时间的微秒
+ */
+uint64_t GetCurrentUS();
+
+std::string ToUpper(const std::string& name);
+
+std::string ToLower(const std::string& name);
+
+std::string Time2Str(time_t ts = time(0), const std::string& format = "%Y-%m-%d %H:%M:%S");
+time_t Str2Time(const char* str, const char* format = "%Y-%m-%d %H:%M:%S");
 
 }

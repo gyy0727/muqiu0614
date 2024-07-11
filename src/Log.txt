@@ -3431,3 +3431,182 @@ top/muqiu0614/src/Scheduler.cc:90	调度器run
 2024-07-10 21:54:05	14364	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:151	idle fiber term
 2024-07-10 21:54:05	14365	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:151	idle fiber term
 2024-07-10 21:54:15	14363	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/test_schduler.cc:28	main term
+2024-07-10 22:22:45	14724	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/test_schduler.cc:16	test
+2024-07-10 22:22:45	14724	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:165	tickle
+2024-07-10 22:22:45	14725	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	调度器run
+2024-07-10 22:22:45	14726	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	调度器run
+2024-07-10 22:22:45	14725	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程0创建
+2024-07-10 22:22:45	14726	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程1创建
+2024-07-10 22:22:45	14725	日志器01	100	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=2
+2024-07-10 22:22:45	14725	日志器01	100	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:60	Fiber::~Fiber id=2 total=4
+2024-07-10 22:22:45	14726	日志器01	100	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=3
+2024-07-10 22:22:45	14726	日志器01	100	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:60	Fiber::~Fiber id=3 total=4
+2024-07-10 22:22:45	14725	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:165	tickle
+2024-07-10 22:22:45	14726	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:165	tickle
+2024-07-10 22:22:45	14725	日志器01	100	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=4
+2024-07-10 22:22:45	14725	日志器01	100	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:60	Fiber::~Fiber id=4 total=6
+2024-07-10 22:22:45	14726	日志器01	100	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=5
+2024-07-10 22:22:45	14726	日志器01	100	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:60	Fiber::~Fiber id=5 total=6
+2024-07-10 22:22:45	14725	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/test_schduler.cc:14	fiber is running
+2024-07-10 22:22:45	14726	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/test_schduler.cc:14	fiber is running
+2024-07-10 22:22:45	14725	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:148	执行完成
+2024-07-10 22:22:45	14726	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:148	执行完成
+2024-07-10 22:22:45	14725	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:165	tickle
+2024-07-10 22:22:45	14726	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:165	tickle
+2024-07-10 22:22:45	14725	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/test_schduler.cc:14	fiber is running
+2024-07-10 22:22:45	14725	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:148	执行完成
+2024-07-10 22:22:45	14726	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/test_schduler.cc:14	fiber is running
+2024-07-10 22:22:45	14726	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:148	执行完成
+2024-07-10 22:22:45	14726	日志器01	100	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:174	idle
+2024-07-10 22:22:45	14725	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/test_schduler.cc:14	fiber is running
+2024-07-10 22:22:45	14725	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:148	执行完成
+2024-07-10 22:22:45	14725	日志器01	100	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:174	idle
+2024-07-10 22:22:50	14724	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:165	tickle
+2024-07-10 22:22:50	14724	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:165	tickle
+2024-07-10 22:22:50	14726	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:148	执行完成
+2024-07-10 22:22:50	14726	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:151	idle fiber term
+2024-07-10 22:23:13	14754	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/test_schduler.cc:16	test
+2024-07-10 22:23:13	14754	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:165	tickle
+2024-07-10 22:23:13	14757	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	调度器run
+2024-07-10 22:23:13	14757	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程0创建
+2024-07-10 22:23:13	14757	日志器01	100	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=1
+2024-07-10 22:23:13	14757	日志器01	100	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:60	Fiber::~Fiber id=1 total=2
+2024-07-10 22:23:13	14758	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	调度器run
+2024-07-10 22:23:13	14758	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程2创建
+2024-07-10 22:23:14	14758	日志器01	100	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=3
+2024-07-10 22:23:13	14757	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:165	tickle
+2024-07-10 22:23:14	14758	日志器01	100	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:60	Fiber::~Fiber id=3 total=4
+2024-07-10 22:23:14	14758	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:165	tickle
+2024-07-10 22:23:14	14757	日志器01	100	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=4
+2024-07-10 22:23:14	14758	日志器01	100	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=5
+2024-07-10 22:23:14	14757	日志器01	100	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:60	Fiber::~Fiber id=4 total=6
+2024-07-10 22:23:14	14758	日志器01	100	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:60	Fiber::~Fiber id=5 total=6
+2024-07-10 22:23:14	14757	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/test_schduler.cc:14	fiber is running
+2024-07-10 22:23:14	14758	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/test_schduler.cc:14	fiber is running
+2024-07-10 22:23:14	14758	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:148	执行完成
+2024-07-10 22:23:14	14758	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:165	tickle
+2024-07-10 22:23:14	14758	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/test_schduler.cc:14	fiber is running
+2024-07-10 22:23:14	14757	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:148	执行完成
+2024-07-10 22:23:14	14758	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:148	执行完成
+2024-07-10 22:23:14	14758	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/test_schduler.cc:14	fiber is running
+2024-07-10 22:23:14	14758	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:148	执行完成
+2024-07-10 22:23:14	14757	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:165	tickle
+2024-07-10 22:23:14	14758	日志器01	100	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:174	idle
+2024-07-10 22:23:14	14757	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/test_schduler.cc:14	fiber is running
+2024-07-10 22:23:14	14757	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:148	执行完成
+2024-07-10 22:23:14	14757	日志器01	100	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:174	idle
+2024-07-10 22:23:18	14758	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:148	执行完成
+2024-07-10 22:23:18	14754	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:165	tickle
+2024-07-10 22:23:18	14754	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:165	tickle
+2024-07-10 22:23:18	14757	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:148	执行完成
+2024-07-10 22:23:18	14757	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:151	idle fiber term
+2024-07-10 22:23:18	14758	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:151	idle fiber term
+2024-07-10 22:24:59	14941	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/test_schduler.cc:16	test
+2024-07-10 22:24:59	14941	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:165	tickle
+2024-07-10 22:24:59	14942	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	调度器run
+2024-07-10 22:24:59	14943	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	调度器run
+2024-07-10 22:24:59	14943	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程1创建
+2024-07-10 22:24:59	14943	日志器01	100	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=2
+2024-07-10 22:24:59	14943	日志器01	100	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:60	Fiber::~Fiber id=2 total=2
+2024-07-10 22:24:59	14942	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程0创建
+2024-07-10 22:24:59	14942	日志器01	100	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=3
+2024-07-10 22:24:59	14942	日志器01	100	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:60	Fiber::~Fiber id=3 total=4
+2024-07-10 22:24:59	14943	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:165	tickle
+2024-07-10 22:24:59	14943	日志器01	100	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=4
+2024-07-10 22:24:59	14943	日志器01	100	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:60	Fiber::~Fiber id=4 total=5
+2024-07-10 22:24:59	14943	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/test_schduler.cc:14	fiber is running
+2024-07-10 22:24:59	14943	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-10 22:24:59	14943	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:165	tickle
+2024-07-10 22:24:59	14943	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/test_schduler.cc:14	fiber is running
+2024-07-10 22:24:59	14943	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-10 22:24:59	14943	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:165	tickle
+2024-07-10 22:24:59	14943	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/test_schduler.cc:14	fiber is running
+2024-07-10 22:24:59	14943	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-10 22:24:59	14943	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/test_schduler.cc:14	fiber is running
+2024-07-10 22:24:59	14943	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-10 22:24:59	14943	日志器01	100	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:174	idle
+2024-07-10 22:24:59	14942	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:165	tickle
+2024-07-10 22:24:59	14942	日志器01	100	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=5
+2024-07-10 22:24:59	14942	日志器01	100	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:60	Fiber::~Fiber id=5 total=6
+2024-07-10 22:24:59	14942	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/test_schduler.cc:14	fiber is running
+2024-07-10 22:24:59	14942	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-10 22:24:59	14942	日志器01	100	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:174	idle
+2024-07-10 22:25:04	14941	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:165	tickle
+2024-07-10 22:25:04	14941	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:165	tickle
+2024-07-10 22:25:04	14943	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-10 22:25:04	14942	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-10 22:25:04	14943	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:151	idle fiber term
+2024-07-10 22:25:04	14942	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:151	idle fiber term
+2024-07-10 22:25:14	14941	日志器01	100	[INFO]	[system]	/root/desktop/muqiu0614/src/test_schduler.cc:28	main term
+2024-07-11 17:17:42	9712	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/test_schduler.cc:16	test
+2024-07-11 17:17:42	9712	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:165	tickle
+2024-07-11 17:17:42	9713	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	调度器run
+2024-07-11 17:17:42	9713	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程0创建
+2024-07-11 17:17:42	9713	日志器01	1	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=1
+2024-07-11 17:17:42	9714	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	调度器run
+2024-07-11 17:17:42	9713	日志器01	1	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:60	Fiber::~Fiber id=1 total=2
+2024-07-11 17:17:42	9713	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:165	tickle
+2024-07-11 17:17:42	9714	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程2创建
+2024-07-11 17:17:42	9714	日志器01	4	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=4
+2024-07-11 17:17:42	9714	日志器01	4	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:60	Fiber::~Fiber id=4 total=5
+2024-07-11 17:17:42	9714	日志器01	4	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:165	tickle
+2024-07-11 17:17:42	9713	日志器01	3	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=3
+2024-07-11 17:17:42	9713	日志器01	3	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:60	Fiber::~Fiber id=3 total=6
+2024-07-11 17:17:42	9713	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/test_schduler.cc:14	fiber is running
+2024-07-11 17:17:42	9714	日志器01	5	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=5
+2024-07-11 17:17:42	9714	日志器01	5	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:60	Fiber::~Fiber id=5 total=6
+2024-07-11 17:17:42	9714	日志器01	5	[INFO]	[system]	/root/desktop/muqiu0614/src/test_schduler.cc:14	fiber is running
+2024-07-11 17:17:42	9713	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:148	执行完成
+2024-07-11 17:17:42	9713	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:165	tickle
+2024-07-11 17:17:42	9713	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/test_schduler.cc:14	fiber is running
+2024-07-11 17:17:42	9714	日志器01	5	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:148	执行完成
+2024-07-11 17:17:42	9714	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:165	tickle
+2024-07-11 17:17:42	9714	日志器01	5	[INFO]	[system]	/root/desktop/muqiu0614/src/test_schduler.cc:14	fiber is running
+2024-07-11 17:17:42	9714	日志器01	5	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:148	执行完成
+2024-07-11 17:17:42	9714	日志器01	5	[INFO]	[system]	/root/desktop/muqiu0614/src/test_schduler.cc:14	fiber is running
+2024-07-11 17:17:42	9714	日志器01	5	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:148	执行完成
+2024-07-11 17:17:42	9714	日志器01	4	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:174	idle
+2024-07-11 17:17:42	9713	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:148	执行完成
+2024-07-11 17:17:42	9713	日志器01	1	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:174	idle
+2024-07-11 17:17:47	9712	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:165	tickle
+2024-07-11 17:17:47	9712	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:165	tickle
+2024-07-11 17:17:47	9714	日志器01	4	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:148	执行完成
+2024-07-11 17:17:47	9713	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:148	执行完成
+2024-07-11 17:17:47	9714	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:151	idle fiber term
+2024-07-11 17:17:47	9713	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:151	idle fiber term
+2024-07-11 17:17:57	9712	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/test_schduler.cc:28	main term
+2024-07-11 22:15:14	16193	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/test_schduler.cc:16	test
+2024-07-11 22:15:14	16193	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:165	tickle
+2024-07-11 22:15:14	16194	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	调度器run
+2024-07-11 22:15:14	16195	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	调度器run
+2024-07-11 22:15:14	16194	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程0创建
+2024-07-11 22:15:14	16195	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程1创建
+2024-07-11 22:15:14	16195	日志器01	3	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=3
+2024-07-11 22:15:14	16195	日志器01	3	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:60	Fiber::~Fiber id=3 total=4
+2024-07-11 22:15:14	16195	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:165	tickle
+2024-07-11 22:15:14	16195	日志器01	4	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=4
+2024-07-11 22:15:14	16195	日志器01	4	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:60	Fiber::~Fiber id=4 total=5
+2024-07-11 22:15:14	16195	日志器01	4	[INFO]	[system]	/root/desktop/muqiu0614/src/test_schduler.cc:14	fiber is running
+2024-07-11 22:15:14	16195	日志器01	4	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:148	执行完成
+2024-07-11 22:15:14	16195	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:165	tickle
+2024-07-11 22:15:14	16195	日志器01	4	[INFO]	[system]	/root/desktop/muqiu0614/src/test_schduler.cc:14	fiber is running
+2024-07-11 22:15:14	16195	日志器01	4	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:148	执行完成
+2024-07-11 22:15:14	16195	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:165	tickle
+2024-07-11 22:15:14	16195	日志器01	4	[INFO]	[system]	/root/desktop/muqiu0614/src/test_schduler.cc:14	fiber is running
+2024-07-11 22:15:14	16195	日志器01	4	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:148	执行完成
+2024-07-11 22:15:14	16195	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:165	tickle
+2024-07-11 22:15:14	16195	日志器01	4	[INFO]	[system]	/root/desktop/muqiu0614/src/test_schduler.cc:14	fiber is running
+2024-07-11 22:15:14	16195	日志器01	4	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:148	执行完成
+2024-07-11 22:15:14	16195	日志器01	4	[INFO]	[system]	/root/desktop/muqiu0614/src/test_schduler.cc:14	fiber is running
+2024-07-11 22:15:14	16195	日志器01	4	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:148	执行完成
+2024-07-11 22:15:14	16195	日志器01	3	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:174	idle
+2024-07-11 22:15:14	16194	日志器01	2	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=2
+2024-07-11 22:15:14	16194	日志器01	2	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:60	Fiber::~Fiber id=2 total=5
+2024-07-11 22:15:14	16194	日志器01	2	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:174	idle
+2024-07-11 22:15:19	16193	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:165	tickle
+2024-07-11 22:15:19	16193	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:165	tickle
+2024-07-11 22:15:19	16195	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:148	执行完成
+2024-07-11 22:15:19	16195	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:151	idle fiber term
+2024-07-11 22:15:19	16194	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:148	执行完成
+2024-07-11 22:15:19	16194	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:151	idle fiber term
+2024-07-11 22:15:29	16193	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/test_schduler.cc:28	main term

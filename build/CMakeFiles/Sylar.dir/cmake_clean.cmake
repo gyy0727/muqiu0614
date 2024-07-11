@@ -33,6 +33,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Sylar.dir/src/test_pthread.cc.o.d"
   "CMakeFiles/Sylar.dir/src/test_schduler.cc.o"
   "CMakeFiles/Sylar.dir/src/test_schduler.cc.o.d"
+  "CMakeFiles/Sylar.dir/src/timer.cc.o"
+  "CMakeFiles/Sylar.dir/src/timer.cc.o.d"
   "CMakeFiles/Sylar.dir/src/util.cc.o"
   "CMakeFiles/Sylar.dir/src/util.cc.o.d"
 )
