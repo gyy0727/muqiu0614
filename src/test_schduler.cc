@@ -4,6 +4,7 @@
 #include <functional>
 #include <iostream>
 using namespace Sylar;
+#if 0
 void func();
 int thread_cout = 2;
 std::string name = "调度器";
@@ -28,3 +29,5 @@ int main() {
   SYLAR_LOG_INFO(g_logger) << "main term";
   return 0;
 }
+#endif
+

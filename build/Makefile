@@ -513,6 +513,30 @@ src/test_schduler.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/test_schduler.cc.s
 .PHONY : src/test_schduler.cc.s
 
+src/test_timer.o: src/test_timer.cc.o
+.PHONY : src/test_timer.o
+
+# target to build an object file
+src/test_timer.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/test_timer.cc.o
+.PHONY : src/test_timer.cc.o
+
+src/test_timer.i: src/test_timer.cc.i
+.PHONY : src/test_timer.i
+
+# target to preprocess a source file
+src/test_timer.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/test_timer.cc.i
+.PHONY : src/test_timer.cc.i
+
+src/test_timer.s: src/test_timer.cc.s
+.PHONY : src/test_timer.s
+
+# target to generate assembly for a file
+src/test_timer.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/test_timer.cc.s
+.PHONY : src/test_timer.cc.s
+
 src/timer.o: src/timer.cc.o
 .PHONY : src/timer.o
 
@@ -618,6 +642,9 @@ help:
 	@echo "... src/test_schduler.o"
 	@echo "... src/test_schduler.i"
 	@echo "... src/test_schduler.s"
+	@echo "... src/test_timer.o"
+	@echo "... src/test_timer.i"
+	@echo "... src/test_timer.s"
 	@echo "... src/timer.o"
 	@echo "... src/timer.i"
 	@echo "... src/timer.s"

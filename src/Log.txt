@@ -3610,3 +3610,6 @@ top/muqiu0614/src/Scheduler.cc:90	调度器run
 2024-07-11 22:15:19	16194	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:148	执行完成
 2024-07-11 22:15:19	16194	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:151	idle fiber term
 2024-07-11 22:15:29	16193	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/test_schduler.cc:28	main term
+2024-07-12 09:54:36	4210	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/test_timer.cc:9	test_timer
+2024-07-12 10:02:17	4725	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/test_timer.cc:8	test_timer
+2024-07-12 10:45:30	6481	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/test_timer.cc:9	test_timer

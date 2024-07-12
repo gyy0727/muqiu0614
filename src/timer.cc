@@ -136,12 +136,13 @@ void TimerManager::listExpiredCb(std::vector<std::function<void()>> &cbs) {
   if (m_timers.empty()) {
     return;
   }
-  bool rollover = detectColckRollover(now_ms);
+
+  bool rollover = detectColckRollover(now_ms); //*判断是否发生了时钟回滚
   if (!rollover && ((*m_timers.begin())->m_next > now_ms)) {
-    return;
+    return;       //*如果没有发生时钟回滚,且最小的定时器还没过期
   }
   Timer::ptr now_timer(new Timer(now_ms));
-  auto it = rollover ? m_timers.end() : m_timers.lower_bound(now_timer);
+  auto it = rollover ? m_timers.end() : m_timers.lower_bound(now_timer); //*如果发生了时间回滚,那就把容器里面所有定时器设为过期
   while (it != m_timers.end() && (*it)->m_next == now_ms) {
     ++it;
   }
