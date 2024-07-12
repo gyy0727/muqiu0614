@@ -811,4 +811,13 @@ CMakeFiles/Sylar.dir/src/IoManager.cc.o: \
  /usr/include/c++/11/bits/unordered_set.h \
  /root/desktop/muqiu0614/src/../include/Manager.h \
  /usr/include/c++/11/semaphore \
- /root/desktop/muqiu0614/src/../include/timer.h
+ /root/desktop/muqiu0614/src/../include/timer.h /usr/include/fcntl.h \
+ /usr/include/x86_64-linux-gnu/bits/fcntl.h \
+ /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
+ /usr/include/linux/falloc.h /usr/include/x86_64-linux-gnu/bits/stat.h \
+ /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
+ /usr/include/x86_64-linux-gnu/sys/epoll.h \
+ /usr/include/x86_64-linux-gnu/bits/epoll.h \
+ /usr/include/x86_64-linux-gnu/sys/eventfd.h \
+ /usr/include/x86_64-linux-gnu/bits/eventfd.h
