@@ -398,6 +398,8 @@ void IOManager::idle() {
         --m_pendingEventCount;
       }
     }
+    //*这里使用裸指针是因为swapout之后当前函数相当于是暂停,不
+    //会析构,可以导致智能指针对象无法减少引用计数,所以要自己手动减少
     Fiber::ptr cur = Fiber::getThis();
     auto raw_ptr = cur.get();
     cur.reset();
