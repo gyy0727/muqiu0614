@@ -217,16 +217,6 @@ bool IOManager::delEvent(int fd, Event event) {
   return true;
 }
 
-
-
-
-
-
-
-
-
-
-
 bool IOManager::cancelEvent(int fd, Event event) {
   rwlock::ReadLock lock(m_mutex);
   if ((int)m_fdContexts.size() <= fd) {
@@ -258,139 +248,161 @@ bool IOManager::cancelEvent(int fd, Event event) {
   return true;
 }
 
-
-
-
 bool IOManager::cancelAll(int fd) {
-    rwlock::ReadLock lock(m_mutex);
-    if((int)m_fdContexts.size() <= fd) {
-        return false;
-    }
-    FdContext* fd_ctx = m_fdContexts[fd];
-    lock.unlock();
+  rwlock::ReadLock lock(m_mutex);
+  if ((int)m_fdContexts.size() <= fd) {
+    return false;
+  }
+  FdContext *fd_ctx = m_fdContexts[fd];
+  lock.unlock();
 
-    std::unique_lock<std::mutex> lock2(fd_ctx->mutex);
-    if(!fd_ctx->events) {
-        return false;
-    }
+  std::unique_lock<std::mutex> lock2(fd_ctx->mutex);
+  if (!fd_ctx->events) {
+    return false;
+  }
 
-    int op = EPOLL_CTL_DEL;
-    epoll_event epevent;
-    epevent.events = 0;
-    epevent.data.ptr = fd_ctx;
+  int op = EPOLL_CTL_DEL;
+  epoll_event epevent;
+  epevent.events = 0;
+  epevent.data.ptr = fd_ctx;
 
-    int rt = epoll_ctl(m_epollfd, op, fd, &epevent);
-    if(rt) {
-        SYLAR_LOG_ERROR(g_logger) << "epoll_ctl(" << m_epollfd << ", "
-            << (EpollCtlOp)op << ", " << fd << ", " << (EPOLL_EVENTS)epevent.events << "):"
-            << rt << " (" << errno << ") (" << strerror(errno) << ")";
-        return false;
-    }
+  int rt = epoll_ctl(m_epollfd, op, fd, &epevent);
+  if (rt) {
+    SYLAR_LOG_ERROR(g_logger)
+        << "epoll_ctl(" << m_epollfd << ", " << (EpollCtlOp)op << ", " << fd
+        << ", " << (EPOLL_EVENTS)epevent.events << "):" << rt << " (" << errno
+        << ") (" << strerror(errno) << ")";
+    return false;
+  }
 
-    if(fd_ctx->events & READ) {
-        fd_ctx->triggerEvent(READ);
-        --m_pendingEventCount;
-    }
-    if(fd_ctx->events & WRITE) {
-        fd_ctx->triggerEvent(WRITE);
-        --m_pendingEventCount;
-    }
+  if (fd_ctx->events & READ) {
+    fd_ctx->triggerEvent(READ);
+    --m_pendingEventCount;
+  }
+  if (fd_ctx->events & WRITE) {
+    fd_ctx->triggerEvent(WRITE);
+    --m_pendingEventCount;
+  }
 
-    assert(fd_ctx->events == 0);
-    return true;
+  assert(fd_ctx->events == 0);
+  return true;
 }
 
-
-
-IOManager* IOManager::getThis() {
-    return dynamic_cast<IOManager*>(Scheduler::GetThis());
+IOManager *IOManager::getThis() {
+  return dynamic_cast<IOManager *>(Scheduler::GetThis());
 }
-
-
-
-
 
 void IOManager::tickle() {
-    if(!hasIdleThreads()) {
-        return;
-    }
-    int rt = write(m_wakeupfd, "T", 1);
-    assert(rt == 1);
+  if (!hasIdleThreads()) {
+    return;
+  }
+  int rt = write(m_wakeupfd, "T", 1);
+  assert(rt == 1);
 }
 
-bool IOManager::stopping(uint64_t timeout) {
-    timeout = getNextTimer();
-    return timeout == ~0ull
-        && m_pendingEventCount == 0
-        && Scheduler::stopping();
-
+//*引用是为了idle()里面直接传入修改next_timeout
+bool IOManager::stopping(uint64_t &timeout) {
+  timeout = getNextTimer();
+  return timeout == ~0ull && m_pendingEventCount == 0 && Scheduler::stopping();
 }
 bool IOManager::stopping() {
-    uint64_t timeout = 0;
-    return stopping(timeout);
+  uint64_t timeout = 0;
+  return stopping(
+      timeout); //*没有定时器&&没有待执行的任务&&最重要一点(m_autostop为true)
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+void IOManager::idle() {
+  SYLAR_LOG_INFO(g_logger) << "idle";
+  const uint64_t MAX_EVENTS = 256;
+  epoll_event *events = new epoll_event[MAX_EVENTS]();
+  std::shared_ptr<epoll_event> shared_events(
+      events, [](epoll_event *ptr) { delete[] ptr; });
+
+  while (true) {
+    uint64_t next_timeout = 0;
+    if (UNLIKELY(stopping(next_timeout))) {
+      SYLAR_LOG_INFO(g_logger) << "name = " << getName() << "idle stoping exit";
+      break;
+    }
+    int rt = 0;
+    do {
+      static const int MAX_TIMEOUT = 3000;
+      if (next_timeout != ~0ull) { //*即定时器容器不为空
+        next_timeout =
+            (int)next_timeout > MAX_TIMEOUT ? MAX_TIMEOUT : next_timeout;
+      } else {
+        next_timeout = MAX_TIMEOUT;
+      }
+      rt = epoll_wait(m_epollfd, events, MAX_EVENTS, (int)next_timeout);
+      if (rt < 0 && errno == EINTR) { //*系统中断
+
+      } else {
+        break;
+      }
+    } while (true);
+
+    std::vector<std::function<void()>> cbs;
+    listExpiredCb(cbs); //*将过期的定时器的任务存入其中
+    if (!cbs.empty()) {
+      schedule(cbs.begin(), cbs.end());
+      cbs.clear();
+    }
+    for (int i = 0; i < rt; ++i) {
+      epoll_event &event = events[i];
+      if (event.data.fd == m_wakeupfd) {
+        uint8_t dummy[256];
+        while (read(m_wakeupfd, dummy, sizeof(dummy)) > 0)
+          ; //*先将内容全部读取
+        continue;
+      }
+      FdContext *fd_ctx = (FdContext *)event.data.ptr;
+      std::unique_lock<std::mutex> lock(fd_ctx->mutex);
+      if (event.events &
+          (EPOLLERR |
+           EPOLLHUP)) { //*意思是如果触发的事件包含了系统中断或者一系列错误,就要重新设置该epollfd的感兴趣事件
+        event.events |= (EPOLLIN | EPOLLOUT) & fd_ctx->events;
+      }
+
+      //*以下逻辑是用于判断具体发生了什么感兴趣的事件
+      int real_events = NONE;
+      if (event.events & EPOLLIN) {
+        real_events |= READ;
+      }
+      if (event.events & EPOLLOUT) {
+        real_events |= WRITE;
+      }
+
+      if ((fd_ctx->events & real_events) == NONE) {
+        continue;
+      }
+      int left_events =
+          (fd_ctx->events &
+           ~real_events); //*剔除已经发生的感兴趣事件,然后剩下的没发生的事件
+      int op = left_events ? EPOLL_CTL_MOD
+                           : EPOLL_CTL_DEL; //*如果还有没发生的感兴趣事件
+      event.events = EPOLLET | left_events;
+      int rt2 = epoll_ctl(m_epollfd, op, fd_ctx->fd, &event);
+      if (rt2) {
+        SYLAR_LOG_ERROR(g_logger)
+            << "epoll_ctl(" << m_epollfd << ", " << (EpollCtlOp)op << ", "
+            << fd_ctx->fd << ", " << (EPOLL_EVENTS)event.events << "):" << rt2
+            << " (" << errno << ") (" << strerror(errno) << ")";
+        continue;
+      }
+      if (real_events & READ) {
+        fd_ctx->triggerEvent(READ);
+        --m_pendingEventCount;
+      }
+      if (real_events & WRITE) {
+        fd_ctx->triggerEvent(WRITE);
+        --m_pendingEventCount;
+      }
+    }
+    Fiber::ptr cur = Fiber::getThis();
+    auto raw_ptr = cur.get();
+    cur.reset();
+
+    raw_ptr->swapOut();
+  }
+}
+void IOManager::onTimerInsertAtFront() { tickle(); }

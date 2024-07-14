@@ -46,7 +46,7 @@ protected:
   void idle() override;
   void onTimerInsertAtFront() override;
   void contextResize(size_t size);
-  bool stopping(uint64_t timeout);
+  bool stopping(uint64_t& timeout);
 
 private:
   int m_epollfd;
