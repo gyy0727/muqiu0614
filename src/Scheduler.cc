@@ -116,7 +116,7 @@ void Scheduler::run() {
       ft.fiber->swapIn(); // *执行任务
       --m_activeThreadCount;
       if (ft.fiber->getState() == Fiber::READY) {
-        scheduler(ft.fiber);
+        schedule(ft.fiber);
       } else if (ft.fiber->getState() != Fiber::TERM &&
                  ft.fiber->getState() != Fiber::EXCEPT) {
         ft.fiber->setState(Fiber::STATE::HOLD);
@@ -132,7 +132,7 @@ void Scheduler::run() {
       cb_fiber->swapIn();
       --m_activeThreadCount;
       if (cb_fiber->getState() == Fiber::READY) {
-        scheduler(cb_fiber);
+        schedule(cb_fiber);
         cb_fiber.reset();
       } else if (cb_fiber->getState() == Fiber::EXCEPT ||
                  cb_fiber->getState() == Fiber::TERM) {

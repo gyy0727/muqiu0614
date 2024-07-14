@@ -1,7 +1,7 @@
 #include "../include/IoManager.h"
 #include "../include/Log.h"
 #include "../include/macro.h"
-#include <cassert>
+#include <assert.h>
 #include <errno.h>
 #include <exception>
 #include <fcntl.h>
@@ -89,10 +89,10 @@ void IOManager::FdContext::triggerEvent(IOManager::Event event) {
   events = (Event)(events & ~event);
   EventContext &ctx = getContext(event);
   if (ctx.cb) {
-    ctx.scheduler->scheduler(&ctx.cb);
+    ctx.scheduler->schedule(ctx.cb);
 
   } else {
-    ctx.scheduler->scheduler(ctx.fiber);
+    ctx.scheduler->schedule(ctx.fiber);
   }
   ctx.scheduler = nullptr;
   return;
