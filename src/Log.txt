@@ -3616,3 +3616,1236 @@ top/muqiu0614/src/Scheduler.cc:90	调度器run
 2024-07-14 15:23:21	20530	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/test_timer.cc:9	test_timer
 2024-07-14 15:24:28	20985	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/test_timer.cc:9	test_timer
 2024-07-14 15:25:49	21198	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/test_timer.cc:9	test_timer
+2024-07-15 10:12:22	4750	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 10:12:22	4751	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 10:12:22	4750	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程0创建
+2024-07-15 10:12:22	4751	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程1创建
+2024-07-15 10:12:22	4751	日志器01	3	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=3
+2024-07-15 10:12:22	4751	日志器01	3	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:60	Fiber::~Fiber id=3 total=4
+2024-07-15 10:12:22	4751	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:315	idle
+2024-07-15 10:12:22	4750	日志器01	2	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=2
+2024-07-15 10:12:22	4750	日志器01	2	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:60	Fiber::~Fiber id=2 total=4
+2024-07-15 10:12:22	4750	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:315	idle
+2024-07-15 10:13:06	4765	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 10:13:06	4765	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程0创建
+2024-07-15 10:13:06	4765	日志器01	1	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=1
+2024-07-15 10:13:06	4765	日志器01	1	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:60	Fiber::~Fiber id=1 total=2
+2024-07-15 10:13:06	4766	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 10:13:06	4765	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:315	idle
+2024-07-15 10:13:06	4766	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程2创建
+2024-07-15 10:13:06	4766	日志器01	3	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=3
+2024-07-15 10:13:06	4766	日志器01	3	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:60	Fiber::~Fiber id=3 total=4
+2024-07-15 10:13:06	4766	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:315	idle
+2024-07-15 10:18:46	5028	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 10:18:46	5028	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程0创建
+2024-07-15 10:18:46	5028	日志器01	1	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=1
+2024-07-15 10:18:46	5028	日志器01	1	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:60	Fiber::~Fiber id=1 total=2
+2024-07-15 10:18:46	5028	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:330	idle
+2024-07-15 10:18:46	5029	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 10:18:46	5029	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程2创建
+2024-07-15 10:18:46	5029	日志器01	3	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=3
+2024-07-15 10:18:46	5029	日志器01	3	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:60	Fiber::~Fiber id=3 total=4
+2024-07-15 10:18:46	5029	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:330	idle
+2024-07-15 10:21:08	5332	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 10:21:08	5332	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程0创建
+2024-07-15 10:21:08	5333	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 10:21:08	5332	日志器01	1	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=1
+2024-07-15 10:21:08	5332	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:330	idle
+2024-07-15 10:21:08	5333	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程2创建
+2024-07-15 10:21:08	5333	日志器01	3	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=3
+2024-07-15 10:21:08	5333	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:330	idle
+2024-07-15 10:21:34	5347	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 10:21:34	5347	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程0创建
+2024-07-15 10:21:34	5347	日志器01	1	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=1
+2024-07-15 10:21:34	5348	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 10:21:34	5348	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程2创建
+2024-07-15 10:21:34	5348	日志器01	3	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=3
+2024-07-15 10:21:34	5347	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:330	idle
+2024-07-15 10:21:34	5348	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:330	idle
+2024-07-15 10:22:53	5351	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 10:22:53	5351	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程0创建
+2024-07-15 10:22:54	5351	日志器01	1	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=1
+2024-07-15 10:22:54	5351	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:330	idle
+2024-07-15 10:22:53	5352	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 10:22:54	5352	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程2创建
+2024-07-15 10:22:54	5352	日志器01	3	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=3
+2024-07-15 10:22:54	5352	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:330	idle
+2024-07-15 10:23:09	5355	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 10:23:09	5355	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程0创建
+2024-07-15 10:23:09	5355	日志器01	1	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=1
+2024-07-15 10:23:09	5355	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:330	idle
+2024-07-15 10:23:09	5356	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 10:23:09	5356	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程2创建
+2024-07-15 10:23:09	5356	日志器01	3	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=3
+2024-07-15 10:23:09	5356	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:330	idle
+2024-07-15 10:26:30	5595	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 10:26:30	5596	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 10:26:30	5595	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程0创建
+2024-07-15 10:26:30	5596	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程1创建
+2024-07-15 10:26:30	5595	日志器01	2	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=2
+2024-07-15 10:26:30	5595	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:332	idle
+2024-07-15 10:26:30	5596	日志器01	3	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=3
+2024-07-15 10:26:30	5596	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:332	idle
+2024-07-15 10:26:49	5610	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 10:26:49	5610	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程0创建
+2024-07-15 10:26:49	5610	日志器01	1	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=1
+2024-07-15 10:26:49	5611	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 10:26:49	5610	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:332	idle
+2024-07-15 10:26:49	5611	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程2创建
+2024-07-15 10:26:49	5611	日志器01	3	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=3
+2024-07-15 10:26:49	5611	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:332	idle
+2024-07-15 10:27:18	5613	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 10:27:18	5613	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程0创建
+2024-07-15 10:27:18	5613	日志器01	1	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=1
+2024-07-15 10:27:18	5613	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:332	idle
+2024-07-15 10:27:18	5614	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 10:27:18	5614	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程2创建
+2024-07-15 10:27:18	5614	日志器01	3	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=3
+2024-07-15 10:27:18	5614	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:332	idle
+2024-07-15 10:27:19	5612	日志器01	0	[ERROR]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:316	 tickle 写入失败
+2024-07-15 10:27:21	5612	日志器01	0	[ERROR]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:316	 tickle 写入失败
+2024-07-15 10:27:21	5612	日志器01	0	[ERROR]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:316	 tickle 写入失败
+2024-07-15 10:33:17	6183	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 10:33:17	6183	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程0创建
+2024-07-15 10:33:17	6184	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 10:33:17	6183	日志器01	1	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=1
+2024-07-15 10:33:17	6184	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程2创建
+2024-07-15 10:33:17	6184	日志器01	3	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=3
+2024-07-15 10:33:17	6183	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:333	idle
+2024-07-15 10:33:17	6184	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:333	idle
+2024-07-15 10:33:46	6203	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 10:33:46	6203	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程0创建
+2024-07-15 10:33:46	6203	日志器01	1	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=1
+2024-07-15 10:33:46	6203	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:333	idle
+2024-07-15 10:33:46	6204	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 10:33:46	6204	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程2创建
+2024-07-15 10:33:46	6204	日志器01	3	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=3
+2024-07-15 10:33:46	6204	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:333	idle
+2024-07-15 10:33:54	6206	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 10:33:54	6207	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 10:33:54	6206	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程0创建
+2024-07-15 10:33:54	6206	日志器01	2	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=2
+2024-07-15 10:33:54	6207	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程1创建
+2024-07-15 10:33:54	6207	日志器01	3	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=3
+2024-07-15 10:33:54	6207	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:333	idle
+2024-07-15 10:33:54	6206	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:333	idle
+2024-07-15 10:40:14	6215	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 10:40:14	6215	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程0创建
+2024-07-15 10:40:14	6215	日志器01	1	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=1
+2024-07-15 10:40:14	6215	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:333	idle
+2024-07-15 10:40:14	6216	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 10:40:14	6216	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程2创建
+2024-07-15 10:40:14	6216	日志器01	3	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=3
+2024-07-15 10:40:14	6216	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:333	idle
+2024-07-15 10:46:54	6792	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 10:46:54	6792	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程0创建
+2024-07-15 10:46:54	6792	日志器01	1	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=1
+2024-07-15 10:46:54	6793	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 10:46:54	6793	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程2创建
+2024-07-15 10:46:54	6793	日志器01	3	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=3
+2024-07-15 10:46:54	6792	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:321	idle
+2024-07-15 10:46:54	6793	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:321	idle
+2024-07-15 10:47:26	6809	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 10:47:26	6809	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程0创建
+2024-07-15 10:47:26	6809	日志器01	1	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=1
+2024-07-15 10:47:26	6809	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:321	idle
+2024-07-15 10:47:26	6810	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 10:47:26	6810	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程2创建
+2024-07-15 10:47:26	6810	日志器01	3	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=3
+2024-07-15 10:47:26	6810	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:321	idle
+2024-07-15 10:53:03	7173	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 10:53:03	7173	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程0创建
+2024-07-15 10:53:03	7174	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 10:53:03	7173	日志器01	1	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=1
+2024-07-15 10:53:03	7173	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:321	idle
+2024-07-15 10:53:03	7174	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程2创建
+2024-07-15 10:53:03	7174	日志器01	3	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=3
+2024-07-15 10:53:03	7174	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:321	idle
+2024-07-15 10:54:53	7372	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 10:54:53	7373	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 10:54:53	7372	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程0创建
+2024-07-15 10:54:53	7373	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程2创建
+2024-07-15 10:54:53	7372	日志器01	1	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=1
+2024-07-15 10:54:53	7373	日志器01	3	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=3
+2024-07-15 10:54:53	7372	日志器01	4	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=4
+2024-07-15 10:54:53	7373	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:321	idle
+2024-07-15 10:54:53	7372	日志器01	4	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:20	test_fiber sock=0
+2024-07-15 10:54:53	7372	日志器01	4	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:38	add event errno=115 Operation now in progress
+2024-07-15 10:54:53	7372	日志器01	4	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-15 10:54:53	7372	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:321	idle
+2024-07-15 10:55:56	7583	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 10:55:56	7583	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程0创建
+2024-07-15 10:55:56	7583	日志器01	1	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=1
+2024-07-15 10:55:56	7583	日志器01	2	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=2
+2024-07-15 10:55:56	7583	日志器01	2	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:20	test_fiber sock=0
+2024-07-15 10:55:56	7584	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 10:55:56	7584	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程3创建
+2024-07-15 10:55:56	7584	日志器01	4	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=4
+2024-07-15 10:55:56	7584	日志器01	4	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:321	idle
+2024-07-15 10:55:56	7583	日志器01	2	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:38	add event errno=115 Operation now in progress
+2024-07-15 10:55:56	7583	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-15 10:55:56	7583	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:321	idle
+2024-07-15 10:57:01	7625	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 10:57:01	7625	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程0创建
+2024-07-15 10:57:01	7625	日志器01	1	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=1
+2024-07-15 10:57:01	7626	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 10:57:01	7626	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程2创建
+2024-07-15 10:57:01	7626	日志器01	4	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=4
+2024-07-15 10:57:01	7626	日志器01	4	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:321	idle
+2024-07-15 10:57:01	7625	日志器01	3	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=3
+2024-07-15 10:57:01	7625	日志器01	3	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:20	test_fiber sock=0
+2024-07-15 10:57:01	7625	日志器01	3	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:38	add event errno=115 Operation now in progress
+2024-07-15 10:57:01	7625	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-15 10:57:01	7625	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:321	idle
+2024-07-15 10:57:21	7628	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 10:57:21	7628	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程0创建
+2024-07-15 10:57:21	7629	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 10:57:21	7628	日志器01	1	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=1
+2024-07-15 10:57:21	7629	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程2创建
+2024-07-15 10:57:21	7628	日志器01	3	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=3
+2024-07-15 10:57:21	7629	日志器01	4	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=4
+2024-07-15 10:57:21	7628	日志器01	3	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:20	test_fiber sock=0
+2024-07-15 10:57:21	7628	日志器01	3	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:38	add event errno=115 Operation now in progress
+2024-07-15 10:57:21	7629	日志器01	4	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:321	idle
+2024-07-15 10:57:21	7628	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-15 10:57:21	7628	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:321	idle
+2024-07-15 11:00:59	7895	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 11:00:59	7895	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程0创建
+2024-07-15 11:00:59	7895	日志器01	1	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=1
+2024-07-15 11:00:59	7896	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 11:00:59	7895	日志器01	2	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=2
+2024-07-15 11:00:59	7896	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程3创建
+2024-07-15 11:00:59	7896	日志器01	4	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=4
+2024-07-15 11:00:59	7895	日志器01	2	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:20	test_fiber sock=0
+2024-07-15 11:00:59	7896	日志器01	4	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:321	idle
+2024-07-15 11:00:59	7896	日志器01	4	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:341	there is no timmer
+2024-07-15 11:00:59	7895	日志器01	2	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:38	add event errno=115 Operation now in progress
+2024-07-15 11:00:59	7895	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-15 11:00:59	7895	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:321	idle
+2024-07-15 11:00:59	7895	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:341	there is no timmer
+2024-07-15 11:01:02	7896	日志器01	4	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:341	there is no timmer
+2024-07-15 11:01:02	7895	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:341	there is no timmer
+2024-07-15 11:01:05	7896	日志器01	4	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:341	there is no timmer
+2024-07-15 11:01:05	7895	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:341	there is no timmer
+2024-07-15 11:01:08	7896	日志器01	4	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:341	there is no timmer
+2024-07-15 11:01:08	7895	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:341	there is no timmer
+2024-07-15 11:01:09	7896	日志器01	4	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:341	there is no timmer
+2024-07-15 11:01:35	8072	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 11:01:35	8072	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程0创建
+2024-07-15 11:01:35	8073	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 11:01:35	8072	日志器01	1	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=1
+2024-07-15 11:01:35	8073	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程2创建
+2024-07-15 11:01:35	8072	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:321	idle
+2024-07-15 11:01:35	8072	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 11:01:35	8073	日志器01	3	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=3
+2024-07-15 11:01:35	8073	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:321	idle
+2024-07-15 11:01:35	8073	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 11:03:58	8267	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 11:03:58	8268	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 11:03:58	8267	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程0创建
+2024-07-15 11:03:58	8267	日志器01	2	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=2
+2024-07-15 11:03:58	8267	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:321	idle
+2024-07-15 11:03:58	8267	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 11:03:58	8268	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程1创建
+2024-07-15 11:03:58	8268	日志器01	3	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=3
+2024-07-15 11:03:58	8268	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:321	idle
+2024-07-15 11:03:58	8268	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 11:04:21	8280	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 11:04:21	8280	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程0创建
+2024-07-15 11:04:21	8280	日志器01	1	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=1
+2024-07-15 11:04:21	8281	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 11:04:21	8280	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:321	idle
+2024-07-15 11:04:21	8281	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程2创建
+2024-07-15 11:04:21	8280	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 11:04:21	8281	日志器01	3	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=3
+2024-07-15 11:04:21	8281	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:321	idle
+2024-07-15 11:04:21	8281	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 11:04:39	8288	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 11:04:39	8288	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程0创建
+2024-07-15 11:04:39	8288	日志器01	1	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=1
+2024-07-15 11:04:39	8289	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 11:04:39	8288	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:321	idle
+2024-07-15 11:04:39	8289	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程2创建
+2024-07-15 11:04:39	8288	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 11:04:39	8289	日志器01	3	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=3
+2024-07-15 11:04:39	8289	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:321	idle
+2024-07-15 11:04:39	8289	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 11:55:10	12857	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 11:55:10	12858	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 11:55:10	12857	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程0创建
+2024-07-15 11:55:10	12858	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程1创建
+2024-07-15 11:55:10	12857	日志器01	2	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=2
+2024-07-15 11:55:10	12857	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:321	idle
+2024-07-15 11:55:10	12858	日志器01	3	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=3
+2024-07-15 11:55:10	12857	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 11:55:10	12858	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:321	idle
+2024-07-15 11:55:10	12858	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 11:56:01	12889	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 11:56:01	12889	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程0创建
+2024-07-15 11:56:01	12889	日志器01	1	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=1
+2024-07-15 11:56:01	12890	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 11:56:01	12890	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程2创建
+2024-07-15 11:56:01	12889	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:321	idle
+2024-07-15 11:56:01	12889	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 11:56:01	12890	日志器01	3	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=3
+2024-07-15 11:56:01	12890	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:321	idle
+2024-07-15 11:56:01	12890	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 11:59:17	13090	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 11:59:17	13090	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程0创建
+2024-07-15 11:59:17	13091	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 11:59:17	13090	日志器01	1	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=1
+2024-07-15 11:59:17	13091	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程2创建
+2024-07-15 11:59:17	13091	日志器01	3	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=3
+2024-07-15 11:59:17	13090	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:321	idle
+2024-07-15 11:59:17	13091	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:321	idle
+2024-07-15 11:59:17	13091	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 11:59:17	13090	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 11:59:18	13090	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 11:59:18	13091	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:29:23	14734	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 12:29:23	14735	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 12:29:23	14734	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程0创建
+2024-07-15 12:29:23	14735	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程1创建
+2024-07-15 12:29:23	14734	日志器01	2	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=2
+2024-07-15 12:29:23	14735	日志器01	3	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=3
+2024-07-15 12:29:23	14734	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:321	idle
+2024-07-15 12:29:23	14735	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:321	idle
+2024-07-15 12:29:23	14734	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:29:23	14735	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:29:24	14734	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:29:24	14735	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:29:24	14734	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:134	释放读锁
+2024-07-15 12:29:24	14735	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:134	释放读锁
+2024-07-15 12:29:24	14734	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:29:24	14735	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:29:24	14734	日志器01	4	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=4
+2024-07-15 12:29:24	14735	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:29:24	14735	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:29:24	14735	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:134	释放读锁
+2024-07-15 12:29:24	14734	日志器01	4	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:66	hello timer i=0
+2024-07-15 12:29:24	14734	日志器01	4	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-15 12:29:24	14734	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:29:25	14734	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:29:25	14734	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:134	释放读锁
+2024-07-15 12:41:15	14948	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 12:41:15	14949	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 12:41:15	14948	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程0创建
+2024-07-15 12:41:15	14949	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程1创建
+2024-07-15 12:41:15	14949	日志器01	3	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=3
+2024-07-15 12:41:15	14949	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:321	idle
+2024-07-15 12:41:15	14948	日志器01	2	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=2
+2024-07-15 12:41:15	14949	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:41:15	14948	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:321	idle
+2024-07-15 12:41:15	14948	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:41:16	14949	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:41:16	14949	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:134	释放读锁
+2024-07-15 12:41:16	14948	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:41:16	14948	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:134	释放读锁
+2024-07-15 12:44:08	15276	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 12:44:08	15276	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程0创建
+2024-07-15 12:44:08	15276	日志器01	1	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=1
+2024-07-15 12:44:08	15277	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 12:44:08	15277	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程2创建
+2024-07-15 12:44:08	15277	日志器01	3	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=3
+2024-07-15 12:44:08	15276	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:321	idle
+2024-07-15 12:44:08	15276	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:44:08	15277	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:321	idle
+2024-07-15 12:44:08	15277	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:44:09	15276	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:44:09	15277	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:44:15	15276	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:134	释放读锁
+2024-07-15 12:44:51	15277	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:134	释放读锁
+2024-07-15 12:47:45	15458	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 12:47:45	15458	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程0创建
+2024-07-15 12:47:45	15459	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 12:47:45	15458	日志器01	1	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=1
+2024-07-15 12:47:45	15458	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:321	idle
+2024-07-15 12:47:45	15459	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程2创建
+2024-07-15 12:47:45	15459	日志器01	3	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=3
+2024-07-15 12:47:45	15458	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:47:45	15459	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:321	idle
+2024-07-15 12:47:45	15459	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:47:46	15458	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:47:46	15458	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:47:46	15459	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:47:46	15459	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:48:57	15651	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 12:48:57	15651	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程0创建
+2024-07-15 12:48:57	15652	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 12:48:57	15651	日志器01	1	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=1
+2024-07-15 12:48:57	15652	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程2创建
+2024-07-15 12:48:57	15652	日志器01	3	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=3
+2024-07-15 12:48:57	15651	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:321	idle
+2024-07-15 12:48:57	15651	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:48:57	15652	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:321	idle
+2024-07-15 12:48:57	15652	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:48:58	15651	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:48:58	15651	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:48:58	15652	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:48:58	15652	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:52:46	15929	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 12:52:46	15930	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 12:52:46	15929	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程0创建
+2024-07-15 12:52:46	15930	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程1创建
+2024-07-15 12:52:46	15929	日志器01	2	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=2
+2024-07-15 12:52:46	15930	日志器01	3	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=3
+2024-07-15 12:52:46	15929	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:321	idle
+2024-07-15 12:52:46	15929	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:52:46	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:321	idle
+2024-07-15 12:52:46	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:52:47	15929	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:52:47	15929	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:52:47	15929	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:52:47	15929	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:170	listExpiredCb exit
+2024-07-15 12:52:47	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:52:47	15929	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:52:47	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:52:47	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:52:47	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:52:47	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:52:47	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:52:47	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:52:47	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:52:47	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:52:47	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:52:47	15929	日志器01	4	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=4
+2024-07-15 12:52:47	15929	日志器01	4	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:66	hello timer i=0
+2024-07-15 12:52:47	15929	日志器01	4	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-15 12:52:47	15929	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:52:48	15929	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:52:48	15929	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:52:48	15929	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:52:48	15929	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:170	listExpiredCb exit
+2024-07-15 12:52:48	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:52:48	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:52:48	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:52:48	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:52:48	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:52:48	15929	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:52:48	15929	日志器01	4	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:66	hello timer i=1
+2024-07-15 12:52:48	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:52:48	15929	日志器01	4	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-15 12:52:48	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:52:48	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:52:48	15929	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:52:48	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:52:48	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:52:49	15929	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:52:49	15929	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:52:49	15929	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:52:49	15929	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:170	listExpiredCb exit
+2024-07-15 12:52:49	15929	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:52:49	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:52:49	15929	日志器01	4	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:66	hello timer i=2
+2024-07-15 12:52:49	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:52:49	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:52:49	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:52:49	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:52:50	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:52:50	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:52:50	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:52:50	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:170	listExpiredCb exit
+2024-07-15 12:52:50	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:52:50	15930	日志器01	5	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=5
+2024-07-15 12:52:50	15930	日志器01	5	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:66	hello timer i=3
+2024-07-15 12:52:50	15930	日志器01	5	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-15 12:52:50	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:52:50	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:52:50	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:52:50	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:52:50	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:52:50	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:52:51	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:52:51	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:52:51	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:52:51	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:170	listExpiredCb exit
+2024-07-15 12:52:51	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:52:51	15930	日志器01	5	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:66	hello timer i=4
+2024-07-15 12:52:51	15930	日志器01	5	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-15 12:52:51	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:52:51	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:52:51	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:52:51	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:52:51	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:52:51	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:52:52	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:52:52	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:52:52	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:52:52	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:170	listExpiredCb exit
+2024-07-15 12:52:52	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:52:52	15930	日志器01	5	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:66	hello timer i=5
+2024-07-15 12:52:52	15930	日志器01	5	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-15 12:52:52	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:52:52	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:52:52	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:52:52	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:52:52	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:52:52	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:52:53	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:52:53	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:52:53	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:52:53	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:170	listExpiredCb exit
+2024-07-15 12:52:53	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:52:53	15930	日志器01	5	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:66	hello timer i=6
+2024-07-15 12:52:53	15930	日志器01	5	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-15 12:52:53	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:52:53	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:52:53	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:52:53	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:52:53	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:52:53	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:52:54	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:52:54	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:52:54	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:52:54	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:170	listExpiredCb exit
+2024-07-15 12:52:54	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:52:54	15930	日志器01	5	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:66	hello timer i=7
+2024-07-15 12:52:54	15930	日志器01	5	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-15 12:52:54	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:52:54	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:52:54	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:52:54	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:52:54	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:52:54	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:52:55	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:52:55	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:52:55	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:52:55	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:170	listExpiredCb exit
+2024-07-15 12:52:55	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:52:55	15930	日志器01	5	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:66	hello timer i=8
+2024-07-15 12:52:55	15930	日志器01	5	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-15 12:52:55	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:52:55	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:52:55	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:52:55	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:52:55	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:52:55	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:52:56	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:52:56	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:52:56	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:52:56	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:170	listExpiredCb exit
+2024-07-15 12:52:56	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:52:56	15930	日志器01	5	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:66	hello timer i=9
+2024-07-15 12:52:56	15930	日志器01	5	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-15 12:52:56	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:52:56	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:52:56	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:52:56	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:52:56	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:52:56	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:52:57	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:52:57	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:52:57	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:52:57	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:170	listExpiredCb exit
+2024-07-15 12:52:57	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:52:57	15930	日志器01	5	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:66	hello timer i=10
+2024-07-15 12:52:57	15930	日志器01	5	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-15 12:52:57	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:52:57	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:52:57	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:52:57	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:52:57	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:52:57	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:52:58	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:52:58	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:52:58	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:52:58	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:170	listExpiredCb exit
+2024-07-15 12:52:58	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:52:58	15930	日志器01	5	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:66	hello timer i=11
+2024-07-15 12:52:58	15930	日志器01	5	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-15 12:52:58	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:52:58	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:52:58	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:52:58	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:52:58	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:52:58	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:52:59	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:52:59	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:52:59	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:52:59	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:170	listExpiredCb exit
+2024-07-15 12:52:59	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:52:59	15930	日志器01	5	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:66	hello timer i=12
+2024-07-15 12:52:59	15930	日志器01	5	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-15 12:52:59	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:52:59	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:52:59	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:52:59	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:52:59	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:52:59	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:53:00	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:53:00	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:53:00	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:53:00	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:170	listExpiredCb exit
+2024-07-15 12:53:00	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:53:00	15930	日志器01	5	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:66	hello timer i=13
+2024-07-15 12:53:00	15930	日志器01	5	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-15 12:53:00	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:53:00	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:53:00	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:53:00	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:53:00	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:53:00	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:53:01	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:53:01	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:53:01	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:53:01	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:170	listExpiredCb exit
+2024-07-15 12:53:01	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:53:01	15930	日志器01	5	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:66	hello timer i=14
+2024-07-15 12:53:01	15930	日志器01	5	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-15 12:53:01	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:53:01	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:53:01	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:53:01	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:53:01	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:53:01	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:53:02	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:53:02	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:53:02	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:53:02	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:170	listExpiredCb exit
+2024-07-15 12:53:02	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:53:02	15930	日志器01	5	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:66	hello timer i=15
+2024-07-15 12:53:02	15930	日志器01	5	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-15 12:53:02	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:53:02	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:53:02	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:53:02	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:53:02	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:53:02	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:53:03	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:53:03	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:53:03	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:53:03	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:170	listExpiredCb exit
+2024-07-15 12:53:03	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:53:03	15930	日志器01	5	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:66	hello timer i=16
+2024-07-15 12:53:03	15930	日志器01	5	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-15 12:53:03	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:53:03	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:53:03	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:53:03	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:53:03	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:53:03	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:53:04	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:53:04	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:53:04	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:53:04	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:170	listExpiredCb exit
+2024-07-15 12:53:04	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:53:04	15930	日志器01	5	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:66	hello timer i=17
+2024-07-15 12:53:04	15930	日志器01	5	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-15 12:53:04	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:53:04	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:53:04	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:53:04	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:53:04	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:53:04	15930	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:54:02	16150	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 12:54:02	16150	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程0创建
+2024-07-15 12:54:02	16151	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 12:54:02	16150	日志器01	1	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=1
+2024-07-15 12:54:02	16151	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程2创建
+2024-07-15 12:54:02	16151	日志器01	3	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=3
+2024-07-15 12:54:02	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:321	idle
+2024-07-15 12:54:02	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:321	idle
+2024-07-15 12:54:02	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:54:02	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:54:03	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:54:03	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:54:03	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:54:03	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:54:03	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:170	listExpiredCb exit
+2024-07-15 12:54:03	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:54:03	16151	日志器01	4	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=4
+2024-07-15 12:54:03	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:54:03	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:54:03	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:54:03	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:54:03	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:54:03	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:54:03	16151	日志器01	4	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:66	hello timer i=0
+2024-07-15 12:54:03	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:54:03	16151	日志器01	4	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-15 12:54:03	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:54:03	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:54:03	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:54:04	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:54:04	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:54:04	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:54:04	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:54:04	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:170	listExpiredCb exit
+2024-07-15 12:54:04	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:54:04	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:54:04	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:54:04	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:54:04	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:54:04	16151	日志器01	4	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:66	hello timer i=1
+2024-07-15 12:54:04	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:54:04	16151	日志器01	4	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-15 12:54:04	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:54:04	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:54:04	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:54:04	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:54:04	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:54:05	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:54:05	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:54:05	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:54:05	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:170	listExpiredCb exit
+2024-07-15 12:54:05	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:54:05	16150	日志器01	5	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=5
+2024-07-15 12:54:05	16150	日志器01	5	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:66	hello timer i=2
+2024-07-15 12:54:05	16150	日志器01	5	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-15 12:54:05	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:54:05	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:54:05	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:54:05	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:54:05	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:54:05	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:54:06	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:54:06	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:54:06	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:54:06	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:54:06	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:54:06	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:170	listExpiredCb exit
+2024-07-15 12:54:06	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:54:06	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:54:06	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:54:06	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:54:06	16151	日志器01	4	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:66	hello timer i=3
+2024-07-15 12:54:06	16151	日志器01	4	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-15 12:54:06	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:54:06	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:54:06	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:54:06	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:54:06	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:54:06	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:54:07	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:54:07	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:54:07	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:54:07	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:170	listExpiredCb exit
+2024-07-15 12:54:07	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:54:07	16151	日志器01	4	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:66	hello timer i=4
+2024-07-15 12:54:07	16151	日志器01	4	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-15 12:54:07	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:54:07	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:54:07	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:54:07	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:54:07	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:54:07	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:54:08	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:54:08	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:54:08	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:54:08	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:54:08	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:170	listExpiredCb exit
+2024-07-15 12:54:08	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:54:08	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:54:08	16151	日志器01	4	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:66	hello timer i=5
+2024-07-15 12:54:08	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:54:08	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:54:08	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:54:08	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:54:08	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:54:08	16151	日志器01	4	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-15 12:54:08	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:54:08	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:54:08	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:54:08	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:54:09	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:54:09	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:54:09	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:54:09	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:170	listExpiredCb exit
+2024-07-15 12:54:09	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:54:09	16151	日志器01	4	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:66	hello timer i=6
+2024-07-15 12:54:09	16151	日志器01	4	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-15 12:54:09	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:54:09	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:54:09	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:54:09	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:54:09	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:54:09	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:54:09	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:54:09	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:54:09	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:54:09	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:54:09	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:54:10	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:54:10	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:54:10	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:54:10	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:170	listExpiredCb exit
+2024-07-15 12:54:10	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:54:10	16151	日志器01	4	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:66	hello timer i=7
+2024-07-15 12:54:10	16151	日志器01	4	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-15 12:54:10	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:54:10	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:54:10	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:54:10	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:54:10	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:54:10	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:54:11	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:54:11	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:54:11	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:54:11	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:54:11	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:170	listExpiredCb exit
+2024-07-15 12:54:11	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:54:11	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:54:11	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:54:11	16150	日志器01	5	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:66	hello timer i=8
+2024-07-15 12:54:11	16150	日志器01	5	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-15 12:54:11	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:54:11	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:54:11	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:54:11	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:54:11	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:54:11	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:54:11	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:54:11	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:54:12	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:54:12	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:54:12	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:54:12	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:54:12	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:170	listExpiredCb exit
+2024-07-15 12:54:12	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:54:12	16151	日志器01	4	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:66	hello timer i=9
+2024-07-15 12:54:12	16151	日志器01	4	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-15 12:54:12	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:54:12	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:54:12	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:54:12	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:54:12	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:54:12	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:54:12	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:54:12	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:54:12	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:54:12	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:54:13	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:54:13	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:54:13	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:54:13	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:54:13	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:170	listExpiredCb exit
+2024-07-15 12:54:13	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:54:13	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:54:13	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:54:13	16150	日志器01	5	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:66	hello timer i=10
+2024-07-15 12:54:13	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:54:13	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:54:13	16150	日志器01	5	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-15 12:54:13	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:54:13	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:54:13	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:54:13	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:54:13	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:54:13	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:54:14	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:54:14	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:54:14	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:54:14	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:54:14	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:170	listExpiredCb exit
+2024-07-15 12:54:14	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:54:14	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:54:14	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:54:14	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:54:14	16150	日志器01	5	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:66	hello timer i=11
+2024-07-15 12:54:14	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:54:14	16150	日志器01	5	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-15 12:54:14	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:54:14	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:54:14	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:54:14	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:54:14	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:54:14	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:54:15	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:54:15	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:54:15	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:54:15	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:54:15	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:170	listExpiredCb exit
+2024-07-15 12:54:15	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:54:15	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:54:15	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:54:15	16150	日志器01	5	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:66	hello timer i=12
+2024-07-15 12:54:15	16150	日志器01	5	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-15 12:54:15	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:54:15	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:54:15	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:54:15	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:54:15	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:54:15	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:54:15	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:54:15	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:54:16	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:54:16	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:54:16	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:54:16	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:170	listExpiredCb exit
+2024-07-15 12:54:16	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:54:16	16150	日志器01	5	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:66	hello timer i=13
+2024-07-15 12:54:16	16150	日志器01	5	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-15 12:54:16	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:54:16	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:54:16	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:54:16	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:54:16	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:54:16	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:54:17	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:54:17	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:54:17	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:54:17	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:170	listExpiredCb exit
+2024-07-15 12:54:17	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:54:17	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:54:17	16150	日志器01	5	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:66	hello timer i=14
+2024-07-15 12:54:17	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:54:17	16150	日志器01	5	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-15 12:54:17	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:54:17	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:54:17	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 12:54:17	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:136	释放读锁
+2024-07-15 12:54:17	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:54:17	16151	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 12:54:17	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:139	获取写锁
+2024-07-15 12:54:17	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 12:54:17	16150	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 13:02:17	16553	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 13:02:17	16554	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 13:02:17	16553	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程0创建
+2024-07-15 13:02:17	16554	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程1创建
+2024-07-15 13:02:17	16553	日志器01	2	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=2
+2024-07-15 13:02:17	16554	日志器01	3	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=3
+2024-07-15 13:02:17	16553	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:321	idle
+2024-07-15 13:02:17	16553	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 13:02:17	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:321	idle
+2024-07-15 13:02:17	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 13:02:18	16553	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 13:02:18	16553	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:137	释放读锁
+2024-07-15 13:02:18	16553	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:141	获取写锁
+2024-07-15 13:02:18	16553	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:172	listExpiredCb exit
+2024-07-15 13:02:18	16553	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 13:02:18	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 13:02:18	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:137	释放读锁
+2024-07-15 13:02:18	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:141	获取写锁
+2024-07-15 13:02:18	16553	日志器01	4	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=4
+2024-07-15 13:02:18	16553	日志器01	4	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:66	hello timer i=0
+2024-07-15 13:02:18	16553	日志器01	4	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-15 13:02:18	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 13:02:18	16553	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 13:02:18	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 13:02:19	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 13:02:19	16553	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 13:02:19	16553	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:137	释放读锁
+2024-07-15 13:02:19	16553	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:141	获取写锁
+2024-07-15 13:02:19	16553	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:172	listExpiredCb exit
+2024-07-15 13:02:19	16553	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 13:02:19	16553	日志器01	4	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:66	hello timer i=1
+2024-07-15 13:02:19	16553	日志器01	4	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-15 13:02:19	16553	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 13:02:19	16553	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 13:02:19	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:137	释放读锁
+2024-07-15 13:02:19	16553	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:137	释放读锁
+2024-07-15 13:02:19	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:141	获取写锁
+2024-07-15 13:02:19	16553	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:141	获取写锁
+2024-07-15 13:02:19	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 13:02:19	16553	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 13:02:19	16553	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 13:02:19	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 13:02:20	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 13:02:20	16553	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 13:02:20	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:137	释放读锁
+2024-07-15 13:02:20	16553	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:137	释放读锁
+2024-07-15 13:02:20	16553	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:141	获取写锁
+2024-07-15 13:02:20	16553	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:172	listExpiredCb exit
+2024-07-15 13:02:20	16553	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 13:02:20	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:141	获取写锁
+2024-07-15 13:02:20	16553	日志器01	4	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:66	hello timer i=2
+2024-07-15 13:02:20	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 13:02:20	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 13:02:20	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 13:02:20	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:137	释放读锁
+2024-07-15 13:02:20	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:141	获取写锁
+2024-07-15 13:02:20	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 13:02:20	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 13:02:21	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 13:02:21	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:137	释放读锁
+2024-07-15 13:02:21	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:141	获取写锁
+2024-07-15 13:02:21	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:172	listExpiredCb exit
+2024-07-15 13:02:21	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 13:02:21	16554	日志器01	5	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=5
+2024-07-15 13:02:21	16554	日志器01	5	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:66	hello timer i=3
+2024-07-15 13:02:21	16554	日志器01	5	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-15 13:02:21	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 13:02:21	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 13:02:21	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:137	释放读锁
+2024-07-15 13:02:21	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:141	获取写锁
+2024-07-15 13:02:21	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 13:02:21	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 13:02:22	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 13:02:22	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:137	释放读锁
+2024-07-15 13:02:22	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:141	获取写锁
+2024-07-15 13:02:22	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:172	listExpiredCb exit
+2024-07-15 13:02:22	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 13:02:22	16554	日志器01	5	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:66	hello timer i=4
+2024-07-15 13:02:22	16554	日志器01	5	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-15 13:02:22	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 13:02:22	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 13:02:22	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:137	释放读锁
+2024-07-15 13:02:22	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:141	获取写锁
+2024-07-15 13:02:22	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 13:02:22	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 13:02:23	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 13:02:23	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:137	释放读锁
+2024-07-15 13:02:23	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:141	获取写锁
+2024-07-15 13:02:23	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:172	listExpiredCb exit
+2024-07-15 13:02:23	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 13:02:23	16554	日志器01	5	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:66	hello timer i=5
+2024-07-15 13:02:23	16554	日志器01	5	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-15 13:02:23	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 13:02:23	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 13:02:23	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:137	释放读锁
+2024-07-15 13:02:23	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:141	获取写锁
+2024-07-15 13:02:23	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 13:02:23	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 13:02:24	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 13:02:24	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:137	释放读锁
+2024-07-15 13:02:24	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:141	获取写锁
+2024-07-15 13:02:24	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:172	listExpiredCb exit
+2024-07-15 13:02:24	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 13:02:24	16554	日志器01	5	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:66	hello timer i=6
+2024-07-15 13:02:24	16554	日志器01	5	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-15 13:02:24	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 13:02:24	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 13:02:24	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:137	释放读锁
+2024-07-15 13:02:24	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:141	获取写锁
+2024-07-15 13:02:24	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 13:02:24	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 13:02:25	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 13:02:25	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:137	释放读锁
+2024-07-15 13:02:25	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:141	获取写锁
+2024-07-15 13:02:25	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:172	listExpiredCb exit
+2024-07-15 13:02:25	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 13:02:25	16554	日志器01	5	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:66	hello timer i=7
+2024-07-15 13:02:25	16554	日志器01	5	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-15 13:02:25	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 13:02:25	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 13:02:25	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:137	释放读锁
+2024-07-15 13:02:25	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:141	获取写锁
+2024-07-15 13:02:25	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 13:02:25	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 13:02:26	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 13:02:26	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:137	释放读锁
+2024-07-15 13:02:26	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:141	获取写锁
+2024-07-15 13:02:26	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:172	listExpiredCb exit
+2024-07-15 13:02:26	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 13:02:26	16554	日志器01	5	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:66	hello timer i=8
+2024-07-15 13:02:26	16554	日志器01	5	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-15 13:02:26	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 13:02:26	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 13:02:26	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:137	释放读锁
+2024-07-15 13:02:26	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:141	获取写锁
+2024-07-15 13:02:26	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 13:02:26	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 13:02:27	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 13:02:27	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:137	释放读锁
+2024-07-15 13:02:27	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:141	获取写锁
+2024-07-15 13:02:27	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:172	listExpiredCb exit
+2024-07-15 13:02:27	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 13:02:27	16554	日志器01	5	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:66	hello timer i=9
+2024-07-15 13:02:27	16554	日志器01	5	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-15 13:02:27	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 13:02:27	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 13:02:27	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:137	释放读锁
+2024-07-15 13:02:27	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:141	获取写锁
+2024-07-15 13:02:27	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 13:02:27	16554	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 13:02:43	16699	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 13:02:43	16700	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 13:02:43	16699	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程0创建
+2024-07-15 13:02:43	16700	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程1创建
+2024-07-15 13:02:43	16699	日志器01	2	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=2
+2024-07-15 13:02:43	16700	日志器01	3	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=3
+2024-07-15 13:02:43	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:321	idle
+2024-07-15 13:02:43	16700	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:321	idle
+2024-07-15 13:02:43	16700	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 13:02:43	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 13:02:44	16700	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 13:02:44	16700	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:137	释放读锁
+2024-07-15 13:02:44	16700	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:141	获取写锁
+2024-07-15 13:02:44	16700	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:172	listExpiredCb exit
+2024-07-15 13:02:44	16700	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 13:02:44	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 13:02:44	16700	日志器01	4	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=4
+2024-07-15 13:02:44	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:137	释放读锁
+2024-07-15 13:02:44	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:141	获取写锁
+2024-07-15 13:02:44	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 13:02:44	16700	日志器01	4	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:66	hello timer i=0
+2024-07-15 13:02:44	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 13:02:44	16700	日志器01	4	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-15 13:02:44	16700	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 13:02:45	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 13:02:45	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:137	释放读锁
+2024-07-15 13:02:45	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:141	获取写锁
+2024-07-15 13:02:45	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:172	listExpiredCb exit
+2024-07-15 13:02:45	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 13:02:45	16700	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 13:02:45	16700	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:137	释放读锁
+2024-07-15 13:02:45	16700	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:141	获取写锁
+2024-07-15 13:02:45	16700	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 13:02:45	16700	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 13:02:45	16700	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 13:02:45	16699	日志器01	5	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=5
+2024-07-15 13:02:45	16700	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:137	释放读锁
+2024-07-15 13:02:45	16700	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:141	获取写锁
+2024-07-15 13:02:45	16700	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 13:02:45	16700	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 13:02:45	16699	日志器01	5	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:66	hello timer i=1
+2024-07-15 13:02:45	16699	日志器01	5	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-15 13:02:45	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 13:02:46	16700	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 13:02:46	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 13:02:46	16700	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:137	释放读锁
+2024-07-15 13:02:46	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:137	释放读锁
+2024-07-15 13:02:46	16700	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:141	获取写锁
+2024-07-15 13:02:46	16700	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:172	listExpiredCb exit
+2024-07-15 13:02:46	16700	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 13:02:46	16700	日志器01	4	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:66	hello timer i=2
+2024-07-15 13:02:46	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:141	获取写锁
+2024-07-15 13:02:46	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 13:02:46	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 13:02:46	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 13:02:46	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:137	释放读锁
+2024-07-15 13:02:46	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:141	获取写锁
+2024-07-15 13:02:46	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 13:02:46	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 13:02:47	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 13:02:47	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:137	释放读锁
+2024-07-15 13:02:47	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:141	获取写锁
+2024-07-15 13:02:47	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:172	listExpiredCb exit
+2024-07-15 13:02:47	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 13:02:47	16699	日志器01	5	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:66	hello timer i=3
+2024-07-15 13:02:47	16699	日志器01	5	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-15 13:02:47	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 13:02:47	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 13:02:47	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:137	释放读锁
+2024-07-15 13:02:47	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:141	获取写锁
+2024-07-15 13:02:47	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 13:02:47	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 13:02:48	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 13:02:48	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:137	释放读锁
+2024-07-15 13:02:48	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:141	获取写锁
+2024-07-15 13:02:48	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:172	listExpiredCb exit
+2024-07-15 13:02:48	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 13:02:48	16699	日志器01	5	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:66	hello timer i=4
+2024-07-15 13:02:48	16699	日志器01	5	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-15 13:02:48	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 13:02:48	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 13:02:48	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:137	释放读锁
+2024-07-15 13:02:48	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:141	获取写锁
+2024-07-15 13:02:48	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 13:02:48	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 13:02:49	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 13:02:49	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:137	释放读锁
+2024-07-15 13:02:49	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:141	获取写锁
+2024-07-15 13:02:49	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:172	listExpiredCb exit
+2024-07-15 13:02:49	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 13:02:49	16699	日志器01	5	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:66	hello timer i=5
+2024-07-15 13:02:49	16699	日志器01	5	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-15 13:02:49	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 13:02:49	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 13:02:49	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:137	释放读锁
+2024-07-15 13:02:49	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:141	获取写锁
+2024-07-15 13:02:49	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 13:02:49	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 13:02:50	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 13:02:50	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:137	释放读锁
+2024-07-15 13:02:50	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:141	获取写锁
+2024-07-15 13:02:50	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:172	listExpiredCb exit
+2024-07-15 13:02:50	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 13:02:50	16699	日志器01	5	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:66	hello timer i=6
+2024-07-15 13:02:50	16699	日志器01	5	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-15 13:02:50	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 13:02:50	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 13:02:50	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:137	释放读锁
+2024-07-15 13:02:50	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:141	获取写锁
+2024-07-15 13:02:50	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 13:02:50	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 13:02:51	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 13:02:51	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:137	释放读锁
+2024-07-15 13:02:51	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:141	获取写锁
+2024-07-15 13:02:51	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:172	listExpiredCb exit
+2024-07-15 13:02:51	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 13:02:51	16699	日志器01	5	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:66	hello timer i=7
+2024-07-15 13:02:51	16699	日志器01	5	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-15 13:02:51	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 13:02:51	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 13:02:51	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:137	释放读锁
+2024-07-15 13:02:51	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:141	获取写锁
+2024-07-15 13:02:51	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 13:02:51	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 13:02:52	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 13:02:52	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:137	释放读锁
+2024-07-15 13:02:52	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:141	获取写锁
+2024-07-15 13:02:52	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:172	listExpiredCb exit
+2024-07-15 13:02:52	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 13:02:52	16699	日志器01	5	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:66	hello timer i=8
+2024-07-15 13:02:52	16699	日志器01	5	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-15 13:02:52	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 13:02:52	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 13:02:52	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:137	释放读锁
+2024-07-15 13:02:52	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:141	获取写锁
+2024-07-15 13:02:52	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 13:02:52	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 13:02:53	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 13:02:53	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:137	释放读锁
+2024-07-15 13:02:53	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:141	获取写锁
+2024-07-15 13:02:53	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:172	listExpiredCb exit
+2024-07-15 13:02:53	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 13:02:53	16699	日志器01	5	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:66	hello timer i=9
+2024-07-15 13:02:53	16699	日志器01	5	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-15 13:02:53	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 13:02:53	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 13:02:53	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:137	释放读锁
+2024-07-15 13:02:53	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:141	获取写锁
+2024-07-15 13:02:53	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 13:02:53	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 13:02:54	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 13:02:54	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:137	释放读锁
+2024-07-15 13:02:54	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:141	获取写锁
+2024-07-15 13:02:54	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:172	listExpiredCb exit
+2024-07-15 13:02:54	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 13:02:54	16699	日志器01	5	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:66	hello timer i=10
+2024-07-15 13:02:54	16699	日志器01	5	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-15 13:02:54	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 13:02:54	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 13:02:54	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:137	释放读锁
+2024-07-15 13:02:54	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:141	获取写锁
+2024-07-15 13:02:54	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 13:02:54	16699	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 13:03:38	16874	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 13:03:38	16875	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-15 13:03:38	16874	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程0创建
+2024-07-15 13:03:38	16875	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程1创建
+2024-07-15 13:03:38	16875	日志器01	3	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=3
+2024-07-15 13:03:38	16874	日志器01	2	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=2
+2024-07-15 13:03:38	16875	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:321	idle
+2024-07-15 13:03:38	16874	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:321	idle
+2024-07-15 13:03:38	16875	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 13:03:38	16874	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:337	there has timmer
+2024-07-15 13:03:39	16875	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 13:03:39	16875	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:137	释放读锁
+2024-07-15 13:03:39	16874	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 13:03:39	16875	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:141	获取写锁
+2024-07-15 13:03:39	16875	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:172	listExpiredCb exit
+2024-07-15 13:03:39	16875	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 13:03:39	16874	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 13:03:39	16874	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:341	there is no timmer
+2024-07-15 13:03:39	16874	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 13:03:39	16874	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 13:03:39	16874	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:341	there is no timmer
+2024-07-15 13:03:39	16875	日志器01	4	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=4
+2024-07-15 13:03:39	16875	日志器01	4	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:66	hello timer i=0
+2024-07-15 13:03:39	16875	日志器01	4	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-15 13:03:39	16875	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:330	name =  idle stoping exit
+2024-07-15 13:03:39	16875	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-15 13:03:39	16875	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:151	idle fiber term
+2024-07-15 13:03:39	16875	日志器01	1	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:74	Fiber::~Fiber id=4 total=4
+2024-07-15 13:03:39	16875	日志器01	1	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:74	Fiber::~Fiber id=3 total=3
+2024-07-15 13:03:39	16875	日志器01	0	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:74	Fiber::~Fiber id=1 total=2
+2024-07-15 13:03:42	16874	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:353	listExpiredCb start
+2024-07-15 13:03:42	16874	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:356	listExpiredCb end
+2024-07-15 13:03:42	16874	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:330	name =  idle stoping exit
+2024-07-15 13:03:42	16874	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-15 13:03:42	16874	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:151	idle fiber term
+2024-07-15 13:03:42	16874	日志器01	0	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:74	Fiber::~Fiber id=2 total=1
+2024-07-15 13:03:42	16874	日志器01	0	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:74	Fiber::~Fiber id=0 total=0

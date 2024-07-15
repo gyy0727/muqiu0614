@@ -2,10 +2,13 @@
 #define TIMER_H
 #include "PThread.h"
 #include <memory>
+#include<shared_mutex>
+#include<mutex>
 #include <set>
 #include"Mutex.h"
 #include <stdint.h>
 #include <vector>
+#include"./Log.h"
 class TimerManager;
 
 class Timer : public std::enable_shared_from_this<Timer> {
@@ -56,6 +59,8 @@ private:
     std::set<Timer::ptr,Timer::Comparator> m_timers;
     bool m_tickled;
     uint64_t m_previousTime;
+    std::mutex m_scopemutex;
+    std::shared_mutex m_shared_mutex;
 
 };
 #endif

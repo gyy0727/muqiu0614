@@ -57,8 +57,6 @@ Fiber::Fiber(std::function<void()> cb, size_t stacksize)
   m_context.uc_stack.ss_sp = m_stack;
   m_context.uc_stack.ss_size = m_stackSize;
   SYLAR_LOG_DEBUG(g_logger) << "Fiber::Fiber id=" << m_id;
-  SYLAR_LOG_DEBUG(g_logger)
-      << "Fiber::~Fiber id=" << m_id << " total=" << s_fiber_counts;
   makecontext(&m_context, &Fiber::mainFunc, 0);
 }
 
@@ -73,6 +71,8 @@ Fiber::~Fiber() {
       setThis(nullptr);
     }
   }
+  SYLAR_LOG_DEBUG(g_logger)
+      << "Fiber::~Fiber id=" << m_id << " total=" << s_fiber_counts;
 }
 void Fiber::reset(std::function<void()> cb) {
   m_cb = std::move(cb);
@@ -106,7 +106,6 @@ void Fiber::swapOut() {
   assert(Scheduler::GetMainFiber());
   swapcontext(&m_context, &Scheduler::GetMainFiber()->m_context);
 }
-
 
 Fiber::ptr Fiber::getThis() {
 
@@ -146,9 +145,9 @@ void Fiber::mainFunc() {
   }
 
   SYLAR_LOG_INFO(g_logger) << "执行完成";
-    auto raw_ptr=cur.get();
-    cur.reset();
-    raw_ptr->swapOut();
+  auto raw_ptr = cur.get();
+  cur.reset();
+  raw_ptr->swapOut();
 }
 
 uint64_t Fiber::getFiberId() {

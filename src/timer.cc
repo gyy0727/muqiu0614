@@ -1,6 +1,7 @@
+#include "../include/Log.h"
 #include "../include/timer.h"
 #include "../include/util.h"
-
+static Sylar::Logger::ptr g_logger = SYLAR_LOG_NAME("system");
 bool Timer::cancel() {
   TimerManager::rwLock::WriteLock lock(m_manager->m_mutex);
   if (m_cb) {
@@ -126,23 +127,32 @@ void TimerManager::listExpiredCb(std::vector<std::function<void()>> &cbs) {
   uint64_t now_ms = Sylar::GetCurrentMS();
   std::vector<Timer::ptr> expired; //* 已经触发的定时器任务集合
   {
-    rwLock::ReadLock lock(m_mutex);
+    /*rwLock::ReadLock lock(m_mutex);*/
+        std::shared_lock<std::shared_mutex> lock(m_shared_mutex);
     if (m_timers.empty()) {
       return;
     }
   }
 
-  rwLock::WriteLock lock(m_mutex);
+  SYLAR_LOG_INFO(g_logger) << "释放读锁";
+  /*rwLock::WriteLock lock(m_mutex);*/
+    //std::unique_lock<std::mutex> lock1(m_scopemutex); 
+    std::unique_lock<std::shared_mutex> lock1(m_shared_mutex);
+  SYLAR_LOG_INFO(g_logger) << "获取写锁";
   if (m_timers.empty()) {
     return;
   }
 
   bool rollover = detectColckRollover(now_ms); //*判断是否发生了时钟回滚
   if (!rollover && ((*m_timers.begin())->m_next > now_ms)) {
-    return;       //*如果没有发生时钟回滚,且最小的定时器还没过期
+    return; //*如果没有发生时钟回滚,且最小的定时器还没过期
   }
   Timer::ptr now_timer(new Timer(now_ms));
-  auto it = rollover ? m_timers.end() : m_timers.lower_bound(now_timer); //*如果发生了时间回滚,那就把容器里面所有定时器设为过期
+  auto it =
+      rollover
+          ? m_timers.end()
+          : m_timers.lower_bound(
+                now_timer); //*如果发生了时间回滚,那就把容器里面所有定时器设为过期
   while (it != m_timers.end() && (*it)->m_next == now_ms) {
     ++it;
   }
@@ -159,6 +169,7 @@ void TimerManager::listExpiredCb(std::vector<std::function<void()>> &cbs) {
       timer->m_cb = nullptr;
     }
   }
+  SYLAR_LOG_INFO(g_logger) << "listExpiredCb exit";
 }
 bool TimerManager::hasTimer() {
   rwLock::ReadLock lock(m_mutex);

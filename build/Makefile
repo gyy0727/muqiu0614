@@ -465,6 +465,30 @@ src/test_fiber.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/test_fiber.cc.s
 .PHONY : src/test_fiber.cc.s
 
+src/test_iomanager.o: src/test_iomanager.cc.o
+.PHONY : src/test_iomanager.o
+
+# target to build an object file
+src/test_iomanager.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/test_iomanager.cc.o
+.PHONY : src/test_iomanager.cc.o
+
+src/test_iomanager.i: src/test_iomanager.cc.i
+.PHONY : src/test_iomanager.i
+
+# target to preprocess a source file
+src/test_iomanager.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/test_iomanager.cc.i
+.PHONY : src/test_iomanager.cc.i
+
+src/test_iomanager.s: src/test_iomanager.cc.s
+.PHONY : src/test_iomanager.s
+
+# target to generate assembly for a file
+src/test_iomanager.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/test_iomanager.cc.s
+.PHONY : src/test_iomanager.cc.s
+
 src/test_pthread.o: src/test_pthread.cc.o
 .PHONY : src/test_pthread.o
 
@@ -636,6 +660,9 @@ help:
 	@echo "... src/test_fiber.o"
 	@echo "... src/test_fiber.i"
 	@echo "... src/test_fiber.s"
+	@echo "... src/test_iomanager.o"
+	@echo "... src/test_iomanager.i"
+	@echo "... src/test_iomanager.s"
 	@echo "... src/test_pthread.o"
 	@echo "... src/test_pthread.i"
 	@echo "... src/test_pthread.s"

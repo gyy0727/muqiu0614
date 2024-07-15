@@ -8,19 +8,19 @@
 #include <string.h>
 #include <sys/epoll.h>
 #include <sys/eventfd.h>
+#include <sys/socket.h>
 #include <unistd.h>
 Logger::ptr g_logger = SYLAR_LOG_NAME("system");
 enum EpollCtlOp {
 
 };
-int createEventFd() {
+static int createEventFd() {
   int evefd = ::eventfd(0, EFD_NONBLOCK | EFD_CLOEXEC);
   if (evefd < 0) {
-    SYLAR_LOG_ERROR(g_logger) << "createEventFd fail";
+    SYLAR_LOG_ERROR(g_logger) << "m_wakeupfd create err " << errno;
   }
   return evefd;
 }
-
 static std::ostream &operator<<(std::ostream &os, const EpollCtlOp &op) {
   switch ((int)op) {
 #define XX(ctl)                                                                \
@@ -97,12 +97,13 @@ void IOManager::FdContext::triggerEvent(IOManager::Event event) {
   ctx.scheduler = nullptr;
   return;
 }
+
 IOManager::IOManager(size_t threads, const std::string &name)
     : Scheduler(threads, name) {
   m_epollfd = epoll_create(5000);
   assert(m_epollfd > 0);
   m_wakeupfd = createEventFd();
-  assert(!m_wakeupfd);
+  assert(m_wakeupfd);
 
   epoll_event event;
   memset(&event, 0, sizeof(epoll_event));
@@ -115,6 +116,7 @@ IOManager::IOManager(size_t threads, const std::string &name)
   contextResize(32);
   start();
 }
+
 IOManager::~IOManager() {
   stop();
   close(m_epollfd);
@@ -138,17 +140,17 @@ void IOManager::contextResize(size_t size) {
 
 int IOManager::addEvent(int fd, Event event, std::function<void()> cb) {
   FdContext *fd_ctx = nullptr;
-  rwlock::ReadLock lock(m_mutex);
+  RWMutexType::ReadLock lock(m_mutex);
   if ((int)m_fdContexts.size() > fd) {
     fd_ctx = m_fdContexts[fd];
     lock.unlock();
   } else {
     lock.unlock();
-    rwlock::WriteLock lock2(m_mutex);
+    RWMutexType::WriteLock lock2(m_mutex);
     contextResize(1.5 * fd);
     fd_ctx = m_fdContexts[fd];
   }
-  std::unique_lock<std::mutex> lock2(fd_ctx->mutex);
+  FdContext::MutexType::Lock lock2(fd_ctx->mutex);
   if (UNLIKELY(fd_ctx->events & event)) {
     SYLAR_LOG_ERROR(g_logger)
         << "addEvent assert fd=" << fd << " event=" << (EPOLL_EVENTS)event
@@ -185,13 +187,13 @@ int IOManager::addEvent(int fd, Event event, std::function<void()> cb) {
 }
 
 bool IOManager::delEvent(int fd, Event event) {
-  rwlock::ReadLock lock(m_mutex);
+  RWMutexType::ReadLock lock(m_mutex);
   if ((int)m_fdContexts.size() <= fd) {
     return false;
   }
   FdContext *fd_ctx = m_fdContexts[fd];
   lock.unlock();
-  std::unique_lock<std::mutex> lock2(fd_ctx->mutex);
+  FdContext::MutexType::Lock lock2(fd_ctx->mutex);
   if (UNLIKELY(!(fd_ctx->events & event))) {
     return false;
   }
@@ -218,13 +220,13 @@ bool IOManager::delEvent(int fd, Event event) {
 }
 
 bool IOManager::cancelEvent(int fd, Event event) {
-  rwlock::ReadLock lock(m_mutex);
+  RWMutexType::ReadLock lock(m_mutex);
   if ((int)m_fdContexts.size() <= fd) {
     return false;
   }
   FdContext *fd_ctx = m_fdContexts[fd];
   lock.unlock();
-  std::unique_lock<std::mutex> lock2(fd_ctx->mutex);
+  FdContext::MutexType::Lock lock2(fd_ctx->mutex);
   if (UNLIKELY(!(fd_ctx->events & event))) {
     return false;
   }
@@ -249,14 +251,14 @@ bool IOManager::cancelEvent(int fd, Event event) {
 }
 
 bool IOManager::cancelAll(int fd) {
-  rwlock::ReadLock lock(m_mutex);
+  RWMutexType::ReadLock lock(m_mutex);
   if ((int)m_fdContexts.size() <= fd) {
     return false;
   }
   FdContext *fd_ctx = m_fdContexts[fd];
   lock.unlock();
+  FdContext::MutexType::Lock lock2(fd_ctx->mutex);
 
-  std::unique_lock<std::mutex> lock2(fd_ctx->mutex);
   if (!fd_ctx->events) {
     return false;
   }
@@ -296,8 +298,12 @@ void IOManager::tickle() {
   if (!hasIdleThreads()) {
     return;
   }
-  int rt = write(m_wakeupfd, "T", 1);
-  assert(rt == 1);
+
+  uint64_t one = 1;
+  ssize_t n = write(m_wakeupfd, &one, sizeof one);
+  if (n != sizeof one) {
+    SYLAR_LOG_FATAL(g_logger) << "m_wakeupfd write err " << errno;
+  }
 }
 
 //*引用是为了idle()里面直接传入修改next_timeout
@@ -328,9 +334,11 @@ void IOManager::idle() {
     do {
       static const int MAX_TIMEOUT = 3000;
       if (next_timeout != ~0ull) { //*即定时器容器不为空
+        SYLAR_LOG_INFO(g_logger) << "there has timmer";
         next_timeout =
             (int)next_timeout > MAX_TIMEOUT ? MAX_TIMEOUT : next_timeout;
       } else {
+        SYLAR_LOG_INFO(g_logger) << "there is no timmer";
         next_timeout = MAX_TIMEOUT;
       }
       rt = epoll_wait(m_epollfd, events, MAX_EVENTS, (int)next_timeout);
@@ -342,7 +350,10 @@ void IOManager::idle() {
     } while (true);
 
     std::vector<std::function<void()>> cbs;
+    SYLAR_LOG_INFO(g_logger) << "listExpiredCb start";
     listExpiredCb(cbs); //*将过期的定时器的任务存入其中
+
+    SYLAR_LOG_INFO(g_logger) << "listExpiredCb end";
     if (!cbs.empty()) {
       schedule(cbs.begin(), cbs.end());
       cbs.clear();
@@ -350,13 +361,13 @@ void IOManager::idle() {
     for (int i = 0; i < rt; ++i) {
       epoll_event &event = events[i];
       if (event.data.fd == m_wakeupfd) {
-        uint8_t dummy[256];
+        uint64_t dummy[256];
         while (read(m_wakeupfd, dummy, sizeof(dummy)) > 0)
           ; //*先将内容全部读取
         continue;
       }
       FdContext *fd_ctx = (FdContext *)event.data.ptr;
-      std::unique_lock<std::mutex> lock(fd_ctx->mutex);
+      FdContext::MutexType::Lock lock(fd_ctx->mutex);
       if (event.events &
           (EPOLLERR |
            EPOLLHUP)) { //*意思是如果触发的事件包含了系统中断或者一系列错误,就要重新设置该epollfd的感兴趣事件
