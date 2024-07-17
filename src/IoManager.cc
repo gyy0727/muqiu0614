@@ -179,9 +179,8 @@ int IOManager::addEvent(int fd, Event event, std::function<void()> cb) {
     event_ctx.cb.swap(cb);
 
   } else {
-    // event_ctx.fiber = Fiber::getThis();
-    // assert(event_ctx.fiber->getState() == Fiber::RUNING,
-    //      "state=" << event_ctx.fiber->getState());
+     event_ctx.fiber = Fiber::getThis();
+     assert(event_ctx.fiber->getState() == Fiber::RUNING);
   }
   return 0;
 }

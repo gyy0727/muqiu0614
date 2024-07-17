@@ -345,6 +345,30 @@ src/Thread.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/Thread.cc.s
 .PHONY : src/Thread.cc.s
 
+src/fdmanager.o: src/fdmanager.cc.o
+.PHONY : src/fdmanager.o
+
+# target to build an object file
+src/fdmanager.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/fdmanager.cc.o
+.PHONY : src/fdmanager.cc.o
+
+src/fdmanager.i: src/fdmanager.cc.i
+.PHONY : src/fdmanager.i
+
+# target to preprocess a source file
+src/fdmanager.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/fdmanager.cc.i
+.PHONY : src/fdmanager.cc.i
+
+src/fdmanager.s: src/fdmanager.cc.s
+.PHONY : src/fdmanager.s
+
+# target to generate assembly for a file
+src/fdmanager.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/fdmanager.cc.s
+.PHONY : src/fdmanager.cc.s
+
 src/hook.o: src/hook.cc.o
 .PHONY : src/hook.o
 
@@ -645,6 +669,9 @@ help:
 	@echo "... src/Thread.o"
 	@echo "... src/Thread.i"
 	@echo "... src/Thread.s"
+	@echo "... src/fdmanager.o"
+	@echo "... src/fdmanager.i"
+	@echo "... src/fdmanager.s"
 	@echo "... src/hook.o"
 	@echo "... src/hook.i"
 	@echo "... src/hook.s"

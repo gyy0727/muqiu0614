@@ -1,6 +1,5 @@
 #ifndef _HOOK_H
 #define _HOOK_H
-
 #include <fcntl.h>
 #include <sys/ioctl.h>
 #include <sys/types.h>

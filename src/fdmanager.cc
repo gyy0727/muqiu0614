@@ -16,8 +16,11 @@ bool FdCtx::init() {
   if (m_isInit) {
     return true;
   }
+    //*读取最大超时
   m_recvTimeout = -1;
+    //*写数据最大超时
   m_sendTimeout = -1;
+    //*保存了文件属性的结构体
   struct stat fd_stat; //*保存了文件的信息,类似于pid结构体
   if (-1 == fstat(m_fd, &fd_stat)) {
     //*获取fd对应的文件的属性,保存到fd_stat

@@ -71,7 +71,7 @@ void Scheduler::setThis() { t_scheduler = this; }
 void Scheduler::run() {
   setThis();
   SYLAR_LOG_INFO(g_logger) << m_name << "run";
-  // set_hook_enable(true);
+  set_hook_enable(true);
   // if (GetThreadId() != m_rootThreadId) {
   t_scheduler_fiber = Fiber::getThis().get();
   assert(t_scheduler_fiber && t_scheduler);
