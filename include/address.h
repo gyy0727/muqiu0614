@@ -9,6 +9,7 @@
 #include <sys/socket.h>
 #include <sys/types.h>
 #include <sys/un.h>
+#include <type_traits>
 #include <unistd.h>
 #include <vector>
 
@@ -61,9 +62,6 @@ public:
   bool operator!=(const Address &rhs) const;
 };
 
-
-
-
 class IPAddress : public Address {
 public:
   typedef std::shared_ptr<IPAddress> ptr;
@@ -80,16 +78,6 @@ public:
 
   virtual void setPort(uint16_t v) = 0;
 };
-
-
-
-
-
-
-
-
-
-
 
 class IPv4Address : public IPAddress {
 public:
