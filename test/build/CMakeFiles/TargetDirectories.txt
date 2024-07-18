@@ -1,3 +1,0 @@
-/home/muqiu0614/桌面/sylar/test/build/CMakeFiles/Sylar.dir
-/home/muqiu0614/桌面/sylar/test/build/CMakeFiles/edit_cache.dir
-/home/muqiu0614/桌面/sylar/test/build/CMakeFiles/rebuild_cache.dir

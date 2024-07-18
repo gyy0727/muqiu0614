@@ -8,7 +8,6 @@
  * 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
 #pragma once
-#include<mutex>
 #include "Mutex.h"
 #include "Singleton.h"
 #include "util.h"
@@ -19,12 +18,14 @@
 #include <list>
 #include <map>
 #include <memory>
+#include <mutex>
 #include <ostream>
 #include <sstream>
 #include <stdarg.h>
 #include <stdint.h>
 #include <string>
 #include <vector>
+using namespace Sylar;
 #define SYLAR_LOG_LEVEL(logger, level)                                         \
   if (logger->getLevel() <= level)                                             \
   Sylar::LogEventWrap(                                                         \
@@ -32,7 +33,7 @@
           logger, level, __FILE__, __LINE__, 0, Sylar::GetThreadId(),          \
           Sylar::GetFiberId(), time(0), "日志器01")))                          \
       .getSS()
-#define SYLAR_LOG_NAME(name) std::make_shared<Sylar::Logger>(name)
+#define SYLAR_LOG_NAME(name) std::make_shared<Logger>(name)
 
 /**
  * @brief 使用流式方式将日志级别debug的日志写入到logger
@@ -154,9 +155,7 @@ public:
 
   uint64_t getTime() const { return m_time; }
 
-  std::string getContent() const {
-    return m_ss.str();
-  }
+  std::string getContent() const { return m_ss.str(); }
 
   std::shared_ptr<Logger> getLogger() const { return m_logger; }
 
@@ -171,7 +170,7 @@ public:
   void format(const char *fmt, va_list al);
 
 private:
-    std::mutex m_mutex;
+  std::mutex m_mutex;
   const char *m_file = nullptr;     // *文件名
   int32_t m_line = 0;               // *行号
   uint32_t m_threadId = 0;          // *线程id
@@ -195,7 +194,7 @@ public:
   std::stringstream &getSS();
 
 private:
-    std::mutex m_mutex;
+  std::mutex m_mutex;
   LogEvent::ptr m_event;
 };
 // *确定日志格式
@@ -244,7 +243,7 @@ public:
 
 private:
   void init();
-    std::mutex m_mutex;
+  std::mutex m_mutex;
   /// 是否有错误
   bool m_error = false;
   std::vector<FormatItem::ptr> m_item; //*格式被解析之后的内容
@@ -275,7 +274,7 @@ public:
 
 protected:
   //*日志级别
-    std::mutex m_mutex;
+  std::mutex m_mutex;
   LogLevel::Level m_level = LogLevel::DEBUG;
 
   //* 是否有自己的日志格式器
@@ -326,7 +325,7 @@ public:
   LogFormatter::ptr getFormatter();
 
 private:
-    std::mutex m_mutex;
+  std::mutex m_mutex;
   std::string m_name;                      //*日志名称
   LogLevel::Level m_level;                 //*日志级别
   std::list<LogAppender::ptr> m_appenders; //*Appender集合
@@ -358,7 +357,7 @@ public:
   bool reopen();
 
 private:
-    std::mutex m_mutex;
+  std::mutex m_mutex;
   std::string m_name;
   std::ofstream m_filestream;
   uint64_t m_lastTime = 0;
@@ -378,7 +377,7 @@ public:
 
 private:
   /// Mutex
-    std::mutex m_mutex;
+  std::mutex m_mutex;
   /// 日志器容器
   std::map<std::string, Logger::ptr> m_loggers;
   /// 主日志器

@@ -1,13 +1,11 @@
 #include "../include/hook.h"
-
 #include <dlfcn.h>
-
 #include "../include/Fiber.h"
 #include "../include/IoManager.h"
 #include "../include/Log.h"
 #include "../include/fdmanager.h"
 #include "../include/macro.h"
-static Logger::ptr g_logger = SYLAR_LOG_NAME("systeam");
+static Logger::ptr g_logger = SYLAR_LOG_NAME("system");
 static uint64_t tcp_connect_timeout = 5000;
 
 static thread_local bool t_hook_enable = false;
@@ -106,43 +104,45 @@ retry:
     std::weak_ptr<timer_info> winfo(tinfo);
     //*超时时间是有效的
     if (to != (uint64_t)-1) {
-      timer = iom->addConditionTimer(to, [winfo, fd, iom, event]() {
+      timer = iom->addConditionTimer(
+          to,
+          [winfo, fd, iom, event]() {
             auto t = winfo.lock();
             if (!t || t->cancelled) {
               return;
             }
-                //*设置标志位为超时
+            //*设置标志位为超时
             t->cancelled = ETIMEDOUT;
-                //*触发并取消事件
+            //*触发并取消事件
             iom->cancelEvent(fd, (IOManager::Event)(event));
           },
           winfo);
     }
-        //*添加对应事件
+    //*添加对应事件
     int rt = iom->addEvent(fd, (IOManager::Event)(event));
-        //*添加失败
+    //*添加失败
     if (UNLIKELY(rt)) {
       SYLAR_LOG_ERROR(g_logger)
           << hook_fun_name << " addEvent(" << fd << ", " << event << ")";
       if (timer) {
-                //*取消定时器,因为 走到这里证明还没超时就完成了
+        //*取消定时器,因为 走到这里证明还没超时就完成了
         timer->cancel();
       }
       return -1;
     } else {
       Fiber::getThis()->swapOut();
       if (timer) {
-                //*同理如上
+        //*同理如上
         timer->cancel();
       }
-            //*如果是超时了
+      //*如果是超时了
       if (tinfo->cancelled) {
         errno = tinfo->cancelled;
         return -1;
       }
-            //*数据来了,因为走到这里证明是事件被触发了,所以重新执行,connect_with_timeout
-            //*不用重新执行是因为他是一次性的操作,走到最后证明肯定连接上了或者说连接失败超时了
-            //*而do_io则是证明数据到了,他的操作过程是之前写了一部分没写完,或者说有新的了,所以说要再来一次
+      //*数据来了,因为走到这里证明是事件被触发了,所以重新执行,connect_with_timeout
+      //*不用重新执行是因为他是一次性的操作,走到最后证明肯定连接上了或者说连接失败超时了
+      //*而do_io则是证明数据到了,他的操作过程是之前写了一部分没写完,或者说有新的了,所以说要再来一次
       goto retry;
     }
   }
@@ -308,242 +308,194 @@ int connect(int sockfd, const struct sockaddr *addr, socklen_t addrlen) {
   return connect_with_timeout(sockfd, addr, addrlen, s_connect_timeout);
 }
 
-
 int accept(int s, struct sockaddr *addr, socklen_t *addrlen) {
-    int fd = do_io(s, accept_f, "accept", IOManager::READ, SO_RCVTIMEO, addr, addrlen);
-    if(fd >= 0) {
-        FdMgr::getInstance()->get(fd, true);
-    }
-    return fd;
+  int fd =
+      do_io(s, accept_f, "accept", IOManager::READ, SO_RCVTIMEO, addr, addrlen);
+  if (fd >= 0) {
+    FdMgr::getInstance()->get(fd, true);
+  }
+  return fd;
 }
 
 ssize_t read(int fd, void *buf, size_t count) {
-    return do_io(fd, read_f, "read", IOManager::READ, SO_RCVTIMEO, buf, count);
+  return do_io(fd, read_f, "read", IOManager::READ, SO_RCVTIMEO, buf, count);
 }
 
 ssize_t readv(int fd, const struct iovec *iov, int iovcnt) {
-    return do_io(fd, readv_f, "readv", IOManager::READ, SO_RCVTIMEO, iov, iovcnt);
+  return do_io(fd, readv_f, "readv", IOManager::READ, SO_RCVTIMEO, iov, iovcnt);
 }
 
 ssize_t recv(int sockfd, void *buf, size_t len, int flags) {
-    return do_io(sockfd, recv_f, "recv", IOManager::READ, SO_RCVTIMEO, buf, len, flags);
+  return do_io(sockfd, recv_f, "recv", IOManager::READ, SO_RCVTIMEO, buf, len,
+               flags);
 }
 
-ssize_t recvfrom(int sockfd, void *buf, size_t len, int flags, struct sockaddr *src_addr, socklen_t *addrlen) {
-    return do_io(sockfd, recvfrom_f, "recvfrom", IOManager::READ, SO_RCVTIMEO, buf, len, flags, src_addr, addrlen);
+ssize_t recvfrom(int sockfd, void *buf, size_t len, int flags,
+                 struct sockaddr *src_addr, socklen_t *addrlen) {
+  return do_io(sockfd, recvfrom_f, "recvfrom", IOManager::READ, SO_RCVTIMEO,
+               buf, len, flags, src_addr, addrlen);
 }
 
 ssize_t recvmsg(int sockfd, struct msghdr *msg, int flags) {
-    return do_io(sockfd, recvmsg_f, "recvmsg", IOManager::READ, SO_RCVTIMEO, msg, flags);
+  return do_io(sockfd, recvmsg_f, "recvmsg", IOManager::READ, SO_RCVTIMEO, msg,
+               flags);
 }
 
 ssize_t write(int fd, const void *buf, size_t count) {
-    return do_io(fd, write_f, "write", IOManager::WRITE, SO_SNDTIMEO, buf, count);
+  return do_io(fd, write_f, "write", IOManager::WRITE, SO_SNDTIMEO, buf, count);
 }
 
 ssize_t writev(int fd, const struct iovec *iov, int iovcnt) {
-    return do_io(fd, writev_f, "writev", IOManager::WRITE, SO_SNDTIMEO, iov, iovcnt);
+  return do_io(fd, writev_f, "writev", IOManager::WRITE, SO_SNDTIMEO, iov,
+               iovcnt);
 }
 
 ssize_t send(int s, const void *msg, size_t len, int flags) {
-    return do_io(s, send_f, "send", IOManager::WRITE, SO_SNDTIMEO, msg, len, flags);
+  return do_io(s, send_f, "send", IOManager::WRITE, SO_SNDTIMEO, msg, len,
+               flags);
 }
 
-ssize_t sendto(int s, const void *msg, size_t len, int flags, const struct sockaddr *to, socklen_t tolen) {
-    return do_io(s, sendto_f, "sendto", IOManager::WRITE, SO_SNDTIMEO, msg, len, flags, to, tolen);
+ssize_t sendto(int s, const void *msg, size_t len, int flags,
+               const struct sockaddr *to, socklen_t tolen) {
+  return do_io(s, sendto_f, "sendto", IOManager::WRITE, SO_SNDTIMEO, msg, len,
+               flags, to, tolen);
 }
 
 ssize_t sendmsg(int s, const struct msghdr *msg, int flags) {
-    return do_io(s, sendmsg_f, "sendmsg", IOManager::WRITE, SO_SNDTIMEO, msg, flags);
+  return do_io(s, sendmsg_f, "sendmsg", IOManager::WRITE, SO_SNDTIMEO, msg,
+               flags);
 }
-
 
 int close(int fd) {
-    if(!t_hook_enable) {
-        return close_f(fd);
-    }
-    //*先获得对应的文件描述符属性
-    FdCtx::ptr ctx = FdMgr::getInstance()->get(fd);
-    if(ctx) {
-        auto iom = IOManager::getThis();
-        if(iom) {
-            iom->cancelAll(fd);
-        }
-        FdMgr::getInstance()->del(fd);
-    }
+  if (!t_hook_enable) {
     return close_f(fd);
+  }
+  //*先获得对应的文件描述符属性
+  FdCtx::ptr ctx = FdMgr::getInstance()->get(fd);
+  if (ctx) {
+    auto iom = IOManager::getThis();
+    if (iom) {
+      iom->cancelAll(fd);
+    }
+    FdMgr::getInstance()->del(fd);
+  }
+  return close_f(fd);
 }
-
 
 //*================================================用处不大,照抄源码=========================================
-int fcntl(int fd, int cmd, ... /* arg */ ) {
-    va_list va;
-    va_start(va, cmd);
-    switch(cmd) {
-        case F_SETFL:
-            {
-                int arg = va_arg(va, int);
-                va_end(va);
-                FdCtx::ptr ctx = FdMgr::getInstance()->get(fd);
-                if(!ctx || ctx->isClose() || !ctx->isSocket()) {
-                    return fcntl_f(fd, cmd, arg);
-                }
-                ctx->setUserNonblock(arg & O_NONBLOCK);
-                if(ctx->getSysNonblock()) {
-                    arg |= O_NONBLOCK;
-                } else {
-                    arg &= ~O_NONBLOCK;
-                }
-                return fcntl_f(fd, cmd, arg);
-            }
-            break;
-        case F_GETFL:
-            {
-                va_end(va);
-                int arg = fcntl_f(fd, cmd);
-                FdCtx::ptr ctx = FdMgr::getInstance()->get(fd);
-                if(!ctx || ctx->isClose() || !ctx->isSocket()) {
-                    return arg;
-                }
-                if(ctx->getUserNonblock()) {
-                    return arg | O_NONBLOCK;
-                } else {
-                    return arg & ~O_NONBLOCK;
-                }
-            }
-            break;
-        case F_DUPFD:
-        case F_DUPFD_CLOEXEC:
-        case F_SETFD:
-        case F_SETOWN:
-        case F_SETSIG:
-        case F_SETLEASE:
-        case F_NOTIFY:
-#ifdef F_SETPIPE_SZ
-        case F_SETPIPE_SZ:
-#endif
-            {
-                int arg = va_arg(va, int);
-                va_end(va);
-                return fcntl_f(fd, cmd, arg); 
-            }
-            break;
-        case F_GETFD:
-        case F_GETOWN:
-        case F_GETSIG:
-        case F_GETLEASE:
-#ifdef F_GETPIPE_SZ
-        case F_GETPIPE_SZ:
-#endif
-            {
-                va_end(va);
-                return fcntl_f(fd, cmd);
-            }
-            break;
-        case F_SETLK:
-        case F_SETLKW:
-        case F_GETLK:
-            {
-                struct flock* arg = va_arg(va, struct flock*);
-                va_end(va);
-                return fcntl_f(fd, cmd, arg);
-            }
-            break;
-        case F_GETOWN_EX:
-        case F_SETOWN_EX:
-            {
-                struct f_owner_exlock* arg = va_arg(va, struct f_owner_exlock*);
-                va_end(va);
-                return fcntl_f(fd, cmd, arg);
-            }
-            break;
-        default:
-            va_end(va);
-            return fcntl_f(fd, cmd);
+int fcntl(int fd, int cmd, ... /* arg */) {
+  va_list va;
+  va_start(va, cmd);
+  switch (cmd) {
+  case F_SETFL: {
+    int arg = va_arg(va, int);
+    va_end(va);
+    FdCtx::ptr ctx = FdMgr::getInstance()->get(fd);
+    if (!ctx || ctx->isClose() || !ctx->isSocket()) {
+      return fcntl_f(fd, cmd, arg);
     }
+    ctx->setUserNonblock(arg & O_NONBLOCK);
+    if (ctx->getSysNonblock()) {
+      arg |= O_NONBLOCK;
+    } else {
+      arg &= ~O_NONBLOCK;
+    }
+    return fcntl_f(fd, cmd, arg);
+  } break;
+  case F_GETFL: {
+    va_end(va);
+    int arg = fcntl_f(fd, cmd);
+    FdCtx::ptr ctx = FdMgr::getInstance()->get(fd);
+    if (!ctx || ctx->isClose() || !ctx->isSocket()) {
+      return arg;
+    }
+    if (ctx->getUserNonblock()) {
+      return arg | O_NONBLOCK;
+    } else {
+      return arg & ~O_NONBLOCK;
+    }
+  } break;
+  case F_DUPFD:
+  case F_DUPFD_CLOEXEC:
+  case F_SETFD:
+  case F_SETOWN:
+  case F_SETSIG:
+  case F_SETLEASE:
+  case F_NOTIFY:
+#ifdef F_SETPIPE_SZ
+  case F_SETPIPE_SZ:
+#endif
+  {
+    int arg = va_arg(va, int);
+    va_end(va);
+    return fcntl_f(fd, cmd, arg);
+  } break;
+  case F_GETFD:
+  case F_GETOWN:
+  case F_GETSIG:
+  case F_GETLEASE:
+#ifdef F_GETPIPE_SZ
+  case F_GETPIPE_SZ:
+#endif
+  {
+    va_end(va);
+    return fcntl_f(fd, cmd);
+  } break;
+  case F_SETLK:
+  case F_SETLKW:
+  case F_GETLK: {
+    struct flock *arg = va_arg(va, struct flock *);
+    va_end(va);
+    return fcntl_f(fd, cmd, arg);
+  } break;
+  case F_GETOWN_EX:
+  case F_SETOWN_EX: {
+    struct f_owner_exlock *arg = va_arg(va, struct f_owner_exlock *);
+    va_end(va);
+    return fcntl_f(fd, cmd, arg);
+  } break;
+  default:
+    va_end(va);
+    return fcntl_f(fd, cmd);
+  }
 }
-
 
 int ioctl(int d, unsigned long int request, ...) {
-    va_list va;
-    va_start(va, request);
-    void* arg = va_arg(va, void*);
-    va_end(va);
+  va_list va;
+  va_start(va, request);
+  void *arg = va_arg(va, void *);
+  va_end(va);
 
-    if(FIONBIO == request) {
-        bool user_nonblock = !!*(int*)arg;
-        FdCtx::ptr ctx = FdMgr::getInstance()->get(d);
-        if(!ctx || ctx->isClose() || !ctx->isSocket()) {
-            return ioctl_f(d, request, arg);
-        }
-        ctx->setUserNonblock(user_nonblock);
+  if (FIONBIO == request) {
+    bool user_nonblock = !!*(int *)arg;
+    FdCtx::ptr ctx = FdMgr::getInstance()->get(d);
+    if (!ctx || ctx->isClose() || !ctx->isSocket()) {
+      return ioctl_f(d, request, arg);
     }
-    return ioctl_f(d, request, arg);
+    ctx->setUserNonblock(user_nonblock);
+  }
+  return ioctl_f(d, request, arg);
 }
 
-int getsockopt(int sockfd, int level, int optname, void *optval, socklen_t *optlen) {
-    return getsockopt_f(sockfd, level, optname, optval, optlen);
+int getsockopt(int sockfd, int level, int optname, void *optval,
+               socklen_t *optlen) {
+  return getsockopt_f(sockfd, level, optname, optval, optlen);
 }
 
-int setsockopt(int sockfd, int level, int optname, const void *optval, socklen_t optlen) {
-    if(!t_hook_enable) {
-        return setsockopt_f(sockfd, level, optname, optval, optlen);
-    }
-    if(level == SOL_SOCKET) {
-        if(optname == SO_RCVTIMEO || optname == SO_SNDTIMEO) {
-            FdCtx::ptr ctx = FdMgr::getInstance()->get(sockfd);
-            if(ctx) {
-                const timeval* v = (const timeval*)optval;
-                ctx->setTimeout(optname, v->tv_sec * 1000 + v->tv_usec / 1000);
-            }
-        }
-    }
+int setsockopt(int sockfd, int level, int optname, const void *optval,
+               socklen_t optlen) {
+  if (!t_hook_enable) {
     return setsockopt_f(sockfd, level, optname, optval, optlen);
+  }
+  if (level == SOL_SOCKET) {
+    if (optname == SO_RCVTIMEO || optname == SO_SNDTIMEO) {
+      FdCtx::ptr ctx = FdMgr::getInstance()->get(sockfd);
+      if (ctx) {
+        const timeval *v = (const timeval *)optval;
+        ctx->setTimeout(optname, v->tv_sec * 1000 + v->tv_usec / 1000);
+      }
+    }
+  }
+  return setsockopt_f(sockfd, level, optname, optval, optlen);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

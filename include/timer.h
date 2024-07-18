@@ -2,7 +2,10 @@
 #define TIMER_H
 #include "PThread.h"
 #include <memory>
-#include<shared_mutex>
+#include <shared_mutex>
+#include<iostream>
+#include <thread>
+#include<memory>
 #include<mutex>
 #include <set>
 #include"Mutex.h"
@@ -60,7 +63,6 @@ private:
     bool m_tickled;
     uint64_t m_previousTime;
     std::mutex m_scopemutex;
-    std::shared_mutex m_shared_mutex;
-
+  std::shared_mutex m_shared_mutex;
 };
 #endif
