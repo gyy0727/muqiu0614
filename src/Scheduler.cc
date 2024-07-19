@@ -7,10 +7,10 @@
  * @Description  :
  * Copyright (c) 2024 by Gyy0727 email: 3155833132@qq.com, All Rights Reserved.
  */
-#include "../include/scheduler.h"
 #include "../include/Fiber.h"
 #include "../include/Log.h"
 #include "../include/hook.h"
+#include "../include/scheduler.h"
 #include <functional>
 static Logger::ptr g_logger = SYLAR_LOG_NAME("system");
 static thread_local Scheduler *t_scheduler = nullptr; //*协程调度器指针
@@ -71,7 +71,7 @@ void Scheduler::setThis() { t_scheduler = this; }
 void Scheduler::run() {
   setThis();
   SYLAR_LOG_INFO(g_logger) << m_name << "run";
-  // set_hook_enable(true);
+  set_hook_enable(true);
   // if (GetThreadId() != m_rootThreadId) {
   t_scheduler_fiber = Fiber::getThis().get();
   assert(t_scheduler_fiber && t_scheduler);
