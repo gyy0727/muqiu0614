@@ -441,53 +441,29 @@ src/hook.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/hook.cc.s
 .PHONY : src/hook.cc.s
 
-src/http11_parser.o: src/http11_parser.cc.o
-.PHONY : src/http11_parser.o
+src/http.o: src/http.cc.o
+.PHONY : src/http.o
 
 # target to build an object file
-src/http11_parser.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/http11_parser.cc.o
-.PHONY : src/http11_parser.cc.o
+src/http.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/http.cc.o
+.PHONY : src/http.cc.o
 
-src/http11_parser.i: src/http11_parser.cc.i
-.PHONY : src/http11_parser.i
-
-# target to preprocess a source file
-src/http11_parser.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/http11_parser.cc.i
-.PHONY : src/http11_parser.cc.i
-
-src/http11_parser.s: src/http11_parser.cc.s
-.PHONY : src/http11_parser.s
-
-# target to generate assembly for a file
-src/http11_parser.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/http11_parser.cc.s
-.PHONY : src/http11_parser.cc.s
-
-src/httpclient_parser.o: src/httpclient_parser.cc.o
-.PHONY : src/httpclient_parser.o
-
-# target to build an object file
-src/httpclient_parser.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/httpclient_parser.cc.o
-.PHONY : src/httpclient_parser.cc.o
-
-src/httpclient_parser.i: src/httpclient_parser.cc.i
-.PHONY : src/httpclient_parser.i
+src/http.i: src/http.cc.i
+.PHONY : src/http.i
 
 # target to preprocess a source file
-src/httpclient_parser.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/httpclient_parser.cc.i
-.PHONY : src/httpclient_parser.cc.i
+src/http.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/http.cc.i
+.PHONY : src/http.cc.i
 
-src/httpclient_parser.s: src/httpclient_parser.cc.s
-.PHONY : src/httpclient_parser.s
+src/http.s: src/http.cc.s
+.PHONY : src/http.s
 
 # target to generate assembly for a file
-src/httpclient_parser.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/httpclient_parser.cc.s
-.PHONY : src/httpclient_parser.cc.s
+src/http.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/http.cc.s
+.PHONY : src/http.cc.s
 
 src/main.o: src/main.cc.o
 .PHONY : src/main.o
@@ -801,12 +777,9 @@ help:
 	@echo "... src/hook.o"
 	@echo "... src/hook.i"
 	@echo "... src/hook.s"
-	@echo "... src/http11_parser.o"
-	@echo "... src/http11_parser.i"
-	@echo "... src/http11_parser.s"
-	@echo "... src/httpclient_parser.o"
-	@echo "... src/httpclient_parser.i"
-	@echo "... src/httpclient_parser.s"
+	@echo "... src/http.o"
+	@echo "... src/http.i"
+	@echo "... src/http.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
