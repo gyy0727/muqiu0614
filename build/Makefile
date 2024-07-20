@@ -369,6 +369,30 @@ src/address.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/address.cc.s
 .PHONY : src/address.cc.s
 
+src/bytearray.o: src/bytearray.cc.o
+.PHONY : src/bytearray.o
+
+# target to build an object file
+src/bytearray.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/bytearray.cc.o
+.PHONY : src/bytearray.cc.o
+
+src/bytearray.i: src/bytearray.cc.i
+.PHONY : src/bytearray.i
+
+# target to preprocess a source file
+src/bytearray.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/bytearray.cc.i
+.PHONY : src/bytearray.cc.i
+
+src/bytearray.s: src/bytearray.cc.s
+.PHONY : src/bytearray.s
+
+# target to generate assembly for a file
+src/bytearray.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/bytearray.cc.s
+.PHONY : src/bytearray.cc.s
+
 src/fdmanager.o: src/fdmanager.cc.o
 .PHONY : src/fdmanager.o
 
@@ -440,6 +464,30 @@ src/main.s: src/main.cc.s
 src/main.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/main.cc.s
 .PHONY : src/main.cc.s
+
+src/socket.o: src/socket.cc.o
+.PHONY : src/socket.o
+
+# target to build an object file
+src/socket.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/socket.cc.o
+.PHONY : src/socket.cc.o
+
+src/socket.i: src/socket.cc.i
+.PHONY : src/socket.i
+
+# target to preprocess a source file
+src/socket.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/socket.cc.i
+.PHONY : src/socket.cc.i
+
+src/socket.s: src/socket.cc.s
+.PHONY : src/socket.s
+
+# target to generate assembly for a file
+src/socket.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/socket.cc.s
+.PHONY : src/socket.cc.s
 
 src/test.o: src/test.cc.o
 .PHONY : src/test.o
@@ -696,6 +744,9 @@ help:
 	@echo "... src/address.o"
 	@echo "... src/address.i"
 	@echo "... src/address.s"
+	@echo "... src/bytearray.o"
+	@echo "... src/bytearray.i"
+	@echo "... src/bytearray.s"
 	@echo "... src/fdmanager.o"
 	@echo "... src/fdmanager.i"
 	@echo "... src/fdmanager.s"
@@ -705,6 +756,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/socket.o"
+	@echo "... src/socket.i"
+	@echo "... src/socket.s"
 	@echo "... src/test.o"
 	@echo "... src/test.i"
 	@echo "... src/test.s"
