@@ -2,3 +2,5 @@ build
 test
 bin
 src/Log.txt
+*.sh
+Log.txt
