@@ -441,6 +441,54 @@ src/hook.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/hook.cc.s
 .PHONY : src/hook.cc.s
 
+src/http11_parser.o: src/http11_parser.cc.o
+.PHONY : src/http11_parser.o
+
+# target to build an object file
+src/http11_parser.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/http11_parser.cc.o
+.PHONY : src/http11_parser.cc.o
+
+src/http11_parser.i: src/http11_parser.cc.i
+.PHONY : src/http11_parser.i
+
+# target to preprocess a source file
+src/http11_parser.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/http11_parser.cc.i
+.PHONY : src/http11_parser.cc.i
+
+src/http11_parser.s: src/http11_parser.cc.s
+.PHONY : src/http11_parser.s
+
+# target to generate assembly for a file
+src/http11_parser.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/http11_parser.cc.s
+.PHONY : src/http11_parser.cc.s
+
+src/httpclient_parser.o: src/httpclient_parser.cc.o
+.PHONY : src/httpclient_parser.o
+
+# target to build an object file
+src/httpclient_parser.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/httpclient_parser.cc.o
+.PHONY : src/httpclient_parser.cc.o
+
+src/httpclient_parser.i: src/httpclient_parser.cc.i
+.PHONY : src/httpclient_parser.i
+
+# target to preprocess a source file
+src/httpclient_parser.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/httpclient_parser.cc.i
+.PHONY : src/httpclient_parser.cc.i
+
+src/httpclient_parser.s: src/httpclient_parser.cc.s
+.PHONY : src/httpclient_parser.s
+
+# target to generate assembly for a file
+src/httpclient_parser.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/httpclient_parser.cc.s
+.PHONY : src/httpclient_parser.cc.s
+
 src/main.o: src/main.cc.o
 .PHONY : src/main.o
 
@@ -753,6 +801,12 @@ help:
 	@echo "... src/hook.o"
 	@echo "... src/hook.i"
 	@echo "... src/hook.s"
+	@echo "... src/http11_parser.o"
+	@echo "... src/http11_parser.i"
+	@echo "... src/http11_parser.s"
+	@echo "... src/httpclient_parser.o"
+	@echo "... src/httpclient_parser.i"
+	@echo "... src/httpclient_parser.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

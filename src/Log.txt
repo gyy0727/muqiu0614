@@ -5268,3 +5268,68 @@ top/muqiu0614/src/Scheduler.cc:90	调度器run
 2024-07-20 17:44:28	12774	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:151	idle fiber term
 2024-07-20 17:44:28	12774	日志器01	0	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:74	Fiber::~Fiber id=2 total=1
 2024-07-20 17:44:28	12774	日志器01	0	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:74	Fiber::~Fiber id=0 total=0
+2024-07-20 21:45:01	15033	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-20 21:45:01	15033	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程0创建
+2024-07-20 21:45:01	15034	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-20 21:45:01	15033	日志器01	1	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=1
+2024-07-20 21:45:01	15033	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:320	idle
+2024-07-20 21:45:01	15033	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:336	there has timmer
+2024-07-20 21:45:01	15034	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程2创建
+2024-07-20 21:45:01	15034	日志器01	3	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=3
+2024-07-20 21:45:01	15034	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:320	idle
+2024-07-20 21:45:01	15034	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:336	there has timmer
+2024-07-20 21:45:02	15033	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:352	listExpiredCb start
+2024-07-20 21:45:02	15033	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:137	释放读锁
+2024-07-20 21:45:02	15033	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:141	获取写锁
+2024-07-20 21:45:02	15033	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:172	listExpiredCb exit
+2024-07-20 21:45:02	15033	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:355	listExpiredCb end
+2024-07-20 21:45:02	15033	日志器01	4	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=4
+2024-07-20 21:45:02	15033	日志器01	4	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:66	hello timer i=0
+2024-07-20 21:45:02	15034	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:352	listExpiredCb start
+2024-07-20 21:45:02	15034	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:355	listExpiredCb end
+2024-07-20 21:45:02	15034	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:340	there is no timmer
+2024-07-20 21:45:02	15033	日志器01	4	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-20 21:45:02	15033	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:329	name =  idle stoping exit
+2024-07-20 21:45:02	15033	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-20 21:45:02	15033	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:151	idle fiber term
+2024-07-20 21:45:02	15033	日志器01	0	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:74	Fiber::~Fiber id=4 total=4
+2024-07-20 21:45:02	15033	日志器01	0	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:74	Fiber::~Fiber id=1 total=3
+2024-07-20 21:45:02	15033	日志器01	0	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:74	Fiber::~Fiber id=0 total=2
+2024-07-20 21:45:05	15034	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:352	listExpiredCb start
+2024-07-20 21:45:05	15034	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:355	listExpiredCb end
+2024-07-20 21:45:05	15034	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:329	name =  idle stoping exit
+2024-07-20 21:45:05	15034	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-20 21:45:05	15034	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:151	idle fiber term
+2024-07-20 21:45:05	15034	日志器01	2	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:74	Fiber::~Fiber id=3 total=1
+2024-07-20 21:45:05	15034	日志器01	0	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:74	Fiber::~Fiber id=2 total=0
+2024-07-20 21:54:52	15508	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-20 21:54:52	15509	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-20 21:54:52	15508	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程0创建
+2024-07-20 21:54:52	15509	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程1创建
+2024-07-20 21:54:52	15509	日志器01	3	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=3
+2024-07-20 21:54:52	15509	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:320	idle
+2024-07-20 21:54:52	15509	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:336	there has timmer
+2024-07-20 21:54:52	15508	日志器01	2	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=2
+2024-07-20 21:54:52	15508	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:320	idle
+2024-07-20 21:54:52	15508	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:336	there has timmer
+2024-07-20 21:54:53	15509	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:352	listExpiredCb start
+2024-07-20 21:54:53	15509	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:137	释放读锁
+2024-07-20 21:54:53	15509	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:141	获取写锁
+2024-07-20 21:54:53	15509	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/timer.cc:172	listExpiredCb exit
+2024-07-20 21:54:53	15509	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:355	listExpiredCb end
+2024-07-20 21:54:53	15509	日志器01	4	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:59	Fiber::Fiber id=4
+2024-07-20 21:54:53	15508	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:352	listExpiredCb start
+2024-07-20 21:54:53	15509	日志器01	4	[INFO]	[IOManager]	/root/desktop/muqiu0614/src/test_iomanager.cc:66	hello timer i=0
+2024-07-20 21:54:53	15508	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:355	listExpiredCb end
+2024-07-20 21:54:53	15509	日志器01	4	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-20 21:54:53	15508	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:329	name =  idle stoping exit
+2024-07-20 21:54:53	15509	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:329	name =  idle stoping exit
+2024-07-20 21:54:53	15508	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-20 21:54:53	15509	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:147	执行完成
+2024-07-20 21:54:53	15508	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:151	idle fiber term
+2024-07-20 21:54:53	15509	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:151	idle fiber term
+2024-07-20 21:54:53	15508	日志器01	0	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:74	Fiber::~Fiber id=2 total=3
+2024-07-20 21:54:53	15509	日志器01	1	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:74	Fiber::~Fiber id=4 total=3
+2024-07-20 21:54:53	15509	日志器01	1	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:74	Fiber::~Fiber id=3 total=1
+2024-07-20 21:54:53	15509	日志器01	0	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:74	Fiber::~Fiber id=1 total=0
+2024-07-20 21:54:53	15508	日志器01	0	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:74	Fiber::~Fiber id=0 total=2
