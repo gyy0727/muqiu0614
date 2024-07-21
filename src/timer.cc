@@ -1,9 +1,13 @@
 #include "../include/Log.h"
 #include "../include/timer.h"
 #include "../include/util.h"
+#include <mutex>
+#include <shared_mutex>
+#include <shared_mutex>
+#include <thread>
 static Sylar::Logger::ptr g_logger = SYLAR_LOG_NAME("system");
 bool Timer::cancel() {
-  TimerManager::rwLock::WriteLock lock(m_manager->m_mutex);
+  std::unique_lock<std::shared_mutex> lock(m_manager->m_mutex);
   if (m_cb) {
     m_cb = nullptr;
     auto it = m_manager->m_timers.find(shared_from_this());
@@ -14,7 +18,7 @@ bool Timer::cancel() {
 }
 bool Timer::refresh() {
 
-  TimerManager::rwLock::WriteLock lock(m_manager->m_mutex);
+  std::unique_lock<std::shared_mutex> lock(m_manager->m_mutex);
   if (!m_cb) {
     return false;
   }
@@ -33,7 +37,7 @@ bool Timer::reset(uint64_t ms, bool from_now) {
   if (ms == m_ms && !from_now) {
     return true;
   }
-  TimerManager::rwLock::WriteLock lock(m_manager->m_mutex);
+  std::unique_lock<std::shared_mutex> lock(m_manager->m_mutex);
   if (!m_cb) {
     return false;
   }
@@ -90,7 +94,7 @@ TimerManager::~TimerManager() {}
 Timer::ptr TimerManager::addTimer(uint64_t ms, std::function<void()> cb,
                                   bool recurring) {
   Timer::ptr timer(new Timer(ms, cb, recurring, this));
-  rwLock::WriteLock lock(m_mutex);
+  std::unique_lock<std::shared_mutex> lock(m_mutex);
   addTimer(timer, lock);
   return timer;
 }
@@ -109,7 +113,7 @@ Timer::ptr TimerManager::addConditionTimer(uint64_t ms,
 }
 
 uint64_t TimerManager::getNextTimer() {
-  rwLock::ReadLock lock(m_mutex);
+  std::shared_lock<std::shared_mutex> lock(m_mutex);
   m_tickled = false;
   if (m_timers.empty()) {
     return ~0ull; //*无限大的时间
@@ -127,19 +131,15 @@ void TimerManager::listExpiredCb(std::vector<std::function<void()>> &cbs) {
   uint64_t now_ms = Sylar::GetCurrentMS();
   std::vector<Timer::ptr> expired; //* 已经触发的定时器任务集合
   {
-    /*rwLock::ReadLock lock(m_mutex);*/
-        std::shared_lock<std::shared_mutex> lock(m_shared_mutex);
+    std::shared_lock<std::shared_mutex> lock(m_mutex);
     if (m_timers.empty()) {
       return;
     }
   }
 
-  SYLAR_LOG_INFO(g_logger) << "释放读锁";
-  /*rwLock::WriteLock lock(m_mutex);*/
-    //std::unique_lock<std::mutex> lock1(m_scopemutex); 
-    std::unique_lock<std::shared_mutex> lock1(m_shared_mutex);
-  SYLAR_LOG_INFO(g_logger) << "获取写锁";
+  std::unique_lock<std::shared_mutex> lock(m_mutex);
   if (m_timers.empty()) {
+
     return;
   }
 
@@ -169,14 +169,13 @@ void TimerManager::listExpiredCb(std::vector<std::function<void()>> &cbs) {
       timer->m_cb = nullptr;
     }
   }
-  SYLAR_LOG_INFO(g_logger) << "listExpiredCb exit";
 }
 bool TimerManager::hasTimer() {
-  rwLock::ReadLock lock(m_mutex);
+    std::shared_lock<std::shared_mutex> lock(m_mutex);
   return !m_timers.empty();
 }
 
-void TimerManager::addTimer(Timer::ptr val, rwLock::WriteLock lock) {
+void TimerManager::addTimer(Timer::ptr val,std::unique_lock<std::shared_mutex> &lock) {
   auto it = m_timers.insert(val).first;
   bool at_front = (it == m_timers.begin()) && !m_tickled;
   if (at_front) {

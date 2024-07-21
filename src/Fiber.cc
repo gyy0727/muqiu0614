@@ -21,7 +21,7 @@
 #include <type_traits>
 #include <ucontext.h>
 static Sylar::Logger::ptr g_logger = SYLAR_LOG_NAME("system");
-static std::atomic<uint64_t> s_fiber_id{0};     //*协程id
+static std::atomic<uint64_t> s_fiber_id{1};     //*协程id
 static std::atomic<uint64_t> s_fiber_counts{0}; //*当前在运行的协程数量
 static thread_local Fiber *t_fiber = nullptr; //*当前在运行的协程指针
 static thread_local Fiber::ptr t_thread_fiber = nullptr; //*调度协程指针
@@ -47,6 +47,7 @@ Fiber::Fiber() : m_id(s_fiber_id++), m_state(RUNING) {
 
 Fiber::Fiber(std::function<void()> cb, size_t stacksize)
     : m_id(s_fiber_id++), m_stackSize(stacksize), m_state(RUNING) {
+  SYLAR_LOG_INFO(g_logger) << "任务协程" << m_id << "创建";
   setThis(this);
   s_fiber_counts++;
   m_stack = MallocStackAllocator::Alloc(m_stackSize);
@@ -56,7 +57,6 @@ Fiber::Fiber(std::function<void()> cb, size_t stacksize)
   m_context.uc_link = nullptr;
   m_context.uc_stack.ss_sp = m_stack;
   m_context.uc_stack.ss_size = m_stackSize;
-  SYLAR_LOG_DEBUG(g_logger) << "Fiber::Fiber id=" << m_id;
   makecontext(&m_context, &Fiber::mainFunc, 0);
 }
 
@@ -115,6 +115,7 @@ Fiber::ptr Fiber::getThis() {
     Fiber::ptr main_fiber(new Fiber());
     setThis(main_fiber.get());
     t_thread_fiber = main_fiber;
+
     return t_fiber->shared_from_this();
   }
 }
@@ -125,6 +126,9 @@ uint64_t Fiber::totalFibers() {
 }
 
 void Fiber::setThis(Fiber *f) {
+  if (f) {
+    f->setState(RUNING);
+  }
   t_fiber = f; //*设置运行时协程指针
 }
 
@@ -132,12 +136,11 @@ void Fiber::mainFunc() {
   Fiber::ptr cur = getThis();
 
   //*这里使用try-catch
-  //*我的个人理解是,作为一个协程,函数对象可能是用户穿进来的,要防止因为用户抛出异常导致程序崩掉
+  //*我的个人理解是,作为一个协程,函数对象可能是用户传进来的,要防止因为用户抛出异常导致程序崩掉
   try {
     cur->m_cb();
     cur->m_cb = nullptr;
     cur->m_state = TERM;
-
   } catch (std::exception &ex) {
     cur->m_state = EXCEPT;
     SYLAR_LOG_ERROR(g_logger) << "Fiber Except"

@@ -179,8 +179,8 @@ int IOManager::addEvent(int fd, Event event, std::function<void()> cb) {
     event_ctx.cb.swap(cb);
 
   } else {
-     event_ctx.fiber = Fiber::getThis();
-     assert(event_ctx.fiber->getState() == Fiber::RUNING);
+    event_ctx.fiber = Fiber::getThis();
+    assert(event_ctx.fiber->getState() == Fiber::STATE::RUNING);
   }
   return 0;
 }
@@ -333,11 +333,9 @@ void IOManager::idle() {
     do {
       static const int MAX_TIMEOUT = 3000;
       if (next_timeout != ~0ull) { //*即定时器容器不为空
-        SYLAR_LOG_INFO(g_logger) << "there has timmer";
         next_timeout =
             (int)next_timeout > MAX_TIMEOUT ? MAX_TIMEOUT : next_timeout;
       } else {
-        SYLAR_LOG_INFO(g_logger) << "there is no timmer";
         next_timeout = MAX_TIMEOUT;
       }
       rt = epoll_wait(m_epollfd, events, MAX_EVENTS, (int)next_timeout);
@@ -349,10 +347,8 @@ void IOManager::idle() {
     } while (true);
 
     std::vector<std::function<void()>> cbs;
-    SYLAR_LOG_INFO(g_logger) << "listExpiredCb start";
     listExpiredCb(cbs); //*将过期的定时器的任务存入其中
 
-    SYLAR_LOG_INFO(g_logger) << "listExpiredCb end";
     if (!cbs.empty()) {
       schedule(cbs.begin(), cbs.end());
       cbs.clear();

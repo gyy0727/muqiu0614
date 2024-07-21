@@ -216,7 +216,7 @@ int socket(int domain, int type, int protocol) {
 
 int connect_with_timeout(int fd, const struct sockaddr *addr, socklen_t addrlen,
                          uint64_t timeout_ms) {
-  if (t_hook_enable) {
+  if (!t_hook_enable) {
     return connect_f(fd, addr, addrlen);
   }
   //*从文件描述符管理器获取对应的属性信息
@@ -242,7 +242,6 @@ int connect_with_timeout(int fd, const struct sockaddr *addr, socklen_t addrlen,
   } else if (n != -1 || errno != EINPROGRESS) {
     return n;
   }
-
   IOManager *iom = IOManager::getThis();
   Timer::ptr timer;
   std::shared_ptr<timer_info> tinfo(new timer_info);
@@ -273,6 +272,7 @@ int connect_with_timeout(int fd, const struct sockaddr *addr, socklen_t addrlen,
   if (rt == 0) {
     //*切出去,addEvent 那里,因为没设置回调函数,所以会把当前函数上下文作为回调
     Fiber::getThis()->swapOut();
+
     //*时间触发的时候会重新回来这里执行
     if (timer) {
       //*取消定时器,注意这里并不会触发定时器的回调

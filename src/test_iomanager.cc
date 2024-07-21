@@ -13,6 +13,7 @@
 #include <fcntl.h>
 #include <iostream>
 #include <sys/epoll.h>
+#if 0
 Logger::ptr g_logger2=SYLAR_LOG_NAME("IOManager");
 int sock=0;
 void test_fiber() {
@@ -76,4 +77,4 @@ int main(int argc, char** argv) {
     test_timer();
     return 0;
 }
-
+#endif

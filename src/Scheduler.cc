@@ -152,6 +152,7 @@ void Scheduler::run() {
         break;
       }
       ++m_idleThreadCount;
+      idle_fiber->setState(Fiber::RUNING);
       idle_fiber->swapIn();
       --m_idleThreadCount;
       if (idle_fiber->getState() != Fiber::TERM &&

@@ -561,6 +561,30 @@ src/test__scheduler.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/test__scheduler.cc.s
 .PHONY : src/test__scheduler.cc.s
 
+src/test_address.o: src/test_address.cc.o
+.PHONY : src/test_address.o
+
+# target to build an object file
+src/test_address.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/test_address.cc.o
+.PHONY : src/test_address.cc.o
+
+src/test_address.i: src/test_address.cc.i
+.PHONY : src/test_address.i
+
+# target to preprocess a source file
+src/test_address.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/test_address.cc.i
+.PHONY : src/test_address.cc.i
+
+src/test_address.s: src/test_address.cc.s
+.PHONY : src/test_address.s
+
+# target to generate assembly for a file
+src/test_address.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/test_address.cc.s
+.PHONY : src/test_address.cc.s
+
 src/test_fiber.o: src/test_fiber.cc.o
 .PHONY : src/test_fiber.o
 
@@ -656,6 +680,30 @@ src/test_schduler.s: src/test_schduler.cc.s
 src/test_schduler.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/test_schduler.cc.s
 .PHONY : src/test_schduler.cc.s
+
+src/test_socket.o: src/test_socket.cc.o
+.PHONY : src/test_socket.o
+
+# target to build an object file
+src/test_socket.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/test_socket.cc.o
+.PHONY : src/test_socket.cc.o
+
+src/test_socket.i: src/test_socket.cc.i
+.PHONY : src/test_socket.i
+
+# target to preprocess a source file
+src/test_socket.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/test_socket.cc.i
+.PHONY : src/test_socket.cc.i
+
+src/test_socket.s: src/test_socket.cc.s
+.PHONY : src/test_socket.s
+
+# target to generate assembly for a file
+src/test_socket.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/test_socket.cc.s
+.PHONY : src/test_socket.cc.s
 
 src/test_timer.o: src/test_timer.cc.o
 .PHONY : src/test_timer.o
@@ -792,6 +840,9 @@ help:
 	@echo "... src/test__scheduler.o"
 	@echo "... src/test__scheduler.i"
 	@echo "... src/test__scheduler.s"
+	@echo "... src/test_address.o"
+	@echo "... src/test_address.i"
+	@echo "... src/test_address.s"
 	@echo "... src/test_fiber.o"
 	@echo "... src/test_fiber.i"
 	@echo "... src/test_fiber.s"
@@ -804,6 +855,9 @@ help:
 	@echo "... src/test_schduler.o"
 	@echo "... src/test_schduler.i"
 	@echo "... src/test_schduler.s"
+	@echo "... src/test_socket.o"
+	@echo "... src/test_socket.i"
+	@echo "... src/test_socket.s"
 	@echo "... src/test_timer.o"
 	@echo "... src/test_timer.i"
 	@echo "... src/test_timer.s"

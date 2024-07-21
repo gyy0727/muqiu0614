@@ -36,7 +36,7 @@ private:
   };
 
 public:
-  IOManager(size_t threads = -1, const std::string &name = " ");
+  IOManager(size_t threads = 3, const std::string &name = " ");
   ~IOManager();
 
   int addEvent(int fd, Event event, std::function<void()> cb = nullptr);
