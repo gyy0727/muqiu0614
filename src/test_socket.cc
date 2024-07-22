@@ -96,11 +96,11 @@ void test2() {
         }
     }
 }
-
+#if 0
 int main(int argc, char** argv) {
     IOManager iom;
     iom.schedule(&test_socket);
     //iom.schedule(&test2);
     return 0;
 }
-
+#endif

@@ -129,6 +129,54 @@ Sylar/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/build
 .PHONY : Sylar/fast
 
+include/http11_parser.o: include/http11_parser.cc.o
+.PHONY : include/http11_parser.o
+
+# target to build an object file
+include/http11_parser.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/include/http11_parser.cc.o
+.PHONY : include/http11_parser.cc.o
+
+include/http11_parser.i: include/http11_parser.cc.i
+.PHONY : include/http11_parser.i
+
+# target to preprocess a source file
+include/http11_parser.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/include/http11_parser.cc.i
+.PHONY : include/http11_parser.cc.i
+
+include/http11_parser.s: include/http11_parser.cc.s
+.PHONY : include/http11_parser.s
+
+# target to generate assembly for a file
+include/http11_parser.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/include/http11_parser.cc.s
+.PHONY : include/http11_parser.cc.s
+
+include/httpclient_parser.o: include/httpclient_parser.cc.o
+.PHONY : include/httpclient_parser.o
+
+# target to build an object file
+include/httpclient_parser.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/include/httpclient_parser.cc.o
+.PHONY : include/httpclient_parser.cc.o
+
+include/httpclient_parser.i: include/httpclient_parser.cc.i
+.PHONY : include/httpclient_parser.i
+
+# target to preprocess a source file
+include/httpclient_parser.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/include/httpclient_parser.cc.i
+.PHONY : include/httpclient_parser.cc.i
+
+include/httpclient_parser.s: include/httpclient_parser.cc.s
+.PHONY : include/httpclient_parser.s
+
+# target to generate assembly for a file
+include/httpclient_parser.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/include/httpclient_parser.cc.s
+.PHONY : include/httpclient_parser.cc.s
+
 src/Config.o: src/Config.cc.o
 .PHONY : src/Config.o
 
@@ -465,6 +513,30 @@ src/http.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/http.cc.s
 .PHONY : src/http.cc.s
 
+src/http_parser.o: src/http_parser.cc.o
+.PHONY : src/http_parser.o
+
+# target to build an object file
+src/http_parser.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/http_parser.cc.o
+.PHONY : src/http_parser.cc.o
+
+src/http_parser.i: src/http_parser.cc.i
+.PHONY : src/http_parser.i
+
+# target to preprocess a source file
+src/http_parser.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/http_parser.cc.i
+.PHONY : src/http_parser.cc.i
+
+src/http_parser.s: src/http_parser.cc.s
+.PHONY : src/http_parser.s
+
+# target to generate assembly for a file
+src/http_parser.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/http_parser.cc.s
+.PHONY : src/http_parser.cc.s
+
 src/main.o: src/main.cc.o
 .PHONY : src/main.o
 
@@ -512,30 +584,6 @@ src/socket.s: src/socket.cc.s
 src/socket.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/socket.cc.s
 .PHONY : src/socket.cc.s
-
-src/test.o: src/test.cc.o
-.PHONY : src/test.o
-
-# target to build an object file
-src/test.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/test.cc.o
-.PHONY : src/test.cc.o
-
-src/test.i: src/test.cc.i
-.PHONY : src/test.i
-
-# target to preprocess a source file
-src/test.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/test.cc.i
-.PHONY : src/test.cc.i
-
-src/test.s: src/test.cc.s
-.PHONY : src/test.s
-
-# target to generate assembly for a file
-src/test.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/test.cc.s
-.PHONY : src/test.cc.s
 
 src/test__scheduler.o: src/test__scheduler.cc.o
 .PHONY : src/test__scheduler.o
@@ -608,6 +656,30 @@ src/test_fiber.s: src/test_fiber.cc.s
 src/test_fiber.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/test_fiber.cc.s
 .PHONY : src/test_fiber.cc.s
+
+src/test_http.o: src/test_http.cc.o
+.PHONY : src/test_http.o
+
+# target to build an object file
+src/test_http.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/test_http.cc.o
+.PHONY : src/test_http.cc.o
+
+src/test_http.i: src/test_http.cc.i
+.PHONY : src/test_http.i
+
+# target to preprocess a source file
+src/test_http.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/test_http.cc.i
+.PHONY : src/test_http.cc.i
+
+src/test_http.s: src/test_http.cc.s
+.PHONY : src/test_http.s
+
+# target to generate assembly for a file
+src/test_http.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/test_http.cc.s
+.PHONY : src/test_http.cc.s
 
 src/test_iomanager.o: src/test_iomanager.cc.o
 .PHONY : src/test_iomanager.o
@@ -786,6 +858,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Sylar"
+	@echo "... include/http11_parser.o"
+	@echo "... include/http11_parser.i"
+	@echo "... include/http11_parser.s"
+	@echo "... include/httpclient_parser.o"
+	@echo "... include/httpclient_parser.i"
+	@echo "... include/httpclient_parser.s"
 	@echo "... src/Config.o"
 	@echo "... src/Config.i"
 	@echo "... src/Config.s"
@@ -828,15 +906,15 @@ help:
 	@echo "... src/http.o"
 	@echo "... src/http.i"
 	@echo "... src/http.s"
+	@echo "... src/http_parser.o"
+	@echo "... src/http_parser.i"
+	@echo "... src/http_parser.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
 	@echo "... src/socket.o"
 	@echo "... src/socket.i"
 	@echo "... src/socket.s"
-	@echo "... src/test.o"
-	@echo "... src/test.i"
-	@echo "... src/test.s"
 	@echo "... src/test__scheduler.o"
 	@echo "... src/test__scheduler.i"
 	@echo "... src/test__scheduler.s"
@@ -846,6 +924,9 @@ help:
 	@echo "... src/test_fiber.o"
 	@echo "... src/test_fiber.i"
 	@echo "... src/test_fiber.s"
+	@echo "... src/test_http.o"
+	@echo "... src/test_http.i"
+	@echo "... src/test_http.s"
 	@echo "... src/test_iomanager.o"
 	@echo "... src/test_iomanager.i"
 	@echo "... src/test_iomanager.s"

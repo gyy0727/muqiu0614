@@ -4,7 +4,7 @@ set(CMAKE_CXX_FLAGS "$ENV{CXXFLAGS} -rdynamic -O0 -ggdb -std=c++17 -Wall -Wno-de
 set(CMAKE_CXX_COMPILER_LAUNCHER ccache)
 
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
-file(GLOB SRC ${CMAKE_CURRENT_SOURCE_DIR}/src/*.cc)
+file(GLOB SRC ${CMAKE_CURRENT_SOURCE_DIR}/src/*.cc ${CMAKE_CURRENT_SOURCE_DIR}/include/*.cc)
 set(CXX_STANDARD 17)
 include_directories(${PROJECT_SOURCE_DIR}/include)
 set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)

@@ -8576,3 +8576,56 @@ X-Xss-Protection: 1;mode=block
 2024-07-21 15:27:39	21072	日志器01	1	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:74	Fiber::~Fiber id=5 total=2
 2024-07-21 15:27:39	21072	日志器01	0	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:74	Fiber::~Fiber id=1 total=1
 2024-07-21 15:27:39	21071	日志器01	0	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:74	Fiber::~Fiber id=6 total=0
+2024-07-22 16:00:09	9309	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-22 16:00:09	9310	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-22 16:00:09	9309	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程1创建
+2024-07-22 16:00:09	9310	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程2创建
+2024-07-22 16:00:09	9310	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:50	任务协程4创建
+2024-07-22 16:00:09	9311	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:73	 run
+2024-07-22 16:00:09	9309	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:50	任务协程3创建
+2024-07-22 16:00:09	9310	日志器01	4	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:50	任务协程5创建
+2024-07-22 16:00:09	9311	日志器01	0	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:43	主协程6创建
+2024-07-22 16:00:09	9309	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:320	idle
+2024-07-22 16:00:09	9311	日志器01	6	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:50	任务协程7创建
+2024-07-22 16:00:09	9311	日志器01	7	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:320	idle
+2024-07-22 16:00:09	9310	日志器01	5	[INFO]	[system]	/root/desktop/muqiu0614/src/test_socket.cc:21	get address: 183.2.172.185:0
+2024-07-22 16:00:09	9310	日志器01	5	[INFO]	[system]	/root/desktop/muqiu0614/src/test_socket.cc:30	addr=183.2.172.185:80
+2024-07-22 16:00:09	9310	日志器01	4	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:320	idle
+2024-07-22 16:00:09	9311	日志器01	5	[INFO]	[system]	/root/desktop/muqiu0614/src/test_socket.cc:35	connect 183.2.172.185:80 connected
+2024-07-22 16:00:09	9310	日志器01	5	[INFO]	[system]	/root/desktop/muqiu0614/src/test_socket.cc:54	HTTP/1.0 200 OK
+Accept-Ranges: bytes
+Cache-Control: no-cache
+Content-Length: 9508
+Content-Type: text/html
+Date: Mon, 22 Jul 2024 08:00:09 GMT
+P3p: CP=" OTI DSP COR IVA OUR IND COM "
+P3p: CP=" OTI DSP COR IVA OUR IND COM "
+Pragma: no-cache
+Server: BWS/1.1
+Set-Cookie: BAIDUID=343DA316A054A12A4161759156947758:FG=1; expires=Thu, 31-Dec-37 23:55:55 GMT; max-age=2147483647; path=/; domain=.baidu.com
+Set-Cookie: BIDUPSID=343DA316A054A12A4161759156947758; expires=Thu, 31-Dec-37 23:55:55 GMT; max-age=2147483647; path=/; domain=.baidu.com
+Set-Cookie: PSTM=1721635209; expires=Thu, 31-Dec-37 23:55:55 GMT; max-age=2147483647; path=/; domain=.baidu.com
+Set-Cookie: BAIDUID=343DA316A054A12A7A3E1401373D2ABF:FG=1; max-age=31536000; expires=Tue, 22-Jul-25 08:00:09 GMT; domain=.baidu.com; path=/; version=1; comment=bd
+Traceid: 1721635209072540673010080233368082176832
+Vary: Accept-Encoding
+X-Ua-Compatible: IE=Edge,chrome=1
+X-Xss-Protection: 1;mode=block
+
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta content="always" name="referrer"><meta name="description" content="全球领先的中文搜索引擎、致力于让网民更便捷地获取信息，找到所求。百度超过千亿的中文网页数据库，可以瞬间找到相关的搜索结果。"><link rel="shortcut icon" href="//www.baidu.com/favicon.ico" type="image/x-icon"><link rel="search" type="application/opensearchdescription+xml" href="//www.baidu.com/content-search.xml" title="百度搜索"><title>百度一下，你就知道</title><style type="text/css">body{margin:0;padding:0;text-align:center;background:#fff;height:100%}html{overflow-y:auto;color:#000;overflow:-moz-scrollbars;height:100%}body,input{font-size:12px;font-family:"PingFang SC",Arial,"Microsoft YaHei",sans-serif}a{text-decoration:none}a:hover{text-decoration:underline}img{border:0;-ms-interpolation-mode:bicubic}input{font-size:100%;border:0}body,form{position:relative;z-index:0}#wrapper{height:100%}#head_wrapper.s-ps-islite{padding-bottom:370px}#head_wrapper.s-ps-islite .s_form{position:relative;z-index:1}#head_wrapper.s-ps-islite .fm{position:absolute;bottom:0}#head_wrapper.s-ps-islite .s-p-top{position:absolute;bottom:40px;width:100%;height:181px}#head_wrapper.s-ps-islite #s_lg_img{position:static;margin:33px auto 0 auto;left:50%}#form{z-index:1}.s_form_wrapper{height:100%}#lh{margin:16px 0 5px;word-spacing:3px}.c-font-normal{font:13px/23px Arial,sans-serif}.c-color-t{color:#222}.c-btn,.c-btn:visited{color:#333!important}.c-btn{display:inline-block;overflow:hidden;font-family:inherit;font-weight:400;text-align:center;vertical-align:middle;outline:0;border:0;height:30px;width:80px;line-height:30px;font-size:13px;border-radius:6px;padding:0;background-color:#f5f5f6;cursor:pointer}.c-btn:hover{background-color:#315efb;color:#fff!important}a.c-btn{text-decoration:none}.c-btn-mini{height:24px;width:48px;line-height:24px}.c-btn-primary,.c-btn-primary:visited{color:#fff!important}.c-btn-primary{background-color:#4e6ef2}.c-btn-primary:hover{background-color:#315efb}a:active{color:#f60}#wrapper{position:relative;min-height:100%}#head{padding-bottom:100px;text-align:center}#wrapper{min-width:1250px;height:100%;min-height:600px}#head{position:relative;padding-bottom:0;height:100%;min-height:600px}.s_form_wrapper{height:100%}.quickdelete-wrap{position:relative}.tools{position:absolute;right:-75px}.s-isindex-wrap{position:relative}#head_wrapper.head_wrapper{width:auto}#head_wrapper{position:relative;height:40%;min-height:314px;max-height:510px;width:1000px;margin:0 auto}#head_wrapper .s-p-top{height:60%;min-height:185px;max-height:310px;position:relative;z-index:0;text-align:center}#head_wrapper input{outline:0;-webkit-appearance:none}#head_wrapper .s_btn_wr,#head_wrapper .s_ipt_wr{display:inline-block;zoom:1;background:0 0;vertical-align:top}#head_wrapper .s_ipt_wr{position:relative;width:546px}#head_wrapper .s_btn_wr{width:108px;height:44px;position:relative;z-index:2}#head_wrapper .s_ipt_wr:ho
+2024-07-22 16:00:09	9310	日志器01	5	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:150	执行完成
+2024-07-22 16:00:09	9310	日志器01	4	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:329	name =  idle stoping exit
+2024-07-22 16:00:09	9310	日志器01	4	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:150	执行完成
+2024-07-22 16:00:09	9310	日志器01	2	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:151	idle fiber term
+2024-07-22 16:00:09	9310	日志器01	2	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:74	Fiber::~Fiber id=4 total=6
+2024-07-22 16:00:09	9310	日志器01	0	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:74	Fiber::~Fiber id=2 total=5
+2024-07-22 16:00:12	9311	日志器01	7	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:329	name =  idle stoping exit
+2024-07-22 16:00:12	9311	日志器01	7	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:150	执行完成
+2024-07-22 16:00:12	9311	日志器01	6	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:151	idle fiber term
+2024-07-22 16:00:12	9311	日志器01	6	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:74	Fiber::~Fiber id=7 total=4
+2024-07-22 16:00:12	9311	日志器01	0	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:74	Fiber::~Fiber id=6 total=3
+2024-07-22 16:00:12	9309	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/IoManager.cc:329	name =  idle stoping exit
+2024-07-22 16:00:12	9309	日志器01	3	[INFO]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:150	执行完成
+2024-07-22 16:00:12	9309	日志器01	1	[INFO]	[system]	/root/desktop/muqiu0614/src/Scheduler.cc:151	idle fiber term
+2024-07-22 16:00:12	9309	日志器01	1	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:74	Fiber::~Fiber id=3 total=2
+2024-07-22 16:00:12	9309	日志器01	0	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:74	Fiber::~Fiber id=1 total=1
+2024-07-22 16:00:12	9308	日志器01	0	[DEBUG]	[system]	/root/desktop/muqiu0614/src/Fiber.cc:74	Fiber::~Fiber id=5 total=0

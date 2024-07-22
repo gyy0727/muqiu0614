@@ -38,7 +38,6 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include <string.h>
-#include "dbg.h"
 
 #define LEN(AT, FPC) (FPC - buffer - parser->AT)
 #define MARK(M,FPC) (parser->M = (FPC) - buffer)
@@ -237,4 +236,3 @@ int httpclient_parser_has_error(httpclient_parser *parser) {
 int httpclient_parser_is_finished(httpclient_parser *parser) {
     return parser->cs == httpclient_parser_first_final;
 }
-
