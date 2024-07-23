@@ -145,6 +145,7 @@ public:
   void setAddrLen(uint32_t v);
   std::string getPath() const;
   std::ostream &insert(std::ostream &os) const override;
+  ~UnixAddress() { unlink(m_addr.sun_path); }
 
 private:
   sockaddr_un m_addr;

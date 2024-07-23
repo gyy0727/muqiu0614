@@ -122,19 +122,19 @@ bool Socket::setOption(int level, int option, const void *result,
 Socket::sptr Socket::accept() {
   //*先创建一个对应的socket对象
   Socket::sptr sock(new Socket(m_family, m_type, m_protocol));
-    //*建立连接成功返回的通信描述符
-    //* accept函数:
-    //*(listenfd,sockaddr(传出参数,记录了客户端信息,不感兴趣可以设置为NUll), sizef(addr))
-    //*newsock 通信用的文件描述符
+  //*建立连接成功返回的通信描述符
+  //* accept函数:
+  //*(listenfd,sockaddr(传出参数,记录了客户端信息,不感兴趣可以设置为NUll),
+  //sizef(addr)) *newsock 通信用的文件描述符
   int newsock = ::accept(m_sock, nullptr, nullptr);
-    //*accept失败
+  //*accept失败
   if (newsock == -1) {
     SYLAR_LOG_ERROR(g_logger) << "accept(" << m_sock << ") errno=" << errno
                               << " errstr=" << strerror(errno);
     return nullptr;
   }
-    //*成功,用该通信文件描述符去初始化sock
-    //*可以理解为每个socket连接主要就一个m_socketfd成员,其他的都是为他服务
+  //*成功,用该通信文件描述符去初始化sock
+  //*可以理解为每个socket连接主要就一个m_socketfd成员,其他的都是为他服务
   if (sock->init(newsock)) {
     return sock;
   }
@@ -143,28 +143,27 @@ Socket::sptr Socket::accept() {
 
 //*绑定到本地端口
 bool Socket::bind(const Address::ptr addr) {
-    //其实就是m_sock是否初始化,只有已经初始化的才能被操作
+  //其实就是m_sock是否初始化,只有已经初始化的才能被操作
   if (!isValid()) {
     newSock();
     if (UNLIKELY((!isValid()))) {
       return false;
     }
-
   }
-    //*判断协议簇是否相同,不可能你一个ipv4的socket对象要绑定一个设置了ipv6的本地监听地址
+  //*判断协议簇是否相同,不可能你一个ipv4的socket对象要绑定一个设置了ipv6的本地监听地址
   if (UNLIKELY(addr->getFamily() != m_family)) {
     SYLAR_LOG_ERROR(g_logger)
         << "bind sock.family(" << m_family << ") addr.family("
         << addr->getFamily() << ") not equal, addr=" << addr->toString();
     return false;
   }
-    //*一切正常,开始真正的bind
+  //*一切正常,开始真正的bind
   if (::bind(m_sock, addr->getAddr(), addr->getAddrLen())) {
     SYLAR_LOG_ERROR(g_logger)
         << "bind error errrno=" << errno << " errstr=" << strerror(errno);
     return false;
   }
-    //*绑定完,就把对应的被绑定到的本地地址信息获取,并初始化自己的m_localAddress
+  //*绑定完,就把对应的被绑定到的本地地址信息获取,并初始化自己的m_localAddress
   getLocalAddress();
   return true;
 }
@@ -178,20 +177,20 @@ bool Socket::connect(const Address::ptr addr, uint64_t timeout_ms) {
       return false;
     }
   }
-//*判断协议簇
+  //*判断协议簇
   if (UNLIKELY(addr->getFamily() != m_family)) {
     SYLAR_LOG_ERROR(g_logger)
         << "connect sock.family(" << m_family << ") addr.family("
         << addr->getFamily() << ") not equal, addr=" << addr->toString();
     return false;
   }
-    //*判断用户设置的超时时间是否有效
+  //*判断用户设置的超时时间是否有效
   if (timeout_ms == (uint64_t)-1) {
     if (::connect(m_sock, addr->getAddr(), addr->getAddrLen())) {
       SYLAR_LOG_ERROR(g_logger)
           << "sock=" << m_sock << " connect(" << addr->toString()
           << ") error errno=" << errno << " errstr=" << strerror(errno);
-            //*connect出错,所以要释放资源
+      //*connect出错,所以要释放资源
       close();
       return false;
     }
@@ -207,8 +206,8 @@ bool Socket::connect(const Address::ptr addr, uint64_t timeout_ms) {
     }
   }
   m_isConnected = true;
-    //*客户端连接远程服务器,少了个bind 的过程,所以要一次性初始化
-    //*m_remoteAddress和m_localAddress
+  //*客户端连接远程服务器,少了个bind 的过程,所以要一次性初始化
+  //*m_remoteAddress和m_localAddress
   getRemoteAddress();
   getLocalAddress();
   return true;
@@ -216,28 +215,28 @@ bool Socket::connect(const Address::ptr addr, uint64_t timeout_ms) {
 
 //*重试连接
 bool Socket::reconnect(uint64_t timeout_ms) {
-    //*远程地址未被初始化,证明未经过connect这个过程,何来reconnect之说
+  //*远程地址未被初始化,证明未经过connect这个过程,何来reconnect之说
   if (!m_remoteAddress) {
     SYLAR_LOG_ERROR(g_logger) << "reconnect m_remoteAddress is null";
     return false;
   }
-    //*远端地址不变,但是自己的端口可能会变化
+  //*远端地址不变,但是自己的端口可能会变化
   m_localAddress.reset();
   return connect(m_remoteAddress, timeout_ms);
 }
 
 //*监听
 bool Socket::listen(int backlog) {
-    //*判断初始化没,只有初始化了才能进行一系列操作
+  //*判断初始化没,只有初始化了才能进行一系列操作
   if (!isValid()) {
     SYLAR_LOG_ERROR(g_logger) << "listen error sock=-1";
     return false;
   }
-    //*开始监听
+  //*开始监听
   if (::listen(m_sock, backlog)) {
     SYLAR_LOG_ERROR(g_logger)
         << "listen error errno=" << errno << " errstr=" << strerror(errno);
-        //*这里是不是应该也要进行close()
+    //*这里是不是应该也要进行close()
     return false;
   }
   return true;
@@ -264,6 +263,15 @@ int Socket::send(const void *buffer, size_t length, int flags) {
   return -1;
 }
 
+//*struct msghdr {
+//*    void         *msg_name;       // 可选的地址信息
+//*    socklen_t     msg_namelen;    // 地址长度
+//*    struct iovec *msg_iov;        // 数据缓冲区数组
+//*    int           msg_iovlen;     // 数据缓冲区数组长度
+//*    void         *msg_control;    // 辅助数据缓冲区
+//*    socklen_t     msg_controllen; // 辅助数据缓冲区长度
+//*    int           msg_flags;      // 消息标志
+//*};
 
 //*之前muduo使用的是write函数
 int Socket::send(const iovec *buffers, size_t length, int flags) {
@@ -286,8 +294,7 @@ int Socket::sendTo(const void *buffer, size_t length, const Address::ptr to,
   }
   return -1;
 }
-
-
+//*Address::ptr to 目的地IP地址,用于无连接的udp
 int Socket::sendTo(const iovec *buffers, size_t length, const Address::ptr to,
                    int flags) {
   if (isConnected()) {

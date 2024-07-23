@@ -1,7 +1,6 @@
 #include "../include/address.h"
 #include "../include/Log.h"
 #include "../include/ntmlgb.h"
-
 #include <cstddef>
 #include <ifaddrs.h>
 #include <netdb.h>
@@ -10,8 +9,9 @@
 using namespace sylar;
 // using sylar::detail::byteswapOnBigEndian;
 // using sylar::detail::byteswapOnLittleEndian;
-static Sylar::Logger::ptr g_logger = SYLAR_LOG_NAME("name");
 
+
+static Sylar::Logger::ptr g_logger = SYLAR_LOG_NAME("name");
 //*求子网掩码,根据前缀长度创建掩码
 template <class T> static T CreateMask(uint32_t bits) {
   //* 将1 左移 (sizeof(T)*8-bits)位再减一
@@ -27,7 +27,7 @@ template <class T> static uint32_t CountBytes(T value) {
   return result;
 }
 
-//*根据host返回任意address
+//*根据host返回任意ip
 Address::ptr Address::LookupAny(const std::string &host, int family, int type,
                                 int protocol) {
   std::vector<Address::ptr> result;
