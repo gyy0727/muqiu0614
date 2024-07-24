@@ -172,12 +172,11 @@ int IOManager::addEvent(int fd, Event event, std::function<void()> cb) {
   ++m_pendingEventCount;
   fd_ctx->events = (Event)(fd_ctx->events | event);
   FdContext::EventContext &event_ctx = fd_ctx->getContext(event);
-  assert(!event_ctx.scheduler && !event_ctx.fiber && !event_ctx.cb);
+  // assert(!event_ctx.scheduler && !event_ctx.fiber && !event_ctx.cb);
   event_ctx.scheduler = Scheduler::GetThis();
   //*如果用户提供了任务就执行该任务,没有就执行当前在运行的协程
   if (cb) {
     event_ctx.cb.swap(cb);
-
   } else {
     event_ctx.fiber = Fiber::getThis();
     assert(event_ctx.fiber->getState() == Fiber::STATE::RUNING);

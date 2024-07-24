@@ -441,6 +441,30 @@ src/bytearray.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/bytearray.cc.s
 .PHONY : src/bytearray.cc.s
 
+src/echo_server.o: src/echo_server.cc.o
+.PHONY : src/echo_server.o
+
+# target to build an object file
+src/echo_server.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/echo_server.cc.o
+.PHONY : src/echo_server.cc.o
+
+src/echo_server.i: src/echo_server.cc.i
+.PHONY : src/echo_server.i
+
+# target to preprocess a source file
+src/echo_server.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/echo_server.cc.i
+.PHONY : src/echo_server.cc.i
+
+src/echo_server.s: src/echo_server.cc.s
+.PHONY : src/echo_server.s
+
+# target to generate assembly for a file
+src/echo_server.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/echo_server.cc.s
+.PHONY : src/echo_server.cc.s
+
 src/fdmanager.o: src/fdmanager.cc.o
 .PHONY : src/fdmanager.o
 
@@ -584,6 +608,30 @@ src/socket.s: src/socket.cc.s
 src/socket.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/socket.cc.s
 .PHONY : src/socket.cc.s
+
+src/tcp_server.o: src/tcp_server.cc.o
+.PHONY : src/tcp_server.o
+
+# target to build an object file
+src/tcp_server.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/tcp_server.cc.o
+.PHONY : src/tcp_server.cc.o
+
+src/tcp_server.i: src/tcp_server.cc.i
+.PHONY : src/tcp_server.i
+
+# target to preprocess a source file
+src/tcp_server.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/tcp_server.cc.i
+.PHONY : src/tcp_server.cc.i
+
+src/tcp_server.s: src/tcp_server.cc.s
+.PHONY : src/tcp_server.s
+
+# target to generate assembly for a file
+src/tcp_server.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/tcp_server.cc.s
+.PHONY : src/tcp_server.cc.s
 
 src/test__scheduler.o: src/test__scheduler.cc.o
 .PHONY : src/test__scheduler.o
@@ -897,6 +945,9 @@ help:
 	@echo "... src/bytearray.o"
 	@echo "... src/bytearray.i"
 	@echo "... src/bytearray.s"
+	@echo "... src/echo_server.o"
+	@echo "... src/echo_server.i"
+	@echo "... src/echo_server.s"
 	@echo "... src/fdmanager.o"
 	@echo "... src/fdmanager.i"
 	@echo "... src/fdmanager.s"
@@ -915,6 +966,9 @@ help:
 	@echo "... src/socket.o"
 	@echo "... src/socket.i"
 	@echo "... src/socket.s"
+	@echo "... src/tcp_server.o"
+	@echo "... src/tcp_server.i"
+	@echo "... src/tcp_server.s"
 	@echo "... src/test__scheduler.o"
 	@echo "... src/test__scheduler.i"
 	@echo "... src/test__scheduler.s"

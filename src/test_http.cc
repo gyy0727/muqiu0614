@@ -17,10 +17,11 @@ void test_response() {
 
     rsp->dump(std::cout) << std::endl;
 }
-
+#if 0
 int main(int argc, char** argv) {
     test_request();
     test_response();
     return 0;
 }
+#endif
 
