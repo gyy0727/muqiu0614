@@ -609,6 +609,54 @@ src/socket.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/socket.cc.s
 .PHONY : src/socket.cc.s
 
+src/socket_stream.o: src/socket_stream.cc.o
+.PHONY : src/socket_stream.o
+
+# target to build an object file
+src/socket_stream.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/socket_stream.cc.o
+.PHONY : src/socket_stream.cc.o
+
+src/socket_stream.i: src/socket_stream.cc.i
+.PHONY : src/socket_stream.i
+
+# target to preprocess a source file
+src/socket_stream.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/socket_stream.cc.i
+.PHONY : src/socket_stream.cc.i
+
+src/socket_stream.s: src/socket_stream.cc.s
+.PHONY : src/socket_stream.s
+
+# target to generate assembly for a file
+src/socket_stream.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/socket_stream.cc.s
+.PHONY : src/socket_stream.cc.s
+
+src/stream.o: src/stream.cc.o
+.PHONY : src/stream.o
+
+# target to build an object file
+src/stream.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/stream.cc.o
+.PHONY : src/stream.cc.o
+
+src/stream.i: src/stream.cc.i
+.PHONY : src/stream.i
+
+# target to preprocess a source file
+src/stream.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/stream.cc.i
+.PHONY : src/stream.cc.i
+
+src/stream.s: src/stream.cc.s
+.PHONY : src/stream.s
+
+# target to generate assembly for a file
+src/stream.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/stream.cc.s
+.PHONY : src/stream.cc.s
+
 src/tcp_server.o: src/tcp_server.cc.o
 .PHONY : src/tcp_server.o
 
@@ -966,6 +1014,12 @@ help:
 	@echo "... src/socket.o"
 	@echo "... src/socket.i"
 	@echo "... src/socket.s"
+	@echo "... src/socket_stream.o"
+	@echo "... src/socket_stream.i"
+	@echo "... src/socket_stream.s"
+	@echo "... src/stream.o"
+	@echo "... src/stream.i"
+	@echo "... src/stream.s"
 	@echo "... src/tcp_server.o"
 	@echo "... src/tcp_server.i"
 	@echo "... src/tcp_server.s"
