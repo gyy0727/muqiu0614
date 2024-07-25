@@ -1,3 +1,4 @@
+#if 0
 #include "../include/IoManager.h"
 #include "../include/Log.h"
 #include "../include/address.h"
@@ -77,3 +78,4 @@ int main(int argc, char **argv) {
   iom.schedule(run);
   return 0;
 }
+#endif
