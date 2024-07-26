@@ -13,6 +13,9 @@
 #include <sys/syscall.h>
 #include <unistd.h>
 #include<iostream>
+#include <typeinfo>
+#include <memory>
+#include <cxxabi.h>
 namespace Sylar {
 
 
@@ -57,4 +60,9 @@ public:
     static std::wstring StringToWString(const std::string& s);
 
 };
+}
+template<class T>
+const char* TypeToName() {
+    static const char* s_name = abi::__cxa_demangle(typeid(T).name(), nullptr, nullptr, nullptr);
+    return s_name;
 }

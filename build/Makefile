@@ -633,6 +633,30 @@ src/main.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/main.cc.s
 .PHONY : src/main.cc.s
 
+src/servlet.o: src/servlet.cc.o
+.PHONY : src/servlet.o
+
+# target to build an object file
+src/servlet.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/servlet.cc.o
+.PHONY : src/servlet.cc.o
+
+src/servlet.i: src/servlet.cc.i
+.PHONY : src/servlet.i
+
+# target to preprocess a source file
+src/servlet.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/servlet.cc.i
+.PHONY : src/servlet.cc.i
+
+src/servlet.s: src/servlet.cc.s
+.PHONY : src/servlet.s
+
+# target to generate assembly for a file
+src/servlet.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/servlet.cc.s
+.PHONY : src/servlet.cc.s
+
 src/socket.o: src/socket.cc.o
 .PHONY : src/socket.o
 
@@ -776,6 +800,30 @@ src/test_address.s: src/test_address.cc.s
 src/test_address.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/test_address.cc.s
 .PHONY : src/test_address.cc.s
+
+src/test_dispatch.o: src/test_dispatch.cc.o
+.PHONY : src/test_dispatch.o
+
+# target to build an object file
+src/test_dispatch.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/test_dispatch.cc.o
+.PHONY : src/test_dispatch.cc.o
+
+src/test_dispatch.i: src/test_dispatch.cc.i
+.PHONY : src/test_dispatch.i
+
+# target to preprocess a source file
+src/test_dispatch.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/test_dispatch.cc.i
+.PHONY : src/test_dispatch.cc.i
+
+src/test_dispatch.s: src/test_dispatch.cc.s
+.PHONY : src/test_dispatch.s
+
+# target to generate assembly for a file
+src/test_dispatch.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/test_dispatch.cc.s
+.PHONY : src/test_dispatch.cc.s
 
 src/test_fiber.o: src/test_fiber.cc.o
 .PHONY : src/test_fiber.o
@@ -1089,6 +1137,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/servlet.o"
+	@echo "... src/servlet.i"
+	@echo "... src/servlet.s"
 	@echo "... src/socket.o"
 	@echo "... src/socket.i"
 	@echo "... src/socket.s"
@@ -1107,6 +1158,9 @@ help:
 	@echo "... src/test_address.o"
 	@echo "... src/test_address.i"
 	@echo "... src/test_address.s"
+	@echo "... src/test_dispatch.o"
+	@echo "... src/test_dispatch.i"
+	@echo "... src/test_dispatch.s"
 	@echo "... src/test_fiber.o"
 	@echo "... src/test_fiber.i"
 	@echo "... src/test_fiber.s"
