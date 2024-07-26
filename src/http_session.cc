@@ -1,6 +1,7 @@
+#include "../include/Log.h"
 #include "../include/http_parser.h"
 #include "../include/http_session.h"
-
+static Logger::ptr g_logger = SYLAR_LOG_NAME("system");
 HttpSession::HttpSession(Socket::sptr sock, bool owner)
     : SocketStream(sock, owner) {}
 
@@ -19,6 +20,7 @@ HttpRequest::ptr HttpSession::recvRequest() {
     int len = read(data + offset, buff_size - offset);
     if (len <= 0) {
       close();
+      SYLAR_LOG_INFO(g_logger) << "读取请求失败--read" << " error = " <<len ;
       return nullptr;
     }
     //*要解析的数据长度
@@ -27,7 +29,9 @@ HttpRequest::ptr HttpSession::recvRequest() {
     //*// execute会将data向前移动nparse个字节，nparse为已经成功解析的字节数
     size_t nparse = parser->execute(data, len);
     if (parser->hasError()) {
+
       close();
+      SYLAR_LOG_INFO(g_logger) << "解析过程存在错误--hasError";
       return nullptr;
     }
     //*指向要数据的末尾
@@ -35,6 +39,7 @@ HttpRequest::ptr HttpSession::recvRequest() {
     //*偏移量等于缓冲区大小,证明数据过大,还没isFinished()就已经满了,可能是恶意攻击
     if (offset == (int)buff_size) {
       close();
+      SYLAR_LOG_INFO(g_logger) << "缓冲区已满--offset==buffer_size";
       return nullptr;
     }
     if (parser->isFinished()) {
@@ -60,6 +65,7 @@ HttpRequest::ptr HttpSession::recvRequest() {
     if (length > 0) {
       if (readFixSize(&body[len], length) <= 0) {
         close();
+        SYLAR_LOG_INFO(g_logger) << "无法获得完整的请求--length>0";
         return nullptr;
       }
     }

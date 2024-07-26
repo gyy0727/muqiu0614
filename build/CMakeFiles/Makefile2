@@ -64,6 +64,8 @@ CMAKE_BINARY_DIR = /root/desktop/muqiu0614/build
 
 # The main recursive "all" target.
 all: CMakeFiles/Sylar.dir/all
+all: CMakeFiles/test_http_server.dir/all
+all: CMakeFiles/Sylar_Default.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -72,6 +74,8 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/Sylar.dir/clean
+clean: CMakeFiles/test_http_server.dir/clean
+clean: CMakeFiles/Sylar_Default.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -81,12 +85,12 @@ clean: CMakeFiles/Sylar.dir/clean
 CMakeFiles/Sylar.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/desktop/muqiu0614/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40 "Built target Sylar"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/desktop/muqiu0614/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28 "Built target Sylar"
 .PHONY : CMakeFiles/Sylar.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Sylar.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/desktop/muqiu0614/build/CMakeFiles 40
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/desktop/muqiu0614/build/CMakeFiles 28
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Sylar.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/desktop/muqiu0614/build/CMakeFiles 0
 .PHONY : CMakeFiles/Sylar.dir/rule
@@ -99,6 +103,58 @@ Sylar: CMakeFiles/Sylar.dir/rule
 CMakeFiles/Sylar.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/clean
 .PHONY : CMakeFiles/Sylar.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/test_http_server.dir
+
+# All Build rule for target.
+CMakeFiles/test_http_server.dir/all: CMakeFiles/Sylar.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_http_server.dir/build.make CMakeFiles/test_http_server.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_http_server.dir/build.make CMakeFiles/test_http_server.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/desktop/muqiu0614/build/CMakeFiles --progress-num=58,59 "Built target test_http_server"
+.PHONY : CMakeFiles/test_http_server.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/test_http_server.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/desktop/muqiu0614/build/CMakeFiles 30
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test_http_server.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/desktop/muqiu0614/build/CMakeFiles 0
+.PHONY : CMakeFiles/test_http_server.dir/rule
+
+# Convenience name for target.
+test_http_server: CMakeFiles/test_http_server.dir/rule
+.PHONY : test_http_server
+
+# clean rule for target.
+CMakeFiles/test_http_server.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_http_server.dir/build.make CMakeFiles/test_http_server.dir/clean
+.PHONY : CMakeFiles/test_http_server.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/Sylar_Default.dir
+
+# All Build rule for target.
+CMakeFiles/Sylar_Default.dir/all: CMakeFiles/Sylar.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar_Default.dir/build.make CMakeFiles/Sylar_Default.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar_Default.dir/build.make CMakeFiles/Sylar_Default.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/desktop/muqiu0614/build/CMakeFiles --progress-num=29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57 "Built target Sylar_Default"
+.PHONY : CMakeFiles/Sylar_Default.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/Sylar_Default.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/desktop/muqiu0614/build/CMakeFiles 57
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Sylar_Default.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/desktop/muqiu0614/build/CMakeFiles 0
+.PHONY : CMakeFiles/Sylar_Default.dir/rule
+
+# Convenience name for target.
+Sylar_Default: CMakeFiles/Sylar_Default.dir/rule
+.PHONY : Sylar_Default
+
+# clean rule for target.
+CMakeFiles/Sylar_Default.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar_Default.dir/build.make CMakeFiles/Sylar_Default.dir/clean
+.PHONY : CMakeFiles/Sylar_Default.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

@@ -311,6 +311,7 @@ int Socket::sendTo(const iovec *buffers, size_t length, const Address::ptr to,
 //*===============================================================TCP和udp
 int Socket::recv(void *buffer, size_t length, int flags) {
   if (isConnected()) {
+        SYLAR_LOG_INFO(g_logger) << "read the sockfd" ;
     return ::recv(m_sock, buffer, length, flags);
   }
   return -1;

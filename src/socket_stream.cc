@@ -1,6 +1,7 @@
 #include"../include/socket_stream.h"
 #include"../include/util.h"
-
+#include"../include/Log.h"
+static Logger::ptr g_logger = SYLAR_LOG_NAME("system");
 SocketStream::SocketStream(Socket::sptr sock, bool owner)
     :m_socket(sock)
     ,m_owner(owner) {
@@ -19,6 +20,7 @@ bool SocketStream::isConnected() const {
 //*其实就是调用对应socket的read函数
 int SocketStream::read(void* buffer, size_t length) {
     if(!isConnected()) {
+        SYLAR_LOG_FATAL(g_logger) << " read while no Connected";
         return -1;
     }
     return m_socket->recv(buffer, length);
