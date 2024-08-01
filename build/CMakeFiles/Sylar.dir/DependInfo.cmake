@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/root/desktop/muqiu0614/include/http11_parser.cc" "CMakeFiles/Sylar.dir/include/http11_parser.cc.o" "gcc" "CMakeFiles/Sylar.dir/include/http11_parser.cc.o.d"
   "/root/desktop/muqiu0614/include/httpclient_parser.cc" "CMakeFiles/Sylar.dir/include/httpclient_parser.cc.o" "gcc" "CMakeFiles/Sylar.dir/include/httpclient_parser.cc.o.d"
+  "/root/desktop/muqiu0614/include/uri.cc" "CMakeFiles/Sylar.dir/include/uri.cc.o" "gcc" "CMakeFiles/Sylar.dir/include/uri.cc.o.d"
   "/root/desktop/muqiu0614/src/Config.cc" "CMakeFiles/Sylar.dir/src/Config.cc.o" "gcc" "CMakeFiles/Sylar.dir/src/Config.cc.o.d"
   "/root/desktop/muqiu0614/src/Fiber.cc" "CMakeFiles/Sylar.dir/src/Fiber.cc.o" "gcc" "CMakeFiles/Sylar.dir/src/Fiber.cc.o.d"
   "/root/desktop/muqiu0614/src/IoManager.cc" "CMakeFiles/Sylar.dir/src/IoManager.cc.o" "gcc" "CMakeFiles/Sylar.dir/src/IoManager.cc.o.d"

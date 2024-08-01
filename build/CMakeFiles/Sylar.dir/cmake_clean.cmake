@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Sylar.dir/include/http11_parser.cc.o.d"
   "CMakeFiles/Sylar.dir/include/httpclient_parser.cc.o"
   "CMakeFiles/Sylar.dir/include/httpclient_parser.cc.o.d"
+  "CMakeFiles/Sylar.dir/include/uri.cc.o"
+  "CMakeFiles/Sylar.dir/include/uri.cc.o.d"
   "CMakeFiles/Sylar.dir/src/Config.cc.o"
   "CMakeFiles/Sylar.dir/src/Config.cc.o.d"
   "CMakeFiles/Sylar.dir/src/Fiber.cc.o"

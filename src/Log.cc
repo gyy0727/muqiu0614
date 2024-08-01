@@ -328,7 +328,7 @@ void FileLogAppender::log(Logger::ptr logger, LogLevel::Level level,
             reopen();
             m_lastTime = now;
         }
-        //if(!(m_filestream << m_formatter->format(logger, level, event))) {
+        //if(!(m_filestream << m_logformatter->format(logger, level, event))) {
         if(!m_logformatter->format(m_filestream, logger, level, event)) {
             std::cout << "error" << std::endl;
         }

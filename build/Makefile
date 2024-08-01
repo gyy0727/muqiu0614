@@ -209,6 +209,33 @@ include/httpclient_parser.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar_Default.dir/build.make CMakeFiles/Sylar_Default.dir/include/httpclient_parser.cc.s
 .PHONY : include/httpclient_parser.cc.s
 
+include/uri.o: include/uri.cc.o
+.PHONY : include/uri.o
+
+# target to build an object file
+include/uri.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/include/uri.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar_Default.dir/build.make CMakeFiles/Sylar_Default.dir/include/uri.cc.o
+.PHONY : include/uri.cc.o
+
+include/uri.i: include/uri.cc.i
+.PHONY : include/uri.i
+
+# target to preprocess a source file
+include/uri.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/include/uri.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar_Default.dir/build.make CMakeFiles/Sylar_Default.dir/include/uri.cc.i
+.PHONY : include/uri.cc.i
+
+include/uri.s: include/uri.cc.s
+.PHONY : include/uri.s
+
+# target to generate assembly for a file
+include/uri.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/include/uri.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar_Default.dir/build.make CMakeFiles/Sylar_Default.dir/include/uri.cc.s
+.PHONY : include/uri.cc.s
+
 src/Config.o: src/Config.cc.o
 .PHONY : src/Config.o
 
@@ -949,6 +976,9 @@ help:
 	@echo "... include/httpclient_parser.o"
 	@echo "... include/httpclient_parser.i"
 	@echo "... include/httpclient_parser.s"
+	@echo "... include/uri.o"
+	@echo "... include/uri.i"
+	@echo "... include/uri.s"
 	@echo "... src/Config.o"
 	@echo "... src/Config.i"
 	@echo "... src/Config.s"
