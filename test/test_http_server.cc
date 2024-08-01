@@ -7,17 +7,17 @@ static Logger::ptr g_logger = SYLAR_LOG_NAME("system");
 
 IOManager::ptr worker;
 void run() {
-  // HttpServer::ptr server(new sylar::http::HttpServer(true, worker.get(),
-  // sylar::IOManager::GetThis()));
-  HttpServer::ptr server(new HttpServer(true));
+  HttpServer::ptr server(
+      new HttpServer(true, worker.get(), IOManager::getThis(),IOManager::getThis()));
+  // HttpServer::ptr server(new HttpServer(true));
   Address::ptr addr = Address::LookupAnyIPAddress("0.0.0.0:8020");
   while (!server->bind(addr)) {
     sleep(2);
   }
   auto sd = server->getServletDispatch();
-  sd->addServlet("/sylar/xx", [](HttpRequest::ptr req, HttpResponse::ptr rsp,
-                                 HttpSession::ptr session) {
-    rsp->setBody(req->toString()+R"rawliteral(<!DOCTYPE html>
+  sd->addServlet("/", [](HttpRequest::ptr req, HttpResponse::ptr rsp,
+                         HttpSession::ptr session) {
+    rsp->setBody(req->toString() + R"rawliteral(<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -116,8 +116,8 @@ void run() {
     return 0;
   });
 
-  sd->addGlobServlet("/sylar/*", [](HttpRequest::ptr req, HttpResponse::ptr rsp,
-                                    HttpSession::ptr session) {
+  sd->addGlobServlet("/*", [](HttpRequest::ptr req, HttpResponse::ptr rsp,
+                              HttpSession::ptr session) {
     rsp->setBody(R"rawliteral(<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -273,8 +273,8 @@ void run() {
 }
 
 int main(int argc, char **argv) {
-  IOManager iom(1, "main");
-  worker.reset(new IOManager(3, "worker"));
+  IOManager iom(3, "main");
+  worker.reset(new IOManager(16, "worker"));
   iom.schedule(run);
   return 0;
 }
