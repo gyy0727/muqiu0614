@@ -1,8 +1,7 @@
-#include "../include/Log.h"
 #include "../include/timer.h"
+#include "../include/Log.h"
 #include "../include/util.h"
 #include <mutex>
-#include <shared_mutex>
 #include <shared_mutex>
 #include <thread>
 static Sylar::Logger::ptr g_logger = SYLAR_LOG_NAME("system");
@@ -171,11 +170,12 @@ void TimerManager::listExpiredCb(std::vector<std::function<void()>> &cbs) {
   }
 }
 bool TimerManager::hasTimer() {
-    std::shared_lock<std::shared_mutex> lock(m_mutex);
+  std::shared_lock<std::shared_mutex> lock(m_mutex);
   return !m_timers.empty();
 }
 
-void TimerManager::addTimer(Timer::ptr val,std::unique_lock<std::shared_mutex> &lock) {
+void TimerManager::addTimer(Timer::ptr val,
+                            std::unique_lock<std::shared_mutex> &lock) {
   auto it = m_timers.insert(val).first;
   bool at_front = (it == m_timers.begin()) && !m_tickled;
   if (at_front) {

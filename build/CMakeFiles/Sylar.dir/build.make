@@ -363,10 +363,24 @@ CMakeFiles/Sylar.dir/src/main.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Sylar.dir/src/main.cc.s"
 	/usr/bin/ccache  g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/desktop/muqiu0614/src/main.cc -o CMakeFiles/Sylar.dir/src/main.cc.s
 
+CMakeFiles/Sylar.dir/src/memorypool.cc.o: CMakeFiles/Sylar.dir/flags.make
+CMakeFiles/Sylar.dir/src/memorypool.cc.o: ../src/memorypool.cc
+CMakeFiles/Sylar.dir/src/memorypool.cc.o: CMakeFiles/Sylar.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/desktop/muqiu0614/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/Sylar.dir/src/memorypool.cc.o"
+	ccache /usr/bin/ccache  g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Sylar.dir/src/memorypool.cc.o -MF CMakeFiles/Sylar.dir/src/memorypool.cc.o.d -o CMakeFiles/Sylar.dir/src/memorypool.cc.o -c /root/desktop/muqiu0614/src/memorypool.cc
+
+CMakeFiles/Sylar.dir/src/memorypool.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Sylar.dir/src/memorypool.cc.i"
+	/usr/bin/ccache  g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/desktop/muqiu0614/src/memorypool.cc > CMakeFiles/Sylar.dir/src/memorypool.cc.i
+
+CMakeFiles/Sylar.dir/src/memorypool.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Sylar.dir/src/memorypool.cc.s"
+	/usr/bin/ccache  g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/desktop/muqiu0614/src/memorypool.cc -o CMakeFiles/Sylar.dir/src/memorypool.cc.s
+
 CMakeFiles/Sylar.dir/src/servlet.cc.o: CMakeFiles/Sylar.dir/flags.make
 CMakeFiles/Sylar.dir/src/servlet.cc.o: ../src/servlet.cc
 CMakeFiles/Sylar.dir/src/servlet.cc.o: CMakeFiles/Sylar.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/desktop/muqiu0614/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/Sylar.dir/src/servlet.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/desktop/muqiu0614/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/Sylar.dir/src/servlet.cc.o"
 	ccache /usr/bin/ccache  g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Sylar.dir/src/servlet.cc.o -MF CMakeFiles/Sylar.dir/src/servlet.cc.o.d -o CMakeFiles/Sylar.dir/src/servlet.cc.o -c /root/desktop/muqiu0614/src/servlet.cc
 
 CMakeFiles/Sylar.dir/src/servlet.cc.i: cmake_force
@@ -380,7 +394,7 @@ CMakeFiles/Sylar.dir/src/servlet.cc.s: cmake_force
 CMakeFiles/Sylar.dir/src/socket.cc.o: CMakeFiles/Sylar.dir/flags.make
 CMakeFiles/Sylar.dir/src/socket.cc.o: ../src/socket.cc
 CMakeFiles/Sylar.dir/src/socket.cc.o: CMakeFiles/Sylar.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/desktop/muqiu0614/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/Sylar.dir/src/socket.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/desktop/muqiu0614/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/Sylar.dir/src/socket.cc.o"
 	ccache /usr/bin/ccache  g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Sylar.dir/src/socket.cc.o -MF CMakeFiles/Sylar.dir/src/socket.cc.o.d -o CMakeFiles/Sylar.dir/src/socket.cc.o -c /root/desktop/muqiu0614/src/socket.cc
 
 CMakeFiles/Sylar.dir/src/socket.cc.i: cmake_force
@@ -394,7 +408,7 @@ CMakeFiles/Sylar.dir/src/socket.cc.s: cmake_force
 CMakeFiles/Sylar.dir/src/socket_stream.cc.o: CMakeFiles/Sylar.dir/flags.make
 CMakeFiles/Sylar.dir/src/socket_stream.cc.o: ../src/socket_stream.cc
 CMakeFiles/Sylar.dir/src/socket_stream.cc.o: CMakeFiles/Sylar.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/desktop/muqiu0614/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/Sylar.dir/src/socket_stream.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/desktop/muqiu0614/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/Sylar.dir/src/socket_stream.cc.o"
 	ccache /usr/bin/ccache  g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Sylar.dir/src/socket_stream.cc.o -MF CMakeFiles/Sylar.dir/src/socket_stream.cc.o.d -o CMakeFiles/Sylar.dir/src/socket_stream.cc.o -c /root/desktop/muqiu0614/src/socket_stream.cc
 
 CMakeFiles/Sylar.dir/src/socket_stream.cc.i: cmake_force
@@ -408,7 +422,7 @@ CMakeFiles/Sylar.dir/src/socket_stream.cc.s: cmake_force
 CMakeFiles/Sylar.dir/src/stream.cc.o: CMakeFiles/Sylar.dir/flags.make
 CMakeFiles/Sylar.dir/src/stream.cc.o: ../src/stream.cc
 CMakeFiles/Sylar.dir/src/stream.cc.o: CMakeFiles/Sylar.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/desktop/muqiu0614/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/Sylar.dir/src/stream.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/desktop/muqiu0614/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/Sylar.dir/src/stream.cc.o"
 	ccache /usr/bin/ccache  g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Sylar.dir/src/stream.cc.o -MF CMakeFiles/Sylar.dir/src/stream.cc.o.d -o CMakeFiles/Sylar.dir/src/stream.cc.o -c /root/desktop/muqiu0614/src/stream.cc
 
 CMakeFiles/Sylar.dir/src/stream.cc.i: cmake_force
@@ -422,7 +436,7 @@ CMakeFiles/Sylar.dir/src/stream.cc.s: cmake_force
 CMakeFiles/Sylar.dir/src/tcp_server.cc.o: CMakeFiles/Sylar.dir/flags.make
 CMakeFiles/Sylar.dir/src/tcp_server.cc.o: ../src/tcp_server.cc
 CMakeFiles/Sylar.dir/src/tcp_server.cc.o: CMakeFiles/Sylar.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/desktop/muqiu0614/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/Sylar.dir/src/tcp_server.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/desktop/muqiu0614/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/Sylar.dir/src/tcp_server.cc.o"
 	ccache /usr/bin/ccache  g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Sylar.dir/src/tcp_server.cc.o -MF CMakeFiles/Sylar.dir/src/tcp_server.cc.o.d -o CMakeFiles/Sylar.dir/src/tcp_server.cc.o -c /root/desktop/muqiu0614/src/tcp_server.cc
 
 CMakeFiles/Sylar.dir/src/tcp_server.cc.i: cmake_force
@@ -436,7 +450,7 @@ CMakeFiles/Sylar.dir/src/tcp_server.cc.s: cmake_force
 CMakeFiles/Sylar.dir/src/timer.cc.o: CMakeFiles/Sylar.dir/flags.make
 CMakeFiles/Sylar.dir/src/timer.cc.o: ../src/timer.cc
 CMakeFiles/Sylar.dir/src/timer.cc.o: CMakeFiles/Sylar.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/desktop/muqiu0614/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/Sylar.dir/src/timer.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/desktop/muqiu0614/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/Sylar.dir/src/timer.cc.o"
 	ccache /usr/bin/ccache  g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Sylar.dir/src/timer.cc.o -MF CMakeFiles/Sylar.dir/src/timer.cc.o.d -o CMakeFiles/Sylar.dir/src/timer.cc.o -c /root/desktop/muqiu0614/src/timer.cc
 
 CMakeFiles/Sylar.dir/src/timer.cc.i: cmake_force
@@ -450,7 +464,7 @@ CMakeFiles/Sylar.dir/src/timer.cc.s: cmake_force
 CMakeFiles/Sylar.dir/src/util.cc.o: CMakeFiles/Sylar.dir/flags.make
 CMakeFiles/Sylar.dir/src/util.cc.o: ../src/util.cc
 CMakeFiles/Sylar.dir/src/util.cc.o: CMakeFiles/Sylar.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/desktop/muqiu0614/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/Sylar.dir/src/util.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/desktop/muqiu0614/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/Sylar.dir/src/util.cc.o"
 	ccache /usr/bin/ccache  g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Sylar.dir/src/util.cc.o -MF CMakeFiles/Sylar.dir/src/util.cc.o.d -o CMakeFiles/Sylar.dir/src/util.cc.o -c /root/desktop/muqiu0614/src/util.cc
 
 CMakeFiles/Sylar.dir/src/util.cc.i: cmake_force
@@ -484,6 +498,7 @@ Sylar_OBJECTS = \
 "CMakeFiles/Sylar.dir/src/http_server.cc.o" \
 "CMakeFiles/Sylar.dir/src/http_session.cc.o" \
 "CMakeFiles/Sylar.dir/src/main.cc.o" \
+"CMakeFiles/Sylar.dir/src/memorypool.cc.o" \
 "CMakeFiles/Sylar.dir/src/servlet.cc.o" \
 "CMakeFiles/Sylar.dir/src/socket.cc.o" \
 "CMakeFiles/Sylar.dir/src/socket_stream.cc.o" \
@@ -516,6 +531,7 @@ Sylar_EXTERNAL_OBJECTS =
 ../lib/libSylar.so: CMakeFiles/Sylar.dir/src/http_server.cc.o
 ../lib/libSylar.so: CMakeFiles/Sylar.dir/src/http_session.cc.o
 ../lib/libSylar.so: CMakeFiles/Sylar.dir/src/main.cc.o
+../lib/libSylar.so: CMakeFiles/Sylar.dir/src/memorypool.cc.o
 ../lib/libSylar.so: CMakeFiles/Sylar.dir/src/servlet.cc.o
 ../lib/libSylar.so: CMakeFiles/Sylar.dir/src/socket.cc.o
 ../lib/libSylar.so: CMakeFiles/Sylar.dir/src/socket_stream.cc.o
@@ -525,7 +541,7 @@ Sylar_EXTERNAL_OBJECTS =
 ../lib/libSylar.so: CMakeFiles/Sylar.dir/src/util.cc.o
 ../lib/libSylar.so: CMakeFiles/Sylar.dir/build.make
 ../lib/libSylar.so: CMakeFiles/Sylar.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/root/desktop/muqiu0614/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Linking CXX shared library ../lib/libSylar.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/root/desktop/muqiu0614/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Linking CXX shared library ../lib/libSylar.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Sylar.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

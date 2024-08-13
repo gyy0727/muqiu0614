@@ -27,7 +27,7 @@ template <class T> static uint32_t CountBytes(T value) {
   return result;
 }
 
-//*根据host返回任意ip
+//*根据host返回对应host的任意ip
 Address::ptr Address::LookupAny(const std::string &host, int family, int type,
                                 int protocol) {
   std::vector<Address::ptr> result;
@@ -127,7 +127,7 @@ bool Address::lookUp(std::vector<Address::ptr> &result, const std::string &host,
   return !result.empty();
 }
 
-// GetInterfaceAddresses（返回本机所有网卡的<网卡名, 地址, 子网掩码位数>）
+//* GetInterfaceAddresses（返回本机所有网卡的<网卡名, 地址, 子网掩码位数>）
 /*
  *struct ifaddrs {
  *    struct ifaddrs *ifa_next;         //指向下一个结构体

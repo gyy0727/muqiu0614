@@ -126,11 +126,12 @@ retry:
       SYLAR_LOG_ERROR(g_logger)
           << hook_fun_name << " addEvent(" << fd << ", " << event << ")";
       if (timer) {
-        //*取消定时器,因为 走到这里证明还没超时就完成了
+        //*取消定时器,因为 走到这里证明感兴趣的事件添加失败了
         timer->cancel();
       }
       return -1;
     } else {
+      //*事件添加成功
       Fiber::getThis()->swapOut();
       if (timer) {
         //*同理如上

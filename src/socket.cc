@@ -1,9 +1,9 @@
+#include "../include/socket.h"
 #include "../include/IoManager.h"
 #include "../include/Log.h"
 #include "../include/fdmanager.h"
 #include "../include/hook.h"
 #include "../include/macro.h"
-#include "../include/socket.h"
 #include <limits.h>
 static Logger::ptr g_logger = SYLAR_LOG_NAME("system");
 
@@ -125,7 +125,7 @@ Socket::sptr Socket::accept() {
   //*建立连接成功返回的通信描述符
   //* accept函数:
   //*(listenfd,sockaddr(传出参数,记录了客户端信息,不感兴趣可以设置为NUll),
-  //sizef(addr)) *newsock 通信用的文件描述符
+  // sizef(addr)) *newsock 通信用的文件描述符
   int newsock = ::accept(m_sock, nullptr, nullptr);
   //*accept失败
   if (newsock == -1) {
@@ -311,7 +311,7 @@ int Socket::sendTo(const iovec *buffers, size_t length, const Address::ptr to,
 //*===============================================================TCP和udp
 int Socket::recv(void *buffer, size_t length, int flags) {
   if (isConnected()) {
-        SYLAR_LOG_INFO(g_logger) << "read the sockfd" ;
+    SYLAR_LOG_INFO(g_logger) << "read the sockfd";
     return ::recv(m_sock, buffer, length, flags);
   }
   return -1;

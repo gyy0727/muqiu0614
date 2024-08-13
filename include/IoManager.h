@@ -1,3 +1,13 @@
+/*
+ * @Author       : muqiu0614 3155833132@qq.com
+ * @Date         : 2024-07-24 13:48:23
+ * @LastEditors  : muqiu0614 3155833132@qq.com
+ * @LastEditTime : 2024-08-05 17:39:55
+ * @FilePath     : /desktop/muqiu0614/include/IoManager.h
+ * @Description  :
+ * Copyright (c) 2024 by muqiu0614 email: 3155833132@qq.com, All Rights
+ * Reserved.
+ */
 #ifndef IOMANAGER_H
 #define IOMANAGER_H
 #include "../include/Mutex.h"
@@ -6,7 +16,7 @@
 #include <mutex>
 #include <shared_mutex>
 #include <thread>
-using  namespace Sylar;
+using namespace Sylar;
 class IOManager : public Scheduler, public TimerManager {
 public:
   using ptr = std::shared_ptr<IOManager>;
@@ -55,11 +65,11 @@ protected:
   bool stopping(uint64_t &timeout);
 
 private:
-  int m_epollfd;
-  int m_wakeupfd;
+  int m_epollfd; //*epoll的监听描述符
+  int m_wakeupfd;//*wakeup文件描述符
   std::atomic<size_t> m_pendingEventCount = {0}; //*待执行的事件数量
   RWMutexType m_mutex;
-  std::vector<FdContext *> m_fdContexts;
+  std::vector<FdContext *> m_fdContexts;//*任务集合
 };
 
 #endif // !IOMANAGER_H

@@ -11,9 +11,8 @@
 #include <sys/socket.h>
 #include <unistd.h>
 Logger::ptr g_logger = SYLAR_LOG_NAME("system");
-enum EpollCtlOp {
 
-};
+//*创建一个epoll事件文件描述符
 static int createEventFd() {
   int evefd = ::eventfd(0, EFD_NONBLOCK | EFD_CLOEXEC);
   if (evefd < 0) {
@@ -21,6 +20,9 @@ static int createEventFd() {
   }
   return evefd;
 }
+enum EpollCtlOp {
+
+};
 static std::ostream &operator<<(std::ostream &os, const EpollCtlOp &op) {
   switch ((int)op) {
 #define XX(ctl)                                                                \
@@ -64,6 +66,8 @@ static std::ostream &operator<<(std::ostream &os, EPOLL_EVENTS events) {
 #undef XX
   return os;
 }
+
+//*获得文件描述符的对应回调函数
 IOManager::FdContext::EventContext &
 IOManager::FdContext::getContext(IOManager::Event event) {
   switch (event) {
@@ -76,7 +80,7 @@ IOManager::FdContext::getContext(IOManager::Event event) {
   }
   throw std::invalid_argument("getContext invalid event");
 }
-
+//*将EventContext重新初始化
 void IOManager::FdContext::resetContext(
     IOManager::FdContext::EventContext &ctx) {
   ctx.scheduler = nullptr;
@@ -85,6 +89,7 @@ void IOManager::FdContext::resetContext(
   return;
 }
 
+//*将文件描述符的回调函数触发
 void IOManager::FdContext::triggerEvent(IOManager::Event event) {
   events = (Event)(events & ~event);
   EventContext &ctx = getContext(event);
@@ -100,23 +105,33 @@ void IOManager::FdContext::triggerEvent(IOManager::Event event) {
 
 IOManager::IOManager(size_t threads, const std::string &name)
     : Scheduler(threads, name) {
+  //*创建epoll的监听描述符
   m_epollfd = epoll_create(5000);
   assert(m_epollfd > 0);
+  //*创建唤醒文件描述符
   m_wakeupfd = createEventFd();
   assert(m_wakeupfd);
-
+  //*创建一个epoll事件用于监听
   epoll_event event;
+  //*初始化为0
   memset(&event, 0, sizeof(epoll_event));
+  //*监听读事件和写事件
   event.events = EPOLLIN | EPOLLET;
+  //*设置对应的fd
   event.data.fd = m_wakeupfd;
+  //*设置为非阻塞
   int rt = fcntl(m_wakeupfd, F_SETFL, O_NONBLOCK);
   assert(!rt);
+  //*将监听描述符添加到epoll监听
   rt = epoll_ctl(m_epollfd, EPOLL_CTL_ADD, m_wakeupfd, &event);
   assert(!rt);
+  //*扩容回调函数数组
   contextResize(32);
+  //*开启线程调度
   start();
 }
 
+//*释放资源
 IOManager::~IOManager() {
   stop();
   close(m_epollfd);
@@ -128,6 +143,7 @@ IOManager::~IOManager() {
   }
 }
 
+//*扩容回调函数数组
 void IOManager::contextResize(size_t size) {
   m_fdContexts.resize(size);
   for (size_t i = 0; i < m_fdContexts.size(); ++i) {
@@ -138,9 +154,13 @@ void IOManager::contextResize(size_t size) {
   }
 }
 
+//*往epoll监听里面添加事件
 int IOManager::addEvent(int fd, Event event, std::function<void()> cb) {
+  //*事件结构体
   FdContext *fd_ctx = nullptr;
+  //*添加读锁
   RWMutexType::ReadLock lock(m_mutex);
+  //*判断回调函数数组够不够大
   if ((int)m_fdContexts.size() > fd) {
     fd_ctx = m_fdContexts[fd];
     lock.unlock();
@@ -150,16 +170,24 @@ int IOManager::addEvent(int fd, Event event, std::function<void()> cb) {
     contextResize(1.5 * fd);
     fd_ctx = m_fdContexts[fd];
   }
+
   FdContext::MutexType::Lock lock2(fd_ctx->mutex);
+  //*添加的事件是已经存在的事件
   if (UNLIKELY(fd_ctx->events & event)) {
     SYLAR_LOG_ERROR(g_logger)
         << "addEvent assert fd=" << fd << " event=" << (EPOLL_EVENTS)event
         << " fd_ctx.event=" << (EPOLL_EVENTS)fd_ctx->events;
+    // return 0;
   }
+  //*判断之前该文件描述符是否添加过到epoll里面监听
   int op = fd_ctx->events ? EPOLL_CTL_MOD : EPOLL_CTL_ADD;
+  //*创建一个epoll_event结构体用于添加到epoll监听
   epoll_event epevent;
+  //*设置epoll为ET模式和感兴趣的事件
   epevent.events = EPOLLET | fd_ctx->events | event;
+  //*设置回调函数
   epevent.data.ptr = fd_ctx;
+  //*添加到epoll监听
   int rt = epoll_ctl(m_epollfd, op, fd, &epevent);
   if (rt) {
     SYLAR_LOG_ERROR(g_logger)
@@ -169,10 +197,12 @@ int IOManager::addEvent(int fd, Event event, std::function<void()> cb) {
         << ") fd_ctx->events=" << (EPOLL_EVENTS)fd_ctx->events;
     return -1;
   }
+  
   ++m_pendingEventCount;
   fd_ctx->events = (Event)(fd_ctx->events | event);
   FdContext::EventContext &event_ctx = fd_ctx->getContext(event);
   // assert(!event_ctx.scheduler && !event_ctx.fiber && !event_ctx.cb);
+  //*将用户提供的回调函数添加到事件结构体里面
   event_ctx.scheduler = Scheduler::GetThis();
   //*如果用户提供了任务就执行该任务,没有就执行当前在运行的协程
   if (cb) {
@@ -183,7 +213,7 @@ int IOManager::addEvent(int fd, Event event, std::function<void()> cb) {
   }
   return 0;
 }
-
+//*删除事件
 bool IOManager::delEvent(int fd, Event event) {
   RWMutexType::ReadLock lock(m_mutex);
   if ((int)m_fdContexts.size() <= fd) {
@@ -195,6 +225,7 @@ bool IOManager::delEvent(int fd, Event event) {
   if (UNLIKELY(!(fd_ctx->events & event))) {
     return false;
   }
+  //*删除对应的事件
   Event new_events = (Event)(fd_ctx->events & ~event);
   int op = new_events ? EPOLL_CTL_MOD : EPOLL_CTL_DEL;
   epoll_event epevent;
@@ -216,7 +247,7 @@ bool IOManager::delEvent(int fd, Event event) {
   fd_ctx->resetContext(event_ctx);
   return true;
 }
-
+//*取消事件
 bool IOManager::cancelEvent(int fd, Event event) {
   RWMutexType::ReadLock lock(m_mutex);
   if ((int)m_fdContexts.size() <= fd) {
@@ -242,12 +273,13 @@ bool IOManager::cancelEvent(int fd, Event event) {
         << ") (" << strerror(errno) << ")";
     return false;
   }
-
+  //*取消的同时先触发一下
   fd_ctx->triggerEvent(event);
+  //*减少待执行的事件数量
   --m_pendingEventCount;
   return true;
 }
-
+//*取消对应fd的全部事件
 bool IOManager::cancelAll(int fd) {
   RWMutexType::ReadLock lock(m_mutex);
   if ((int)m_fdContexts.size() <= fd) {
@@ -288,10 +320,12 @@ bool IOManager::cancelAll(int fd) {
   return true;
 }
 
+//*获取调度器的指针
 IOManager *IOManager::getThis() {
   return dynamic_cast<IOManager *>(Scheduler::GetThis());
 }
 
+//*往唤醒文件描述符写入数据,跳出epoll_wait
 void IOManager::tickle() {
   if (!hasIdleThreads()) {
     return;
@@ -304,11 +338,13 @@ void IOManager::tickle() {
   }
 }
 
+
 //*引用是为了idle()里面直接传入修改next_timeout
 bool IOManager::stopping(uint64_t &timeout) {
   timeout = getNextTimer();
   return timeout == ~0ull && m_pendingEventCount == 0 && Scheduler::stopping();
 }
+
 bool IOManager::stopping() {
   uint64_t timeout = 0;
   return stopping(
@@ -318,6 +354,7 @@ bool IOManager::stopping() {
 void IOManager::idle() {
   SYLAR_LOG_INFO(g_logger) << "idle";
   const uint64_t MAX_EVENTS = 256;
+  //*装发生感兴趣事件的epoll_event结构体
   epoll_event *events = new epoll_event[MAX_EVENTS]();
   std::shared_ptr<epoll_event> shared_events(
       events, [](epoll_event *ptr) { delete[] ptr; });
@@ -347,11 +384,12 @@ void IOManager::idle() {
 
     std::vector<std::function<void()>> cbs;
     listExpiredCb(cbs); //*将过期的定时器的任务存入其中
-
+    //*将过期定时器的回调函数提交到任务池
     if (!cbs.empty()) {
       schedule(cbs.begin(), cbs.end());
       cbs.clear();
     }
+    //*遍历感兴趣事件
     for (int i = 0; i < rt; ++i) {
       epoll_event &event = events[i];
       if (event.data.fd == m_wakeupfd) {
@@ -404,7 +442,7 @@ void IOManager::idle() {
       }
     }
     //*这里使用裸指针是因为swapout之后当前函数相当于是暂停,不
-    //会析构,可以导致智能指针对象无法减少引用计数,所以要自己手动减少
+    //*会析构,可以导致智能指针对象无法减少引用计数,所以要自己手动减少
     Fiber::ptr cur = Fiber::getThis();
     auto raw_ptr = cur.get();
     cur.reset();

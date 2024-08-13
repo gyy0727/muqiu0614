@@ -722,6 +722,33 @@ src/main.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar_Default.dir/build.make CMakeFiles/Sylar_Default.dir/src/main.cc.s
 .PHONY : src/main.cc.s
 
+src/memorypool.o: src/memorypool.cc.o
+.PHONY : src/memorypool.o
+
+# target to build an object file
+src/memorypool.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/memorypool.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar_Default.dir/build.make CMakeFiles/Sylar_Default.dir/src/memorypool.cc.o
+.PHONY : src/memorypool.cc.o
+
+src/memorypool.i: src/memorypool.cc.i
+.PHONY : src/memorypool.i
+
+# target to preprocess a source file
+src/memorypool.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/memorypool.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar_Default.dir/build.make CMakeFiles/Sylar_Default.dir/src/memorypool.cc.i
+.PHONY : src/memorypool.cc.i
+
+src/memorypool.s: src/memorypool.cc.s
+.PHONY : src/memorypool.s
+
+# target to generate assembly for a file
+src/memorypool.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar.dir/build.make CMakeFiles/Sylar.dir/src/memorypool.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sylar_Default.dir/build.make CMakeFiles/Sylar_Default.dir/src/memorypool.cc.s
+.PHONY : src/memorypool.cc.s
+
 src/servlet.o: src/servlet.cc.o
 .PHONY : src/servlet.o
 
@@ -1033,6 +1060,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/memorypool.o"
+	@echo "... src/memorypool.i"
+	@echo "... src/memorypool.s"
 	@echo "... src/servlet.o"
 	@echo "... src/servlet.i"
 	@echo "... src/servlet.s"

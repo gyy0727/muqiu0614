@@ -43,6 +43,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Sylar.dir/src/http_session.cc.o.d"
   "CMakeFiles/Sylar.dir/src/main.cc.o"
   "CMakeFiles/Sylar.dir/src/main.cc.o.d"
+  "CMakeFiles/Sylar.dir/src/memorypool.cc.o"
+  "CMakeFiles/Sylar.dir/src/memorypool.cc.o.d"
   "CMakeFiles/Sylar.dir/src/servlet.cc.o"
   "CMakeFiles/Sylar.dir/src/servlet.cc.o.d"
   "CMakeFiles/Sylar.dir/src/socket.cc.o"
