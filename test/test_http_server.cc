@@ -16,8 +16,8 @@ void run() {
     sleep(2);
   }
   auto sd = server->getServletDispatch();
-  sd->addServlet("/*", [](HttpRequest::ptr req, HttpResponse::ptr rsp,
-                         HttpSession::ptr session) {
+  sd->addServlet("/test", [](HttpRequest::ptr req, HttpResponse::ptr rsp,
+                             HttpSession::ptr session) {
     rsp->setBody(req->toString() + R"rawliteral(<!DOCTYPE html>
 <html>
 <head>
@@ -44,9 +44,8 @@ Commercial support is available at
     return 0;
   });
 
-  sd->addGlobServlet("/sylarx/*", [](HttpRequest::ptr req,
-                                     HttpResponse::ptr rsp,
-                                     HttpSession::ptr session) {
+  sd->addGlobServlet("/error", [](HttpRequest::ptr req, HttpResponse::ptr rsp,
+                                  HttpSession::ptr session) {
     rsp->setBody(
         XX(<html><head><title> 404 Not Found</ title></ head><body><center>
                    <h1> 404 Not Found</ h1></ center><hr><center>
@@ -66,8 +65,8 @@ Commercial support is available at
 }
 
 int main(int argc, char **argv) {
-  IOManager iom(6, "main");
-  //worker.reset(new IOManager(16, "worker"));
+  IOManager iom(2, "main");
+  // worker.reset(new IOManager(16, "worker"));
   iom.schedule(run);
   return 0;
 }

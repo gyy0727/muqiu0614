@@ -29,8 +29,11 @@ void HttpServer::handleClient(Socket::sptr client) {
     session->sendResponse(rsp);
 
     if (!m_isKeepalive || req->isClose()) {
+
+      SYLAR_LOG_INFO(g_logger) << "not keepalive" << " " << m_isKeepalive << " is close " << req->isClose() ;
       break;
     }
+    SYLAR_LOG_INFO(g_logger) << "keepalive";
   } while (true);
   session->close();
 }

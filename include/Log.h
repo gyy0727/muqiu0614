@@ -27,7 +27,7 @@
 #include <vector>
 using namespace Sylar;
 #define SYLAR_LOG_LEVEL(logger, level)                                         \
-  if (0/*logger->getLevel() <= level*/)                                             \
+  if (logger->getLevel() <= level)                                             \
   Sylar::LogEventWrap(                                                         \
       Sylar::LogEvent::ptr(new Sylar::LogEvent(                                \
           logger, level, __FILE__, __LINE__, 0, Sylar::GetThreadId(),          \

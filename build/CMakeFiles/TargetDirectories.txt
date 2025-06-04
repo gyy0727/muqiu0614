@@ -1,5 +1,6 @@
-/root/desktop/muqiu0614/build/CMakeFiles/Sylar.dir
+/root/desktop/muqiu0614/build/CMakeFiles/muqiu0614.dir
 /root/desktop/muqiu0614/build/CMakeFiles/test_http_server.dir
-/root/desktop/muqiu0614/build/CMakeFiles/Sylar_Default.dir
+/root/desktop/muqiu0614/build/CMakeFiles/test_fina.dir
+/root/desktop/muqiu0614/build/CMakeFiles/muqiu_Default.dir
 /root/desktop/muqiu0614/build/CMakeFiles/edit_cache.dir
 /root/desktop/muqiu0614/build/CMakeFiles/rebuild_cache.dir

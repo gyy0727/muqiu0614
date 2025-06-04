@@ -15,14 +15,19 @@ file(GLOB SRC ${CMAKE_CURRENT_SOURCE_DIR}/src/*.cc ${CMAKE_CURRENT_SOURCE_DIR}/i
 
 
 # 库和可执行文件
-add_library(Sylar SHARED ${SRC})
+add_library(muqiu0614 SHARED ${SRC})
 add_executable(test_http_server ./test/test_http_server.cc)
+
+add_executable(test_fina ./test/test_fina.cc)
+
 
 # 包含目录
 #target_include_directories(test_http_server PRIVATE ${PROJECT_SOURCE_DIR}/include)
 
 # 链接库
-target_link_libraries(test_http_server Sylar pthread)
+target_link_libraries(test_http_server muqiu0614 pthread)
 
-add_executable(Sylar_Default ${SRC} ./test/echo_server.cc)
-target_link_libraries(Sylar_Default Sylar pthread)
+target_link_libraries(test_fina muqiu0614 pthread)
+
+add_executable(muqiu_Default ${SRC} ./test/echo_server.cc)
+target_link_libraries(muqiu_Default muqiu0614 pthread)

@@ -176,7 +176,8 @@ int IOManager::addEvent(int fd, Event event, std::function<void()> cb) {
   if (UNLIKELY(fd_ctx->events & event)) {
     SYLAR_LOG_ERROR(g_logger)
         << "addEvent assert fd=" << fd << " event=" << (EPOLL_EVENTS)event
-        << " fd_ctx.event=" << (EPOLL_EVENTS)fd_ctx->events;
+        << " fd_ctx.event=" << (EPOLL_EVENTS)fd_ctx->events << "  "
+        << "事件已经存在";
     // return 0;
   }
   //*判断之前该文件描述符是否添加过到epoll里面监听
@@ -197,7 +198,7 @@ int IOManager::addEvent(int fd, Event event, std::function<void()> cb) {
         << ") fd_ctx->events=" << (EPOLL_EVENTS)fd_ctx->events;
     return -1;
   }
-  
+
   ++m_pendingEventCount;
   fd_ctx->events = (Event)(fd_ctx->events | event);
   FdContext::EventContext &event_ctx = fd_ctx->getContext(event);
@@ -337,7 +338,6 @@ void IOManager::tickle() {
     SYLAR_LOG_FATAL(g_logger) << "m_wakeupfd write err " << errno;
   }
 }
-
 
 //*引用是为了idle()里面直接传入修改next_timeout
 bool IOManager::stopping(uint64_t &timeout) {

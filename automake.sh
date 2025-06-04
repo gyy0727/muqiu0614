@@ -46,7 +46,7 @@ if [ "$#" -eq 1 ]; then
     EXECUTABLE="${DEFAULT_EXECUTABLE}_$1"
 else
     # 如果没有传递参数，使用默认的可执行文件
-    EXECUTABLE="Sylar_Default"
+    EXECUTABLE="muqiu_Default"
 fi
 
 # 删除 lib、build 和 bin 目录下的所有文件
